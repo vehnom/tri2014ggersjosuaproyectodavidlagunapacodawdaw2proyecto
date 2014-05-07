@@ -15,7 +15,9 @@
 	<?php include "../plantilla/sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenido_prueba">
-			<table id="example" class="display" cellspacing="0" width="100%">
+		<h2>Tabla Prueba</h2>
+		<hr style="margin-bottom: 25px;">
+		<table id="example" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th>Name</th>
