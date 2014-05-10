@@ -273,7 +273,7 @@ Create table Fotos_Avisos (
 
 Create table Estados_Avisos (
 	Id_Estado_Aviso Int NOT NULL AUTO_INCREMENT,
-	Nombre_Estado Varchar(100) NOT NULL AUTO_INCREMENT,
+	Nombre_Estado Varchar(100) NOT NULL,
 	Index AI_Id_Estado_Aviso (Id_Estado_Aviso),
 	Index AI_Nombre_Estado (Nombre_Estado),
  Primary Key (Id_Estado_Aviso)) ENGINE = InnoDB;
