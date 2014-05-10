@@ -53,7 +53,6 @@ Create table Avisos (
 	Coord_Longitud Varchar(500),
 	Coord_Latitud Varchar(500),
 	Id_Estado_Aviso Int NOT NULL,
-	Index AI_Id_Aviso (Id_Aviso),
  Primary Key (Id_Aviso)) ENGINE = InnoDB;
 
 Create table Facturas (
@@ -71,7 +70,6 @@ Create table Facturas (
 	Cobrado Bool NOT NULL,
 	NFac_Provisional Varchar(100) NOT NULL,
 	Hora Time NOT NULL,
-	Index AI_Id_Factura (Id_Factura),
  Primary Key (Id_Factura)) ENGINE = InnoDB;
 
 Create table Flota_Vehiculos (
@@ -81,14 +79,12 @@ Create table Flota_Vehiculos (
 	Marca Varchar(100) NOT NULL,
 	Modelo Varchar(100) NOT NULL,
 	UNIQUE (Matricula),
-	Index AI_Id_Vehiculo (Id_Vehiculo),
  Primary Key (Id_Vehiculo)) ENGINE = InnoDB;
 
 Create table ITV (
 	Id_ITV Int NOT NULL AUTO_INCREMENT,
 	Estado Varchar(100) NOT NULL,
 	Fecha_Pasar_ITV Varchar(100) NOT NULL,
-	Index AI_Id_ITV (Id_ITV),
  Primary Key (Id_ITV)) ENGINE = InnoDB;
 
 Create table Pedidos (
@@ -97,7 +93,6 @@ Create table Pedidos (
 	Seguimiento Varchar(100) NOT NULL,
 	Hora_Llamada Time NOT NULL,
 	Cantidad Int NOT NULL,
-	Index AI_Id_Pedido (Id_Pedido),
  Primary Key (Id_Pedido)) ENGINE = InnoDB;
 
 Create table Operarios (
@@ -115,7 +110,6 @@ Create table Operarios (
 	Foto Varchar(500),
 	Fecha_Alta Date NOT NULL,
 	UNIQUE (DNI),
-	Index AI_Id_Operario (Id_Operario),
  Primary Key (Id_Operario)) ENGINE = InnoDB;
 
 Create table Concepto_Factura (
@@ -124,14 +118,12 @@ Create table Concepto_Factura (
 	Coste Varchar(100) NOT NULL,
 	Cantidad Varchar(100) NOT NULL,
 	N_Orden Varchar(100) NOT NULL,
-	Index AI_Id_Concepto (Id_Concepto),
  Primary Key (Id_Concepto)) ENGINE = InnoDB;
 
 Create table Incidencias (
 	Id_Incidencia Int NOT NULL AUTO_INCREMENT,
 	Fecha Date NOT NULL,
 	Seguimiento Varchar(100) NOT NULL,
-	Index AI_Id_Incidencia (Id_Incidencia),
  Primary Key (Id_Incidencia)) ENGINE = InnoDB;
 
 Create table Productos (
@@ -147,7 +139,6 @@ Create table Productos (
 	Precio_COM Decimal(10,2) NOT NULL,
 	Fabricante Varchar(100) NOT NULL,
 	CERC_CARP Varchar(100) NOT NULL,
-	Index AI_Id_Producto (Id_Producto),
  Primary Key (Id_Producto)) ENGINE = InnoDB;
 
 Create table Clientes (
@@ -166,7 +157,6 @@ Create table Clientes (
 	Email Varchar(100) NOT NULL,
 	Moroso Bool NOT NULL,
 	UNIQUE (NIF),
-	Index AI_Id_Cliente (Id_Cliente),
  Primary Key (Id_Cliente)) ENGINE = InnoDB;
 
 Create table Avisos_Operarios (
@@ -191,7 +181,6 @@ Create table Vacaciones (
 	Id_Vacaciones Int NOT NULL AUTO_INCREMENT,
 	Id_Operario Int NOT NULL,
 	Cantidad_Vacaciones Int NOT NULL,
-	Index AI_Id_Vacaciones (Id_Vacaciones),
  Primary Key (Id_Vacaciones)) ENGINE = InnoDB;
 
 Create table Historial_Vacaciones (
@@ -200,7 +189,6 @@ Create table Historial_Vacaciones (
 	Fecha_Ini Date NOT NULL,
 	Fecha_Fin Date NOT NULL,
 	Dias Int NOT NULL,
-	Index AI_Id_HIstorial_Vacaciones (Id_HIstorial_Vacaciones),
  Primary Key (Id_HIstorial_Vacaciones)) ENGINE = InnoDB;
 
 Create table Proveedores (
@@ -218,21 +206,18 @@ Create table Proveedores (
 	Provincia Varchar(100) NOT NULL,
 	Referencia Varchar(100) NOT NULL,
 	Observaciones Varchar(500),
-	Index AI_Id_Proveedor (Id_Proveedor),
  Primary Key (Id_Proveedor)) ENGINE = InnoDB;
 
 Create table Categorias_Productos (
 	Id_Categoria Int NOT NULL AUTO_INCREMENT,
 	Nombre_Categoria Varchar(100) NOT NULL,
 	Descripcion_Categoria Varchar(500),
-	Index AI_Id_Categoria (Id_Categoria),
  Primary Key (Id_Categoria)) ENGINE = InnoDB;
 
 Create table Niveles_Reclamaciones (
 	Id_Nivel_Reclamacion Int NOT NULL AUTO_INCREMENT,
 	Nombre_Nivel_Reclamacion Varchar(100) NOT NULL,
 	Descripcion_Nivel_Reclamacion Varchar(500),
-	Index AI_Id_Nivel_Reclamacion (Id_Nivel_Reclamacion),
  Primary Key (Id_Nivel_Reclamacion)) ENGINE = InnoDB;
 
 Create table Usuario (
@@ -240,14 +225,12 @@ Create table Usuario (
 	Id_Nivel_Usuario Int NOT NULL,
 	Nick Varchar(100) NOT NULL,
 	Password Varchar(100) NOT NULL,
-	Index AI_Id_Usuario (Id_Usuario),
  Primary Key (Id_Usuario)) ENGINE = InnoDB;
 
 Create table Niveles_Usuario (
 	Id_Nivel_Usuario Int NOT NULL AUTO_INCREMENT,
 	Nombre_Nivel Varchar(100) NOT NULL,
 	Descripcion_Nivel Varchar(100) NOT NULL,
-	Index AI_Id_Nivel_Usuario (Id_Nivel_Usuario),
  Primary Key (Id_Nivel_Usuario)) ENGINE = InnoDB;
 
 Create table Avisos_incidencias (
@@ -263,7 +246,6 @@ Create table Concepto_Facturas (
 Create table Fotos (
 	Id_Foto Int NOT NULL AUTO_INCREMENT,
 	Ruta_Foto Varchar(100),
-	Index AI_Id_Foto (Id_Foto),
  Primary Key (Id_Foto)) ENGINE = InnoDB;
 
 Create table Fotos_Avisos (
@@ -274,8 +256,6 @@ Create table Fotos_Avisos (
 Create table Estados_Avisos (
 	Id_Estado_Aviso Int NOT NULL AUTO_INCREMENT,
 	Nombre_Estado Varchar(100) NOT NULL,
-	Index AI_Id_Estado_Aviso (Id_Estado_Aviso),
-	Index AI_Nombre_Estado (Nombre_Estado),
  Primary Key (Id_Estado_Aviso)) ENGINE = InnoDB;
 
 Create table Retirada_Objetos_Vehiculos (
@@ -285,7 +265,6 @@ Create table Retirada_Objetos_Vehiculos (
 	Objeto_Retirado Varchar(1000),
 	Fecha_Inicio Timestamp NOT NULL,
 	Fecha_Final Timestamp,
-	Index AI_Id_Retirada (Id_Retirada),
  Primary Key (Id_Retirada)) ENGINE = InnoDB;
 
 Create table Agenda (
