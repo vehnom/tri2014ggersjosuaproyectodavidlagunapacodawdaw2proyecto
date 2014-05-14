@@ -102,7 +102,55 @@ body {
 	background-color: #222;
 }
 
+#contenido_thumbs {
+	width: 90%;
+	margin: 50px auto;
+	height: auto;
+	/*background-color: blue;*/
+}
 
+.fila_thumbs {
+	height: 150px;
+	width: 100%;
+	/*background-color: red;*/
+}
+
+.thumb {
+	width: 150px;
+	height: 150px;
+	background-color: #f3f3f3;
+	border: 1px solid #ebe9e9;
+	float: left;
+	margin-left: 26px;
+}
+
+.thumb:hover {
+	box-shadow: 0 0 0.5em #ddd;
+	cursor: pointer;
+}
+
+.thumb h2{
+	font-size: 60px; 
+	margin: 30px 45px; 
+	color: #aaa;
+}
+
+.thumb:hover h2{
+	color: #4873A8;
+	width: 100%;
+}
+
+.thumb:hover small{
+	color: #4873A8;
+	width: 100%;
+}
+
+.thumb small{
+	color: #aaa;
+	margin-top: -30px;
+	text-align: center;
+	display: block;
+}
 
 
 
