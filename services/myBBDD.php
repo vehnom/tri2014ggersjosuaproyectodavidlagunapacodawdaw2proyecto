@@ -5,7 +5,7 @@
 		private $host = "localhost";
 		private $user = "root";
 		private $password = "";
-		private $database = "db_rpOnline";
+		private $database = "db_rptriggers";
 		private $link;
 		private $statement;
 
