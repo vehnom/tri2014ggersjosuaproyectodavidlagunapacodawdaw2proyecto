@@ -14,11 +14,12 @@
 	<div id="contenido">
 		<div id="contenido_thumbs">
 			<div class="fila_thumbs">
-				<div class="thumb">
-					<h2><i class="icon-clipboard-2"></i></h2>
-					<small>Avisos diarios</small>
-				</div>
-
+				<a href="../plantilla/avisos.php">
+					<div class="thumb">
+						<h2><i class="icon-clipboard-2"></i></h2>
+						<small>Avisos diarios</small>
+					</div>
+				</a>
 				<div class="thumb">
 					<h2><i class="icon-pencil"></i></h2>
 					<small>Nuevo Aviso</small>
