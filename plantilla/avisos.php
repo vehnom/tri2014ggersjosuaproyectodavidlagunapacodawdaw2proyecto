@@ -15,14 +15,14 @@
 	<?php include "../plantilla/sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenido_prueba">
-		<h2>Tabla Prueba</h2>
+		<h2>Tabla de avisos</h2>
 		<hr style="margin-bottom: 25px;">
 		<table id="tabla_avisos" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th>Id_Aviso</th>
-                <th>Id_Pedido</th>
-                <th>Id_Factura</th>
+                <!-- <th>Id_Pedido</th>
+                <th>Id_Factura</th> -->
                 <th>Nota</th>
                 <th>Quedada_dia</th>
                 <th>Hora</th>
@@ -30,8 +30,8 @@
                 <th>Citado_Por</th>
                 <th>Fecha_Entrada</th>
                 <th>Fecha_Visitado</th>
-                <th>Coord_Longitud</th>
-                <th>Coord_Latitud</th>
+                <!-- <th>Coord_Longitud</th>
+                <th>Coord_Latitud</th> -->
                 <th>Id_Estado_Aviso</th>
             </tr>
         </thead>
@@ -39,8 +39,8 @@
         <tfoot>
             <tr>
                 <th>Id_Aviso</th>
-                <th>Id_Pedido</th>
-                <th>Id_Factura</th>
+                <!-- <th>Id_Pedido</th>
+                <th>Id_Factura</th> -->
                 <th>Nota</th>
                 <th>Quedada_dia</th>
                 <th>Hora</th>
@@ -48,8 +48,8 @@
                 <th>Citado_Por</th>
                 <th>Fecha_Entrada</th>
                 <th>Fecha_Visitado</th>
-                <th>Coord_Longitud</th>
-                <th>Coord_Latitud</th>
+                <!-- <th>Coord_Longitud</th>
+                <th>Coord_Latitud</th> -->
                 <th>Id_Estado_Aviso</th>
             </tr>
         </tfoot>

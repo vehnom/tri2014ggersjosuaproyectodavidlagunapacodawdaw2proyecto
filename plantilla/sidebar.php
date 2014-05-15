@@ -5,7 +5,7 @@
 		</div>
 		<a href="#"><div class="btn_sidebar primer_btn_sidebar desp_inicio">INICIO >></div></a>
 		<div class="sub_menu_desplegable sub_inicio">
-			<a href="#">Item 1</a>
+			<a href="inicio.php">Pagina principal</a>
 			<a href="#">Item 2</a>
 			<a href="#">Item 3</a>
 			<a href="#">Item 4</a>
@@ -13,7 +13,7 @@
 		</div>
 		<a href="#"><div class="btn_sidebar desp_avisos">AVISOS >></div></a>
 		<div class="sub_menu_desplegable sub_avisos">
-			<a href="../plantilla/avisos.php">Avisos diarios</a>
+			<a href="avisos.php">Avisos diarios</a>
 			<a href="#">Item 2</a>
 			<a href="#">Item 3</a>
 			<a href="#">Item 4</a>
