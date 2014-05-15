@@ -19,5 +19,5 @@
 			<a href="#">Item 4</a>
 			<a href="#">Item 5</a>
 		</div>
-		<a href="#"><div class="btn_sidebar ultimo_btn_sidebar">EMPLEADOS</div></a>
+		<a href="empleados.php"><div class="btn_sidebar ultimo_btn_sidebar">EMPLEADOS</div></a>
 </div>

@@ -374,6 +374,15 @@ CREATE TABLE IF NOT EXISTS `niveles_usuario` (
   PRIMARY KEY (`Id_Nivel_Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Volcado de datos para la tabla 'niveles_usuario'
+--
+
+INSERT INTO `niveles_usuario` (`Id_Nivel_Usuario`, `Nombre_Nivel`, `Descripcion_Nivel`) VALUES
+(0, 'Empleado', 'Nivel de usuario básico'),
+(1, 'Comun', 'Nivel de usuario normal'),
+(2, 'Administrador', 'Nivel de usuario avanzado');
+
 -- --------------------------------------------------------
 
 --
@@ -398,6 +407,15 @@ CREATE TABLE IF NOT EXISTS `operarios` (
   UNIQUE KEY `DNI` (`DNI`),
   KEY `Id_Usuario` (`Id_Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Volcado de datos para la tabla 'operarios'
+--
+
+INSERT INTO `operarios` (`Id_Operario`, `Id_Usuario`, `Nombre`, `Apellido`, `Apellido2`, `Telefono`, `Telefono2`, `Direccion`, `DNI`, `Seg_Social`, `Observacion`, `Foto`, `Fecha_Alta`) VALUES
+(1, 1, 'pepe', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 1', '12345678A', 'asegurado', 'trastorno bipolar', 'demasiado feo', '2014-05-13'),
+(2, 2, 'pepa', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 2', '12345678B', 'sin asegurar', 'buen trabajador', 'demasiado fea', '2014-05-12'),
+(3, 3, 'pepon', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 3', '12345678C', 'asegurado', 'conoce internet', 'increiblemente orrible', '2014-05-14');
 
 -- --------------------------------------------------------
 
@@ -494,6 +512,15 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`Id_Usuario`),
   KEY `Id_Nivel_Usuario` (`Id_Nivel_Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Volcado de datos para la tabla 'usuario'
+--
+
+INSERT INTO `usuario` (`Id_Usuario`, `Id_Nivel_Usuario`, `Nick`, `Password`) VALUES
+(1, 0, 'pepe', 'pepe123'),
+(2, 1, 'pepa', 'pepa123'),
+(3, 2, 'pepon', 'pepon123');
 
 -- --------------------------------------------------------
 
