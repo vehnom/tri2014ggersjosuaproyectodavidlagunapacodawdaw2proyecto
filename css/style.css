@@ -156,65 +156,32 @@ body {
 	
 }
 
+#formNuevoEmpleado input{
+	padding:5px;
+	margin-bottom:10px;
+}
 
+#formNuevoEmpleado input[type=submit]{
+	padding:10px;
+	font-size:25px;
+}
 
+#formNuevoEmpleado  textarea{
+	resize:none;
+}
 
+#formNuevoEmpleado .thumb{
+	width:auto !important; 
+	height:auto !important;
+	padding:10px;
+	margin-bottom:20px;
+	margin-left:30%;
+}
 
+#formNuevoEmpleado .thumb2{
+	margin-left:5%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#formNuevoEmpleado .thumb3{
+	margin-left:40%;
 }

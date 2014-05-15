@@ -20,10 +20,12 @@
 						<small>Consultar empleados</small>
 					</div>
 				</a>
+				<a href="nuevoEmpleado.php">
 				<div class="thumb">
 					<h2><i class="icon-user-2"></i></h2>
 					<small>Nuevo empleado</small>
 				</div>
+				</a>
 
 				<div class="thumb">
 					<h2><i class="icon-pencil"></i></h2>
