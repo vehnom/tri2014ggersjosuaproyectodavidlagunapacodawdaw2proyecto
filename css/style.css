@@ -185,3 +185,21 @@ body {
 #formNuevoEmpleado .thumb3{
 	margin-left:40%;
 }
+
+#formBorrarEmpleado input{
+	padding:5px;
+	margin-bottom:10px;
+}
+
+#formBorrarEmpleado input[type=submit]{
+	padding:10px;
+	font-size:25px;
+}
+
+#formBorrarEmpleado .thumb{
+	width:auto !important; 
+	height:auto !important;
+	padding:10px;
+	margin-bottom:20px;
+	margin-left:40%;
+}

@@ -35,6 +35,11 @@
 			$this -> statement = mysql_query($query);
 			return $this -> statement;
 		}
+		
+		function delete($query){
+			$this -> statement = mysql_query($query);
+			return $this -> statement;
+		}
 
 	}
 

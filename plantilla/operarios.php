@@ -10,32 +10,34 @@
 	<link href="../metro/min/iconFont.min.css" rel="stylesheet">
 </head>
 <body>
-	<?php include "../plantilla/sidebar.php" ?>
+	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenido_thumbs">
 			<div class="fila_thumbs">
-				<a href="tablaEmpleados.php">
+				<a href="tablaOperarios.php">
 					<div class="thumb">
 						<h2><i class="icon-search"></i></h2>
 						<small>Consultar empleados</small>
 					</div>
 				</a>
-				<a href="nuevoEmpleado.php">
-				<div class="thumb">
-					<h2><i class="icon-user-2"></i></h2>
-					<small>Nuevo empleado</small>
-				</div>
+				<a href="nuevoOperario.php">
+					<div class="thumb">
+						<h2><i class="icon-user-2"></i></h2>
+						<small>Nuevo empleado</small>
+					</div>
 				</a>
-
-				<div class="thumb">
-					<h2><i class="icon-pencil"></i></h2>
-					<small>Editar empleado</small>
-				</div>
-
+				<a href="editarOperario.php">
+					<div class="thumb">
+						<h2><i class="icon-pencil"></i></h2>
+						<small>Editar empleado</small>
+					</div>
+				</a>
+				<a href="borrarOperario.php">
 				<div class="thumb">
 					<h2><i class="icon-remove"></i></h2>
 					<small>Borrar empleado</small>
 				</div>
+				</a>
 			</div>
 		</div>
 	</div>

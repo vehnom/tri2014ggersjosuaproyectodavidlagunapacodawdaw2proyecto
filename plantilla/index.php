@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="../js/desplegable.js"></script>
 </head>
 <body>
-	<?php include "../plantilla/sidebar.php" ?>
+	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenido_prueba">
 			

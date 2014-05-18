@@ -10,11 +10,11 @@
 	<link href="../metro/min/iconFont.min.css" rel="stylesheet">
 </head>
 <body>
-	<?php include "../plantilla/sidebar.php" ?>
+	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenido_thumbs">
 			<div class="fila_thumbs">
-				<a href="../plantilla/avisos.php">
+				<a href="avisos.php">
 					<div class="thumb">
 						<h2><i class="icon-clipboard-2"></i></h2>
 						<small>Avisos diarios</small>

@@ -12,10 +12,10 @@
 	<script type="text/javascript" src="../js/tabla_operarios.js"></script>
 </head>
 <body>
-	<?php include "../plantilla/sidebar.php" ?>
+	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenido_prueba">
-		<h2>Tabla Prueba</h2>
+		<h2>Lista de Operarios</h2>
 		<hr style="margin-bottom: 25px;">
 		<table id="tabla_operarios" class="display" cellspacing="0" width="100%">
         <thead>

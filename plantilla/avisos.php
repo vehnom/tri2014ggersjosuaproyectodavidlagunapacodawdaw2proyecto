@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="../js/tabla_avisos.js"></script>
 </head>
 <body>
-	<?php include "../plantilla/sidebar.php" ?>
+	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenido_prueba">
 		<h2>Tabla de avisos</h2>
