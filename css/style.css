@@ -231,7 +231,7 @@ body {
 }
 
 .input_aviso {
-	width: 500px;
+	width: 700px;
 }
 
 .input_aviso label {
@@ -346,6 +346,31 @@ body {
 	background-color: #7CA3CC;
 }
 
+.input_aviso input[type="button"] {
+	width: 200px;
+	font-family: verdana;
+	padding: 5px;
+	background-color: #4873A8;
+	border: 1px solid #3A5F8B;
+	height: 35px;
+	margin-top: 15px;
+	color: #f2f2f2;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px 1px black;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.input_aviso input[type="button"]:hover {
+	background-color: #7CA3CC;
+}
+
 #importe_aviso {
 	width: 100px !important;
+}
+
+#valida_nota_aviso {
+	float: right;
 }

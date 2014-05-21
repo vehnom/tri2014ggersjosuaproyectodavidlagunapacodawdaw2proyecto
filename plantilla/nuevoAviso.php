@@ -8,6 +8,29 @@
 	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
 	<script type="text/javascript" src="../js/desplegable.js"></script>
 	<link href="../metro/min/iconFont.min.css" rel="stylesheet">
+
+	<script type="text/javascript">
+		function validaTodo(){
+			var valida = true;
+
+			var nota_aviso = document.getElementById('nota_aviso').value;
+			var hora_aviso = document.getElementById('hora_aviso').value;
+			var tipo_trabajo_aviso = document.getElementById('tipo_trabajo_aviso').value;
+			var citado_por_aviso = document.getElementById('citado_por_aviso').value;
+			var fecha_entrada_aviso = document.getElementById('fecha_entrada_aviso').value;
+			var fecha_visita_aviso = document.getElementById('fecha_visita_aviso').value;
+			var estado_aviso = document.getElementById('estado_aviso').value;
+			var nivel_reclamacion_aviso = document.getElementById('nivel_reclamacion_aviso').value;
+			var procedencia_aviso = document.getElementById('procedencia_aviso').value;
+			var poliza_aviso = document.getElementById('poliza_aviso').value;
+			var requiere_profesional_aviso = document.getElementById('requiere_profesional_aviso').value;
+			var importe_aviso = document.getElementById('importe_aviso').value;
+			var n_factura_provisinal_aviso = document.getElementById('n_factura_provisinal_aviso').value;
+
+			if(!nota_aviso.length > 0) valida = false; document.getElementById('valida_nota_aviso').innerHTML="<span style='color: red;'>Incorrecto</span>";
+		}
+	</script>
+
 </head>
 <body>
 	<?php include "sidebar.php" ?>
@@ -18,6 +41,7 @@
 				<div class="input_aviso">
 					<label for="nota_aviso">Nota: </label>
 					<textarea id="nota_aviso" name="nota_aviso" placeholder="ej: Se han quedado encerrados... "></textarea>
+					<div id="valida_nota_aviso"></div>
 				</div>
 				<div class="input_aviso">
 					<label for="hora_aviso">Hora: </label>
@@ -99,7 +123,7 @@
 				</div>
 
 				<div class="input_aviso">
-					<input type="submit" name="btn_introducir_aviso" id="btn_introducir_aviso">
+					<input onclick="validaTodo();" type="button" name="btn_introducir_aviso" id="btn_introducir_aviso" value="Añadir">
 				</div>
 				
 			</form>
