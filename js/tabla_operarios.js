@@ -20,6 +20,6 @@ $(document).ready(function() {
         ]
     });
     $("#tabla_operarios tbody").on("click",function(event){
-        location.href = "editarOperario.php?u_=" + event.target.parentNode.cells[0].textContent;
+        location.href = "editarOperario.php?u=" + event.target.parentNode.cells[0].textContent; 
     });
 });

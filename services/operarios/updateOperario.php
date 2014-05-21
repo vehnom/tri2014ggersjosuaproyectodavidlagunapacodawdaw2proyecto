@@ -1,11 +1,14 @@
 <?php
-	session_start();
-	include_once("../myBBDD.php");
-	include_once("../getOperarios.php");
+	include_once("../services/getOperarios.php");
 	$mybd = new myBBDD();
-	$idUsuario = $_GET['u_']; 
-	
-	$_SESSION['operario'] = getOperariosxId($mybd,$idUsuario);
+	if(!isset($_GET['u'])){
+		$idUsuario = $_GET['u']; 
+		echo $idUsuario;
+		$_SESSION['operario'] = getOperariosxId($mybd,$idUsuario);
+	}else{
+		updateDatosOperario($mybd);
+	}
+
 
 	function updateDatosOperario($mybd){
 		$nombre = $_POST['nombre'];

@@ -4,9 +4,8 @@ include_once("myBBDD.php");
 $mybd = new myBBDD();
 
 $array_operarios = getOperarios($mybd);
+
 escribeOperarios($array_operarios);
-
-
 
 function getOperarios($mybd){
 	$query = "SELECT * FROM operarios";
@@ -20,14 +19,12 @@ function getOperarios($mybd){
 	return $array_operarios;
 }
 function getOperariosxId($mybd, $id){
-	$query = "SELECT * FROM operarios WHERE Id_Operario = '$id'";
-	$array_operarios = array();
+	$query = "SELECT * FROM operarios WHERE Id_Operario = ".$id."";
 	$result = $mybd -> consulta($query);
-
-	while($fila = mysql_fetch_assoc($result)){
-		array_push($array_operarios, $fila);
+	if($fila = mysql_fetch_assoc($result)){
+	return $fila;
 	}
-	return $array_operarios;
+		
 }
 
 
