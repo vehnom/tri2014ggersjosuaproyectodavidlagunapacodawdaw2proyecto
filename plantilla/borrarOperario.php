@@ -57,7 +57,7 @@
 	
 <script type="text/javascript">
 	function comprobar(){
-		var borrarOperario = confirm('Realmente desea borra este operario?');
+		var borrarOperario = confirm('¿Realmente desea borra este operario?');
 	
 		if(borrarOperario == true){
 			document.formBorrarEmpleado.submit();
