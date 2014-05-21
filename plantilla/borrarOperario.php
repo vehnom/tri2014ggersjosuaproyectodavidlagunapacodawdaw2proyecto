@@ -3,6 +3,8 @@
 
 	$mybd = new myBBDD();
 	$array_dni = getDniOperarios($mybd);
+	$array_nombre = getNombreOperarios($mybd);
+	$array_apellidos = getApellidoOperarios($mybd);
 
 	function getDniOperarios($mybd){
 		$query = "SELECT DNI FROM operarios";
@@ -14,6 +16,30 @@
 		}
 
 		return $array_dni;
+	}
+	
+	function getNombreOperarios($mybd){
+		$query = "SELECT NOMBRE FROM operarios";
+		$array_nombre = array();
+		$result = $mybd -> consulta($query);
+
+		while($fila = mysql_fetch_assoc($result)){
+			array_push($array_nombre, $fila);
+		}
+
+		return $array_nombre;
+	}
+	
+	function getApellidoOperarios($mybd){
+		$query = "SELECT APELLIDO FROM operarios";
+		$array_apellidos = array();
+		$result = $mybd -> consulta($query);
+
+		while($fila = mysql_fetch_assoc($result)){
+			array_push($array_apellidos, $fila);
+		}
+
+		return $array_apellidos;
 	}
 ?>
 
@@ -28,6 +54,16 @@
 	<script type="text/javascript" src="../js/desplegable.js"></script>
 	<script type="text/javascript" src="../js/script.js"></script>
 	<link href="../metro/min/iconFont.min.css" rel="stylesheet">
+	
+<script type="text/javascript">
+	function comprobar(){
+		var borrarOperario = confirm('Realmente desea borra este operario?');
+	
+		if(borrarOperario == true){
+			document.formBorrarEmpleado.submit();
+		}
+	}
+</script>
 </head>
 <body>
 	<?php include "sidebar.php" ?>
@@ -36,21 +72,21 @@
 			<div class="fila_thumbs">
 				<center>
 					<form action="../services/operarios/deleteOperario.php" method="post" id="formBorrarEmpleado" name="formBorrarEmpleado">
-						<h2 style="font-size:60px; color: #aaa;"> Borrar empleado </h2>
+						<h2 style="font-size:60px; color: #aaa;"> Borrar Operario </h2>
 						<div class="thumb">
 							<p> Listado DNI </p>
 							<select id="listaDni" name="listaDni">
 							<?php
 								for($i = 0; $i < count($array_dni); $i++){	
-									echo "<option value=$array_dni[$i]>" . $array_dni[$i]['DNI'] . "</option>";
+									echo "<option value=" . $array_dni[$i]['DNI'] . " id=" . $array_dni[$i]['DNI'] . " name=" . $array_dni[$i]['DNI'] . ">" . $array_dni[$i]['DNI'] .  " - " . $array_nombre[$i]['NOMBRE'] . " " . $array_apellidos[$i]['APELLIDO'] . "</option>";
 								}								
 							?>
 							</select>
-						
+
 							<br>
 							<br>
 						
-							<input type="submit" id="borrar" name="borrar" value="Borrar Operario"/>
+							<input type="button" id="borrar" name="borrar" value="Borrar Operario" onclick="comprobar();"/>
 						</div>
 					</form>
 				</center>
