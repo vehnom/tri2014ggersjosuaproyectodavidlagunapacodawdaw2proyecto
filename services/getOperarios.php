@@ -19,6 +19,17 @@ function getOperarios($mybd){
 
 	return $array_operarios;
 }
+function getOperariosxId($mybd, $id){
+	$query = "SELECT * FROM operarios WHERE Id_Operario = '$id'";
+	$array_operarios = array();
+	$result = $mybd -> consulta($query);
+
+	while($fila = mysql_fetch_assoc($result)){
+		array_push($array_operarios, $fila);
+	}
+	return $array_operarios;
+}
+
 
 function escribeOperarios($array_operarios){
 	$string_operarios = '';
