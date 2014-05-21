@@ -19,7 +19,7 @@ $(document).ready(function() {
             { "data": "Fecha_Alta"}
         ]
     });
-    $("#tabla_operarios").on("click",function(event){
-        alert(event.target.parentNode.cells[0].textContent);
+    $("#tabla_operarios tbody").on("click",function(event){
+        location.href = "editarOperario.php/" + event.target.parentNode.cells[0].textContent;
     });
 });
