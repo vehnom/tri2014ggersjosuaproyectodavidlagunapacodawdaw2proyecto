@@ -14,7 +14,7 @@
 		<a href="#"><div class="btn_sidebar desp_avisos">AVISOS >></div></a>
 		<div class="sub_menu_desplegable sub_avisos">
 			<a href="avisos.php">Avisos diarios</a>
-			<a href="#">Item 2</a>
+			<a href="nuevoAviso.php">Nuevo aviso</a>
 			<a href="#">Item 3</a>
 			<a href="#">Item 4</a>
 			<a href="#">Item 5</a>

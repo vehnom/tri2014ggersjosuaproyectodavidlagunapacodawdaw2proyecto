@@ -5,6 +5,10 @@ body {
 	font-family: verdana;
 }
 
+:focus{
+	outline: none;
+}
+
 #sideBar {
 	float: left;
 	width: 20%;
@@ -202,4 +206,146 @@ body {
 	padding:10px;
 	margin-bottom:20px;
 	margin-left:40%;
+}
+
+#contenedor_form_nuevo_aviso {
+	width: 96%;
+	margin: 20px 2%;
+	height: auto;
+	background-color: #f3f3f3;
+	display: table;
+	border: 1px solid #ebe9e9;
+}
+
+#form_nuevo_aviso {
+	font-family: verdana;
+	width: 90%;
+	height: auto;
+	margin: 50px 5%;
+}
+
+#form_nuevo_aviso h2{
+	font-size: 30px;
+	color: #333;
+	text-align: center;
+}
+
+.input_aviso {
+	width: 500px;
+}
+
+.input_aviso label {
+	width: 150px;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 12px;
+	font-weight: bold;
+	color: #333;
+}
+
+.input_aviso input[type="text"] {
+	border: 1px solid #ebe9e9;
+	width: 300px;
+	font-family: verdana;
+	font-size: 12px;
+	color: #333;
+	padding: 5px;
+}
+
+.input_aviso input[type="text"]:focus {
+	background-color: #f7f7f7;
+}
+
+.input_aviso input[type="time"] {
+	border: 1px solid #ebe9e9;
+	width: 100px;
+	font-family: verdana;
+	font-size: 12px;
+	color: #333;
+	padding: 5px;
+}
+
+.input_aviso input[type="time"]:focus {
+	background-color: #f7f7f7;
+}
+
+.input_aviso input[type="datetime-local"] {
+	border: 1px solid #ebe9e9;
+	width: 200px;
+	font-family: verdana;
+	font-size: 12px;
+	color: #333;
+	padding: 5px;
+}
+
+.input_aviso input[type="datetime-local"]:focus {
+	background-color: #f7f7f7;
+}
+
+
+
+.input_aviso textarea {
+	border: 1px solid #ebe9e9;
+	width: 300px;
+	height: 150px;
+	font-family: verdana;
+	font-size: 12px;
+	color: #333;
+	padding: 5px;
+}
+
+.input_aviso textarea:focus {
+	background-color: #f7f7f7;
+}
+
+.input_aviso select {
+	border: 1px solid #ebe9e9;
+	width: 150px;
+	height: 35px;
+	font-family: verdana;
+	font-size: 12px;
+	color: #333;
+	padding: 5px;
+}
+
+.input_aviso select option {
+	width: 150px;
+	height: 35px;
+	padding: 5px;
+}
+
+.input_aviso select:focus {
+	background-color: #f7f7f7;
+}
+
+.option_tipo_trabajo_aviso{
+	width: 150px;
+	height: 35px;
+	padding: 5px;
+	min-height: 25px;
+}
+
+.input_aviso input[type="submit"] {
+	width: 200px;
+	font-family: verdana;
+	padding: 5px;
+	background-color: #4873A8;
+	border: 1px solid #3A5F8B;
+	height: 35px;
+	margin-top: 15px;
+	color: #f2f2f2;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px 1px black;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.input_aviso input[type="submit"]:hover {
+	background-color: #7CA3CC;
+}
+
+#importe_aviso {
+	width: 100px !important;
 }

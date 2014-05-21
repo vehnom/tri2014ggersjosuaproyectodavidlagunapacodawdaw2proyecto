@@ -20,6 +20,7 @@
 						<small>Avisos diarios</small>
 					</div>
 				</a>
+				<a href="nuevoAviso.php">
 				<div class="thumb">
 					<h2><i class="icon-pencil"></i></h2>
 					<small>Nuevo Aviso</small>

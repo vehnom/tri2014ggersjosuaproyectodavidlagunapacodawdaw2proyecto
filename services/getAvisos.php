@@ -2,10 +2,14 @@
 include_once("myBBDD.php");
 
 $mybd = new myBBDD();
+$mybd -> conectar();
+	
+actualizaAvisos($mybd);
 
-$array_avisos = getAvisos($mybd);
-escribeAvisos($array_avisos);
-
+function actualizaAvisos($mybd){
+	$array_avisos = getAvisos($mybd);
+	escribeAvisos($array_avisos);
+}
 
 
 function getAvisos($mybd){
