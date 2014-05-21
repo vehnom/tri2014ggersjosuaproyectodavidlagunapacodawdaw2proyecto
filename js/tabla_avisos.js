@@ -3,8 +3,8 @@ $(document).ready(function() {
         "ajax": "../services/avisos.txt",
         "columns": [
             { "data": "Id_Aviso" },
-            { "data": "Id_Pedido" },
-            { "data": "Id_Factura" },
+            //{ "data": "Id_Pedido" },
+            //{ "data": "Id_Factura" },
             { "data": "Nota" },
             { "data": "Quedada_dia" },
             { "data": "Hora" },
@@ -12,8 +12,8 @@ $(document).ready(function() {
             { "data": "Citado_Por" },
             { "data": "Fecha_Entrada" },
             { "data": "Fecha_Visitado" },
-            { "data": "Coord_Longitud" },
-            { "data": "Coord_Latitud" },
+            //{ "data": "Coord_Longitud" },
+            //{ "data": "Coord_Latitud" },
             { "data": "Id_Estado_Aviso"}
         ]
     } );
