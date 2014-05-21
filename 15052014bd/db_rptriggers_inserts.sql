@@ -31,4 +31,3 @@ INSERT INTO `operarios` (`Id_Operario`, `Id_Usuario`, `Nombre`, `Apellido`, `Ape
 (1, 1, 'pepe', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 1', '12345678A', 'asegurado', 'trastorno bipolar', 'demasiado feo', '2014-05-13'),
 (2, 2, 'pepa', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 2', '12345678B', 'sin asegurar', 'buen trabajador', 'demasiado fea', '2014-05-12'),
 (3, 3, 'pepon', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 3', '12345678C', 'asegurado', 'conoce internet', 'increiblemente orrible', '2014-05-14');
-

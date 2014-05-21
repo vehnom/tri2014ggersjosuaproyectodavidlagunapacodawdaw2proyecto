@@ -329,11 +329,11 @@ CREATE TABLE IF NOT EXISTS `niveles_reclamaciones` (
 --
 
 CREATE TABLE IF NOT EXISTS `niveles_usuario` (
-  `Id_Nivel_Usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `Id_Nivel_Usuario` int(11) NOT NULL,
   `Nombre_Nivel` varchar(100) NOT NULL,
   `Descripcion_Nivel` varchar(100) NOT NULL,
   PRIMARY KEY (`Id_Nivel_Usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
