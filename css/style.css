@@ -9,6 +9,13 @@ body {
 	outline: none;
 }
 
+#contenido_prueba {
+	height: auto;
+	margin: 40px;
+}
+
+/* ----- INICIO SIDEBAR ----- */
+
 #sideBar {
 	float: left;
 	width: 20%;
@@ -18,14 +25,6 @@ body {
 	font-family: 'Ubuntu Condensed', sans-serif;
 	border-bottom-right-radius: 5px;
 	padding-bottom: 5px;
-}
-
-#contenido {
-	width: 80%;
-	background-color: #FFF;
-	float: left;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
 }
 
 .btn_sidebar {
@@ -72,11 +71,6 @@ body {
 	text-align: center;
 }
 
-#contenido_prueba {
-	height: auto;
-	margin: 40px;
-}
-
 .primer_btn_sidebar {
 	border-top-right-radius: 5px;
 }
@@ -104,6 +98,18 @@ body {
 .sub_menu_desplegable a:hover{
 	/*text-decoration: underline !important;*/
 	background-color: #222;
+}
+
+/* ----- FIN SIDEBAR ----- */
+
+/* ----- INICIO CONTENIDO Y THUMBS (ICONOS) ----- */
+
+#contenido {
+	width: 80%;
+	background-color: #FFF;
+	float: left;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
 #contenido_thumbs {
@@ -156,46 +162,29 @@ body {
 	display: block;
 }
 
-#tabla_avisos table{
-	
-}
+/* ----- FIN THUMBS (ICONOS) ----- */
 
 
-#formNuevoEmpleado h2{
-	color: #333;
-	font-size: 40px;
-	text-align: center;
+/* ----- INICIO COLUMNAS ----- */
+
+#form_col_izqda {
+	width: 50%;
+	height: auto;
+	float: left;
+	/*background-color: white;*/
 }
 
-#formNuevoEmpleado input{
-	padding:5px;
-	margin-bottom:10px;
+#form_col_dcha {
+	width: 50%;
+	height: auto;
+	float: left;
+	/*background-color: red;*/
 }
 
-#formNuevoEmpleado input[type=submit]{
-	padding:10px;
-	font-size:25px;
-}
+/* ----- FIN COLUMNAS ----- */
 
-#formNuevoEmpleado  textarea{
-	resize:none;
-}
 
-#formNuevoEmpleado .thumb{
-	width:auto !important; 
-	height:auto !important;
-	padding:10px;
-	margin-bottom:20px;
-	margin-left:30%;
-}
-
-#formNuevoEmpleado .thumb2{
-	margin-left:5%;
-}
-
-#formNuevoEmpleado .thumb3{
-	margin-left:40%;
-}
+/* ----- INICIO FORMULARIO BORRAR OPERARIO ----- */
 
 #formBorrarEmpleado input{
 	padding:5px;
@@ -215,7 +204,11 @@ body {
 	margin-left:40%;
 }
 
-#contenedor_form_nuevo_aviso {
+/* ----- FIN FORMULARIO BORRAR OPERARIO ----- */
+
+
+/* ----- INICIO FORMULARIO CONTENEDOR FORMULARIO ----- */
+#contenedor_form {
 	width: 96%;
 	margin: 20px 2%;
 	height: auto;
@@ -224,24 +217,32 @@ body {
 	border: 1px solid #ebe9e9;
 }
 
-#form_nuevo_aviso {
+#contenedor_form h2{
+	font-size: 30px;
+	color: #333;
+	text-align: center;
+}
+
+/* ----- FIN FORMULARIO CONTENEDOR FORMULARIO ----- */
+
+/* ----- INICIO FORMULARIO ----- */
+
+.form{
 	font-family: verdana;
 	width: 90%;
 	height: auto;
 	margin: 50px 5%;
 }
 
-#form_nuevo_aviso h2{
-	font-size: 30px;
-	color: #333;
-	text-align: center;
-}
-
-.input_aviso {
+.form_input {
 	width: 500px;
 }
 
-.input_aviso label {
+.form_input input{
+	padding:5px;
+}
+
+.form_input label {
 	width: 150px;
 	display: inline-block;
 	vertical-align: top;
@@ -250,7 +251,7 @@ body {
 	color: #333;
 }
 
-.input_aviso input[type="text"] {
+.form_input input[type="text"] {
 	border: 1px solid #ebe9e9;
 	width: 300px;
 	font-family: verdana;
@@ -259,11 +260,11 @@ body {
 	padding: 5px;
 }
 
-.input_aviso input[type="text"]:focus {
+.form_input input[type="text"]:focus {
 	background-color: #f7f7f7;
 }
 
-.input_aviso input[type="tel"] {
+.form_input input[type="tel"] {
 	border: 1px solid #ebe9e9;
 	width: 300px;
 	font-family: verdana;
@@ -272,11 +273,11 @@ body {
 	padding: 5px;
 }
 
-.input_aviso input[type="tel"]:focus {
+.form_input input[type="tel"]:focus {
 	background-color: #f7f7f7;
 }
 
-.input_aviso input[type="time"] {
+.form_input input[type="time"] {
 	border: 1px solid #ebe9e9;
 	width: 100px;
 	font-family: verdana;
@@ -285,11 +286,11 @@ body {
 	padding: 5px;
 }
 
-.input_aviso input[type="time"]:focus {
+.form_input input[type="time"]:focus {
 	background-color: #f7f7f7;
 }
 
-.input_aviso input[type="datetime-local"] {
+.form_input input[type="datetime-local"] {
 	border: 1px solid #ebe9e9;
 	width: 200px;
 	font-family: verdana;
@@ -298,13 +299,11 @@ body {
 	padding: 5px;
 }
 
-.input_aviso input[type="datetime-local"]:focus {
+.form_input input[type="datetime-local"]:focus {
 	background-color: #f7f7f7;
 }
 
-
-
-.input_aviso textarea {
+.form_input textarea {
 	border: 1px solid #ebe9e9;
 	width: 300px;
 	height: 150px;
@@ -314,11 +313,11 @@ body {
 	padding: 5px;
 }
 
-.input_aviso textarea:focus {
+.form_input textarea:focus {
 	background-color: #f7f7f7;
 }
 
-.input_aviso select {
+.form_input select {
 	border: 1px solid #ebe9e9;
 	width: 150px;
 	height: 35px;
@@ -328,13 +327,13 @@ body {
 	padding: 5px;
 }
 
-.input_aviso select option {
+.form_input select option {
 	width: 150px;
 	height: 35px;
 	padding: 5px;
 }
 
-.input_aviso select:focus {
+.form_input select:focus {
 	background-color: #f7f7f7;
 }
 
@@ -345,7 +344,7 @@ body {
 	min-height: 25px;
 }
 
-.input_aviso input[type="submit"] {
+.form_input input[type="submit"] {
 	width: 200px;
 	font-family: verdana;
 	padding: 5px;
@@ -362,11 +361,11 @@ body {
 	border-radius: 5px;
 }
 
-.input_aviso input[type="submit"]:hover {
+.form_input input[type="submit"]:hover {
 	background-color: #7CA3CC;
 }
 
-.input_aviso input[type="button"] {
+.form_input input[type="button"] {
 	width: 200px;
 	font-family: verdana;
 	padding: 5px;
@@ -383,10 +382,13 @@ body {
 	border-radius: 5px;
 }
 
-.input_aviso input[type="button"]:hover {
+.form_input input[type="button"]:hover {
 	background-color: #7CA3CC;
 }
 
+/* ----- FIN FORMULARIO ----- */
+
+/* INICIO FORMULARIO NUEVO AVISO */
 #importe_aviso {
 	width: 100px !important;
 }
@@ -395,16 +397,4 @@ body {
 	float: right;
 }
 
-#form_col_izqda {
-	width: 50%;
-	height: auto;
-	float: left;
-	/*background-color: white;*/
-}
-
-#form_col_dcha {
-	width: 50%;
-	height: auto;
-	float: left;
-	/*background-color: red;*/
-}
+/* FIN FORMULARIO NUEVO AVISO */
