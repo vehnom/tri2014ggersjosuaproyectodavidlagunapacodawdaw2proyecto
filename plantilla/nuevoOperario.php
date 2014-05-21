@@ -43,9 +43,6 @@
 								<label for="telefono2">Telefono secundario: </label>
 								<input style="width: 200px;" type="tel" id="telefono2" name="telefono2" placeholder="Telefono secundario" maxlength="9" required onkeypress="return numeroTelefono(event);"/>
 							</div>
-
-						</div>
-						<div id="form_col_dcha">
 							<div class="input_aviso">
 								<label for="direccion">Direccion: </label>
 								<input type="text" id="direccion" name="direccion" placeholder="Direccion" required/>
@@ -54,6 +51,9 @@
 								<label for="dni">DNI: </label>
 								<input type="text" id="dni" name="dni" placeholder="DNI" maxlength="9" required onBlur="validarDNI(document.getElementById('dni').value);"/>
 							</div>
+						</div>
+						
+						<div id="form_col_dcha">
 							<div class="input_aviso">
 								<label for="ss">Nº Seguridad Social: </label>
 								<input type="text" id="ss" name="ss" placeholder="Seg. Social" required/>
