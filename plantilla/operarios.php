@@ -17,25 +17,25 @@
 				<a href="tablaOperarios.php">
 					<div class="thumb">
 						<h2><i class="icon-search"></i></h2>
-						<small>Consultar empleados</small>
+						<small>Ver Operarios</small>
 					</div>
 				</a>
 				<a href="nuevoOperario.php">
 					<div class="thumb">
 						<h2><i class="icon-user-2"></i></h2>
-						<small>Nuevo empleado</small>
+						<small>Nuevo Operario</small>
 					</div>
 				</a>
 				<a href="editarOperario.php">
 					<div class="thumb">
 						<h2><i class="icon-pencil"></i></h2>
-						<small>Editar empleado</small>
+						<small>Editar Operario</small>
 					</div>
 				</a>
 				<a href="borrarOperario.php">
 				<div class="thumb">
 					<h2><i class="icon-remove"></i></h2>
-					<small>Borrar empleado</small>
+					<small>Borrar Operario</small>
 				</div>
 				</a>
 			</div>
