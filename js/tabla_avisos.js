@@ -16,5 +16,6 @@ $(document).ready(function() {
             //{ "data": "Coord_Latitud" },
             { "data": "Id_Estado_Aviso"}
         ]
-    } );
-} );
+    });
+});
+

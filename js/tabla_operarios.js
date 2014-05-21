@@ -1,6 +1,8 @@
 $(document).ready(function() {
     $('#tabla_operarios').dataTable( {
         "ajax": "../services/empleados.txt",
+        "bFilter": false,
+        "scrollX": true,
         "columns": [
             { "data": "Id_Operario" },
             { "data": "Id_Usuario" },
@@ -16,5 +18,8 @@ $(document).ready(function() {
             { "data": "Foto" },
             { "data": "Fecha_Alta"}
         ]
-    } );
-} );
+    });
+    $("#tabla_operarios").on("click",function(event){
+        alert(event.target.parentNode.cells[0].textContent);
+    });
+});

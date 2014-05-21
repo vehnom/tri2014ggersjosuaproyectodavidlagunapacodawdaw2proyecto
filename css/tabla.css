@@ -21,6 +21,9 @@ table.dataTable thead th,
 table.dataTable tfoot th {
   font-weight: bold;
 }
+table.dataTable tfoot th {
+  font-weight: bold;
+} 
 table.dataTable thead th,
 table.dataTable thead td {
   padding: 10px 18px;
@@ -34,6 +37,12 @@ table.dataTable tfoot th,
 table.dataTable tfoot td {
   padding: 10px 18px 6px 18px;
   border-top: 1px solid #111111;
+}
+table.dataTable tfoot th{
+  display:none;
+} 
+table.dataTable{
+  border-bottom: 1px solid #111111;
 }
 table.dataTable thead .sorting_asc,
 table.dataTable thead .sorting_desc,
