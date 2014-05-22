@@ -14,7 +14,7 @@
 	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenedor_form">
-			<form class="form" id="form_nuevo_operario" action="../services/operarios/insertOperario.php" method="post" >
+			<form class="form" id="form_nuevo_operario" action="../services/operarios/insertOperario.php" method="post">
 				<h2> Crear operario </h2>
 				<div id="form_col_izqda">
 					<div class="form_input">
@@ -81,7 +81,7 @@
 				</div>
 				
 				<div class="form_input">
-					<input onclick="validaTodo();" type="button" name="btn_introducir_aviso" id="btn_introducir_aviso" value="Añadir" onClick="validarDNI(document.getElementById('dni').value);">
+					<input onclick="validaTodo();" type="button" name="btn_introducir_operario" id="btn_introducir_operario" value="Añadir" onClick="validarDNI(document.getElementById('dni').value);">
 				</div>
 			</form>
 		</div>
