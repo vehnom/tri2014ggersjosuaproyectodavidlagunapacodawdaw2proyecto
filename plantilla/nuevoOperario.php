@@ -19,7 +19,7 @@
 				<div id="form_col_izqda">
 					<div class="form_input">
 						<label for="idUsuario">Id Usuario: </label>
-						<input style="width: 100px;" type="text" id="idUsuario" name="idUsuario" placeholder="Id usuario" required/>
+						<input type="text" id="idUsuario" name="idUsuario" placeholder="Id usuario" required/>
 					</div>
 			
 					<div class="form_input">

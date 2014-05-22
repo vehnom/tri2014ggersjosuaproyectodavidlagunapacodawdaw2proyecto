@@ -15,7 +15,6 @@
 
 
 		function conectar(){
-
 			$this -> link = mysql_connect($this -> host, $this -> user, $this -> password);
 			@mysql_select_db($this -> database, $this -> link);
 		}

@@ -240,6 +240,7 @@ body {
 
 .form_input input{
 	padding:5px;
+	width: 40%;
 }
 
 .form_input label {
@@ -253,7 +254,7 @@ body {
 
 .form_input input[type="text"] {
 	border: 1px solid #ebe9e9;
-	width: 300px;
+	width: 40%;
 	font-family: verdana;
 	font-size: 12px;
 	color: #333;
@@ -266,7 +267,7 @@ body {
 
 .form_input input[type="tel"] {
 	border: 1px solid #ebe9e9;
-	width: 300px;
+	width: 40%;
 	font-family: verdana;
 	font-size: 12px;
 	color: #333;
@@ -279,7 +280,7 @@ body {
 
 .form_input input[type="time"] {
 	border: 1px solid #ebe9e9;
-	width: 100px;
+	width: 40%;
 	font-family: verdana;
 	font-size: 12px;
 	color: #333;
@@ -292,7 +293,7 @@ body {
 
 .form_input input[type="datetime-local"] {
 	border: 1px solid #ebe9e9;
-	width: 200px;
+	width: 40%;
 	font-family: verdana;
 	font-size: 12px;
 	color: #333;
@@ -305,7 +306,7 @@ body {
 
 .form_input textarea {
 	border: 1px solid #ebe9e9;
-	width: 300px;
+	width: 40%;
 	height: 150px;
 	font-family: verdana;
 	font-size: 12px;
@@ -319,7 +320,7 @@ body {
 
 .form_input select {
 	border: 1px solid #ebe9e9;
-	width: 150px;
+	width: 40%;
 	height: 35px;
 	font-family: verdana;
 	font-size: 12px;

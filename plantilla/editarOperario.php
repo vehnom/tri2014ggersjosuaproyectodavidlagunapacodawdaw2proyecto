@@ -1,5 +1,7 @@
 <?php 
 	session_start();
+	//include("../services/operarios/SeditarOperario.php");
+
 ?>
 <!doctype html>
 <html lang="es-ES">
@@ -17,12 +19,12 @@
 	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenedor_form">
-			<form class="form" id="form_editar_operario" action="../services/operarios/updateOperario.php" method="post">
+			<form class="form" id="form_editar_operario" action="../services/operarios/SeditarOperario.php?s=1" method="post">
 				<h2> Editar operario </h2>
 				<div id="form_col_izqda">
 					<div class="form_input">
 						<label for="idUsuario">Id Usuario: </label>
-						<input style="width: 100px;" type="text" id="idUsuario" name="idUsuario" placeholder="Id usuario" value="<?php echo $_SESSION['operario']['Id_Operario']; ?>" disabled/>
+						<input type="text" id="idUsuario" name="idUsuario" placeholder="Id usuario" value="<?php echo $_SESSION['operario']['Id_Operario']; ?>" disabled/>
 					</div>
 			
 					<div class="form_input">
