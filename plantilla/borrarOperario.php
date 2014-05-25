@@ -60,7 +60,7 @@
 		var borrarOperario = confirm('¿Realmente desea borra este operario?');
 	
 		if(borrarOperario == true){
-			document.formBorrarEmpleado.submit();
+			document.formBorrar.submit();
 		}
 	}
 </script>
@@ -71,7 +71,7 @@
 		<div id="contenido_thumbs">
 			<div class="fila_thumbs">
 				<center>
-					<form action="../services/operarios/deleteOperario.php" method="post" id="formBorrarEmpleado" name="formBorrarEmpleado">
+					<form action="../services/operarios/deleteOperario.php" method="post" id="formBorrar" name="formBorrar">
 						<h2 style="font-size:60px; color: #aaa;"> Borrar Operario </h2>
 						<div class="thumb">
 							<p> Listado DNI </p>

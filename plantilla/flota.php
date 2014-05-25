@@ -14,36 +14,30 @@
 	<div id="contenido">
 		<div id="contenido_thumbs">
 			<div class="fila_thumbs">
-				<a href="avisos.php">
+				<a href="tablaFlota.php">
 					<div class="thumb">
-						<h2><i class="icon-clipboard-2"></i></h2>
-						<small>Avisos diarios</small>
+						<h2><i class="icon-search"></i></h2>
+						<small>Ver Veh&iacute;culos</small>
 					</div>
 				</a>
-				
-				<a href="nuevoAviso.php">
+				<a href="nuevoVehiculo.php">
+					<div class="thumb">
+						<h2><i class="icon-steering-wheel"></i></h2>
+						<small>Nuevo Veh&iacute;culo</small>
+					</div>
+				</a>
+				<a href="editarVehiculo.php">
 					<div class="thumb">
 						<h2><i class="icon-pencil"></i></h2>
-						<small>Nuevo Aviso</small>
+						<small>Editar Veh&iacute;culo</small>
 					</div>
 				</a>
-				
+				<a href="borrarVehiculo.php">
 				<div class="thumb">
-					<h2><i class="icon-file"></i></h2>
-					<small>Presupuestos</small>
+					<h2><i class="icon-remove"></i></h2>
+					<small>Borrar Veh&iacute;culo</small>
 				</div>
-
-				<a href="flota.php">
-					<div class="thumb">
-						<h2><i class="icon-cars"></i></h2>
-						<small>Flota Veh&iacute;culos</small>
-					</div>
 				</a>
-				
-				<div class="thumb">
-					<h2><i class="icon-clipboard-2"></i></h2>
-					<small>Avisos diarios</small>
-				</div>
 			</div>
 		</div>
 	</div>

@@ -181,22 +181,28 @@ body {
 	/*background-color: red;*/
 }
 
+#form_col_center{
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
 /* ----- FIN COLUMNAS ----- */
 
 
 /* ----- INICIO FORMULARIO BORRAR OPERARIO ----- */
 
-#formBorrarEmpleado input{
+#formBorrar input{
 	padding:5px;
 	margin-bottom:10px;
 }
 
-#formBorrarEmpleado input[type=submit]{
+#formBorrar input[type=submit]{
 	padding:10px;
 	font-size:25px;
 }
 
-#formBorrarEmpleado .thumb{
+#formBorrar .thumb{
 	width:auto !important; 
 	height:auto !important;
 	padding:10px;
