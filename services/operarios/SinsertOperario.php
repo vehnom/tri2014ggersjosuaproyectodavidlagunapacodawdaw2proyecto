@@ -6,5 +6,5 @@
 
 	insertDatosOperarioForm($mybd);
 
-	header('Location: ../../plantilla/nuevoOperario.php'); 
+	header('Location: ../../plantilla/tablaOperario.php'); 
 ?>

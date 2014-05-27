@@ -3,8 +3,10 @@
 	include_once("../myBBDD.php");
 	$mybd = new myBBDD();
 	include("../../modelo/MOperarios.php");
-	$decision = $_POST['hideOperario'];
-	
+	$decision = "0";
+	if(isset($_POST['hideOperario'])){
+		$decision = $_POST['hideOperario'];
+	}
 	switch($decision){
 		case "1":
 			$idUsuario = $_POST['idUsuario'];

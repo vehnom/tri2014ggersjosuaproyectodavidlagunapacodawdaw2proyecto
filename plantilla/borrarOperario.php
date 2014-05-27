@@ -1,48 +1,7 @@
-<?php
-	include_once("../services/myBBDD.php");
-
-	$mybd = new myBBDD();
-	$array_dni = getDniOperarios($mybd);
-	$array_nombre = getNombreOperarios($mybd);
-	$array_apellidos = getApellidoOperarios($mybd);
-
-	function getDniOperarios($mybd){
-		$query = "SELECT DNI FROM operarios";
-		$array_dni = array();
-		$result = $mybd -> consulta($query);
-
-		while($fila = mysql_fetch_assoc($result)){
-			array_push($array_dni, $fila);
-		}
-
-		return $array_dni;
-	}
-	
-	function getNombreOperarios($mybd){
-		$query = "SELECT NOMBRE FROM operarios";
-		$array_nombre = array();
-		$result = $mybd -> consulta($query);
-
-		while($fila = mysql_fetch_assoc($result)){
-			array_push($array_nombre, $fila);
-		}
-
-		return $array_nombre;
-	}
-	
-	function getApellidoOperarios($mybd){
-		$query = "SELECT APELLIDO FROM operarios";
-		$array_apellidos = array();
-		$result = $mybd -> consulta($query);
-
-		while($fila = mysql_fetch_assoc($result)){
-			array_push($array_apellidos, $fila);
-		}
-
-		return $array_apellidos;
-	}
+<?php 
+	session_start();
+	include("../services/operarios/SdeleteOperario.php");
 ?>
-
 <!doctype html>
 <html lang="es-ES">
 <head>
@@ -58,11 +17,17 @@
 <script type="text/javascript">
 	function comprobar(){
 		var borrarOperario = confirm('¿Realmente desea borra este operario?');
-	
 		if(borrarOperario == true){
 			document.formBorrar.submit();
+		}else{
+			$("#hideOperario").val("0");
 		}
 	}
+	$(document).ready(function(){
+		$("#btn_editar_operario").on("click", function(){
+			$("#hideOperario").val("1");
+		});
+	});
 </script>
 </head>
 <body>
@@ -71,14 +36,16 @@
 		<div id="contenido_thumbs">
 			<div class="fila_thumbs">
 				<center>
-					<form action="../services/operarios/deleteOperario.php" method="post" id="formBorrar" name="formBorrar">
+					<form action="../services/operarios/SdeleteOperario.php" method="post" id="formBorrar" name="formBorrar">
+						<input type="hidden" id="hideOperario" name="hideOperario" value="0">
 						<h2 style="font-size:60px; color: #aaa;"> Borrar Operario </h2>
 						<div class="thumb">
 							<p> Listado DNI </p>
 							<select id="listaDni" name="listaDni">
 							<?php
-								for($i = 0; $i < count($array_dni); $i++){	
-									echo "<option value=" . $array_dni[$i]['DNI'] . " id=" . $array_dni[$i]['DNI'] . " name=" . $array_dni[$i]['DNI'] . ">" . $array_dni[$i]['DNI'] .  " - " . $array_nombre[$i]['NOMBRE'] . " " . $array_apellidos[$i]['APELLIDO'] . "</option>";
+
+								for($i = 0; $i < count($_SESSION['operarios2']); $i++){	
+									echo "<option value='" . $_SESSION['operarios2'][$i]["Id_Usuario"] . "'>" . $_SESSION['operarios2'][$i]["Nombre"] . " " . $_SESSION['operarios2'][$i]["Apellido"] . "</option>";
 								}								
 							?>
 							</select>
