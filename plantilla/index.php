@@ -1,3 +1,6 @@
+<?php
+	include("../helpers/CRaiz.php");
+?>
 <!doctype html>
 <html lang="es-ES">
 <head>

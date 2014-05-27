@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	include("../services/operarios/SdeleteOperario.php");
+	include($_SESSION[".."]."/services/operarios/SdeleteOperario.php");
 ?>
 <!doctype html>
 <html lang="es-ES">
@@ -24,7 +24,7 @@
 		}
 	}
 	$(document).ready(function(){
-		$("#btn_editar_operario").on("click", function(){
+		$("#borrar").on("click", function(){
 			$("#hideOperario").val("1");
 		});
 	});

@@ -1,6 +1,5 @@
 <?php 
 	session_start();
-	//include("../services/operarios/SeditarOperario.php");
 ?>
 <!doctype html>
 <html lang="es-ES">

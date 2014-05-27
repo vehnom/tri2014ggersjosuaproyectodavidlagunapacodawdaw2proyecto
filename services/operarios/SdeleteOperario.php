@@ -1,7 +1,8 @@
 <?php
-	include_once("../services/myBBDD.php");
+echo $_SESSION[".."];
+	include_once($_SESSION[".."]."/services/myBBDD.php");
 	$mybd = new myBBDD();
-	include("../modelo/MOperarios.php");
+	include($_SESSION[".."]."/modelo/MOperarios.php");
 	$decision = "0";
 	if(isset($_POST['hideOperario'])){
 		$decision = $_POST['hideOperario'];
