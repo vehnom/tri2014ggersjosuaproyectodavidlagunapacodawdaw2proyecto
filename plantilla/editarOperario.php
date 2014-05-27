@@ -14,14 +14,22 @@
 	<script type="text/javascript" src="../js/desplegable.js"></script>
 	<script type="text/javascript" src="../js/script.js"></script>
 	<link href="../metro/min/iconFont.min.css" rel="stylesheet">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#hideOperario").on("click", function(){
+				$("#hideOperario").val("1");
+			});
+		});
+	</script>
 </head>
 <body>
 	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenedor_form">
-			<form class="form" id="form_editar_operario" action="../services/operarios/SeditarOperario.php?s=1" method="post">
+			<form class="form" id="form_editar_operario" action="../services/operarios/SeditarOperario.php" method="post">
 				<h2> Editar operario </h2>
 				<div id="form_col_izqda">
+					<input type="hidden" id="hideOperario" name="hideOperario" value="0">
 					<div class="form_input">
 						<label for="idUsuario">Id Usuario: </label>
 						<input type="text" id="idUsuario" name="idUsuario" placeholder="Id usuario" value="<?php echo $_SESSION['operario']['Id_Operario']; ?>" disabled/>
@@ -39,17 +47,17 @@
 					
 					<div class="form_input">
 						<label for="apellido2">Segundo apellido: </label>
-						<input style="width: 200px;" type="text" id="apellido2" name="apellido2" placeholder="Segundo apellido" value="<?php echo $_SESSION['operario']['Apellido2']; ?>" required/> <br>
+						<input style="width: 200px;" type="text" id="apellido2" name="apellido2" placeholder="Segundo apellido" value="<?php echo $_SESSION['operario']['Apellido2']; ?>"/> <br>
 					</div>
 
 					<div class="form_input">
 						<label for="telefono1">Telefono principal: </label>
-						<input style="width: 200px;" type="tel" id="telefono1" name="telefono1" placeholder="Telefono principal" maxlength="9" value="<?php echo $_SESSION['operario']['Telefono']; ?>" required onkeypress="return numeroTelefono(event);"/>
+						<input style="width: 200px;" type="tel" id="telefono1" name="telefono1" placeholder="Telefono principal" maxlength="9" value="<?php echo $_SESSION['operario']['Telefono']; ?>" onkeypress="return numeroTelefono(event);" required/>
 					</div>
 
 					<div class="form_input">
 						<label for="telefono2">Telefono secundario: </label>
-						<input style="width: 200px;" type="tel" id="telefono2" name="telefono2" placeholder="Telefono secundario" maxlength="9" value="<?php echo $_SESSION['operario']['Telefono2']; ?>" required onkeypress="return numeroTelefono(event);"/>
+						<input style="width: 200px;" type="tel" id="telefono2" name="telefono2" placeholder="Telefono secundario" maxlength="9" value="<?php echo $_SESSION['operario']['Telefono2']; ?>" onkeypress="return numeroTelefono(event);"/>
 					</div>
 
 					<div class="form_input">
@@ -71,12 +79,12 @@
 					
 					<div class="form_input">
 						<label for="observaciones">Observaciones: </label>
-						<textarea id="observaciones" name="observaciones" placeholder="Observaciones" required no-rezize><?php echo $_SESSION['operario']['Observacion']; ?></textarea>
+						<textarea id="observaciones" name="observaciones" placeholder="Observaciones" no-rezize><?php echo $_SESSION['operario']['Observacion']; ?></textarea>
 					</div>
 					
 					<div class="form_input">
 						<label for="foto">Foto: </label>
-						<input type="file" id="foto" name="foto" placeholder="Foto" value="<?php echo $_SESSION['operario']['Foto']; ?>" required/>
+						<input type="file" id="foto" name="foto" placeholder="Foto" value="<?php echo $_SESSION['operario']['Foto']; ?>"/>
 					</div>
 
 					<div class="form_input">
