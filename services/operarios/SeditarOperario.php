@@ -20,6 +20,7 @@
 			$foto = $_POST['foto'];
 			$fecha = $_POST['fecha'];
 			updateDatosOperario($mybd,$idUsuario,$nombre,$apellido1,$apellido2,$telefono1,$telefono2,$direccion,$dni,$ss,$observaciones,$foto,$fecha);
+			header('Location: ../../plantilla/tablaOperarios.php');
 		break;
 		default:
 			$idUsuario = $_GET['u']; 

@@ -16,7 +16,7 @@
 	<link href="../metro/min/iconFont.min.css" rel="stylesheet">
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#hideOperario").on("click", function(){
+			$("#btn_editar_operario").on("click", function(){
 				$("#hideOperario").val("1");
 			});
 		});
@@ -32,7 +32,7 @@
 					<input type="hidden" id="hideOperario" name="hideOperario" value="0">
 					<div class="form_input">
 						<label for="idUsuario">Id Usuario: </label>
-						<input type="text" id="idUsuario" name="idUsuario" placeholder="Id usuario" value="<?php echo $_SESSION['operario']['Id_Operario']; ?>" disabled/>
+						<input type="text" id="idUsuario" name="idUsuario" placeholder="Id usuario" value="<?php echo $_SESSION['operario']['Id_Operario']; ?>"/>
 					</div>
 			
 					<div class="form_input">
@@ -84,7 +84,7 @@
 					
 					<div class="form_input">
 						<label for="foto">Foto: </label>
-						<input type="file" id="foto" name="foto" placeholder="Foto" value="<?php echo $_SESSION['operario']['Foto']; ?>"/>
+						<input type="text" id="foto" name="foto" placeholder="Foto" value="<?php echo $_SESSION['operario']['Foto']; ?>"/>
 					</div>
 
 					<div class="form_input">
