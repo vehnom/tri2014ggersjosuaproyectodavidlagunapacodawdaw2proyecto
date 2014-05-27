@@ -1,3 +1,7 @@
+<?php
+    include_once "../services/operarios/getOperarios.php";
+    
+?>
 <!doctype html>
 <html lang="es-ES">
 <head>

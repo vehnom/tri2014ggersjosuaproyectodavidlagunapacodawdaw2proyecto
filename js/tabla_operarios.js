@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#tabla_operarios').dataTable( {
-        "ajax": "../services/empleados.txt",
+        "ajax": "../services/operarios/operarios.txt",
         "bFilter": false,
         "scrollX": true,
         "columns": [

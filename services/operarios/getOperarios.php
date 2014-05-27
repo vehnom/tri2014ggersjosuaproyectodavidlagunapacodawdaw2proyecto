@@ -1,9 +1,9 @@
 <?php
-include("../myBBDD.php");
+include_once("../services/myBBDD.php");
 
 $mybd = new myBBDD();
 
-//actualizaOperarios($mybd);
+actualizaOperarios($mybd);
 
 function actualizaOperarios($mybd){
 	$array_operarios = getOperarios($mybd);
@@ -40,7 +40,6 @@ function escribeOperarios($array_operarios){
 
 
 	for($i = 0; $i < count($array_operarios); $i++){
-		//echo  $array_operarios[$i]['Id_Aviso'] . " " . $array_operarios[$i]['Nota'] . "<br />";
 		$string_operarios .= '{';
 		$string_operarios .=  '"Id_Operario":' . $array_operarios[$i]['Id_Operario'] . ',';
 		$string_operarios .=  '"Id_Usuario":' . $array_operarios[$i]['Id_Usuario'] . ',';
@@ -48,7 +47,7 @@ function escribeOperarios($array_operarios){
 		$string_operarios .=  '"Apellido":' . '"' . $array_operarios[$i]['Apellido'] . '"' . ',';
 		$string_operarios .=  '"Apellido2":' . '"' . $array_operarios[$i]['Apellido2'] . '"' . ',';
 		$string_operarios .=  '"Telefono":' . '"' . $array_operarios[$i]['Telefono'] . '"' . ',';
-				if($array_operarios[$i]['Telefono2'] != NULL){
+		if($array_operarios[$i]['Telefono2'] != NULL){
 			$string_operarios .=  '"Telefono2":' . '"' . $array_operarios[$i]['Telefono2'] . '"' . ',';
 		} else {
 			$string_operarios .=  '"Telefono2":' . '" "' . ',';
@@ -72,7 +71,7 @@ function escribeOperarios($array_operarios){
 	//echo $string_operarios;
 	//$string_prueba = "jejeje";
 	//Escribir en un archivo una nueva línea
-	$fp = fopen("empleados.txt", "w+");
+	$fp = fopen("../services/operarios/operarios.txt", "w+");
 	fwrite($fp, $string_operarios);
 	fclose($fp);
 	

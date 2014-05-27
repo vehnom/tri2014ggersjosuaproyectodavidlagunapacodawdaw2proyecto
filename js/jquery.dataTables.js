@@ -10708,7 +10708,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Mostrados del aviso _START_ al _END_ de _TOTAL_ avisos",
+			"sInfo": "Mostradas de la entrada _START_ a la _END_ de _TOTAL_ entradas",
 	
 	
 			/**

@@ -2,7 +2,6 @@
 include_once("myBBDD.php");
 
 $mybd = new myBBDD();
-$mybd -> conectar();
 	
 actualizaAvisos($mybd);
 
