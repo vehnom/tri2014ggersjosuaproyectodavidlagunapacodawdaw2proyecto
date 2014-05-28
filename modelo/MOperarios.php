@@ -17,8 +17,8 @@
 		}
 			
 	}
-	function deleteDatosOperarioxDNI($mybd, $dni){
-		$query = "DELETE FROM operarios WHERE DNI='$dni'";
+	function deleteDatosOperarioxId($mybd, $id){
+		$query = "DELETE FROM operarios WHERE Id_Usuario='$id'";
 		$result = $mybd -> delete($query);	
 	}
 

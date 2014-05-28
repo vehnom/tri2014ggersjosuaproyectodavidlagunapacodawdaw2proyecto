@@ -18,16 +18,12 @@
 	function comprobar(){
 		var borrarOperario = confirm('¿Realmente desea borra este operario?');
 		if(borrarOperario == true){
+			$("#hideOperario").val("1");
 			document.formBorrar.submit();
 		}else{
 			$("#hideOperario").val("0");
 		}
 	}
-	$(document).ready(function(){
-		$("#borrar").on("click", function(){
-			$("#hideOperario").val("1");
-		});
-	});
 </script>
 </head>
 <body>
@@ -36,12 +32,12 @@
 		<div id="contenido_thumbs">
 			<div class="fila_thumbs">
 				<center>
-					<form action="../services/operarios/SdeleteOperario.php" method="post" id="formBorrar" name="formBorrar">
+					<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="formBorrar" name="formBorrar">
 						<input type="hidden" id="hideOperario" name="hideOperario" value="0">
 						<h2 style="font-size:60px; color: #aaa;"> Borrar Operario </h2>
 						<div class="thumb">
-							<p> Listado DNI </p>
-							<select id="listaDni" name="listaDni">
+							<p> Listado Operarios </p>
+							<select id="listaId" name="listaId">
 							<?php
 
 								for($i = 0; $i < count($_SESSION['operarios2']); $i++){	
