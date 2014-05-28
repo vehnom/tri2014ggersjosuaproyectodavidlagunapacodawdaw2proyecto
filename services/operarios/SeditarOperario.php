@@ -25,8 +25,8 @@
 			header('Location: ../../plantilla/tablaOperarios.php');
 		break;
 		default:
-			$idUsuario = $_GET['u']; 
-			$_SESSION['operario'] = getOperariosxId($mybd,$idUsuario);
-			header('Location: ../../plantilla/editarOperario.php?u='.$idUsuario);
+			$idOperario = $_GET['u']; 
+			$_SESSION['operario'] = getOperariosxId($mybd,$idOperario);
+			header('Location: ../../plantilla/editarOperario.php?u='.$idOperario);
 	}
 ?>

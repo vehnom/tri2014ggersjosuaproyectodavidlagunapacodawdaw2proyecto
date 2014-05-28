@@ -20,4 +20,5 @@
 			<a href="#">Item 5</a>
 		</div>
 		<a href="operarios.php"><div class="btn_sidebar ultimo_btn_sidebar">OPERARIOS</div></a>
+		<a href="proveedores.php"><div class="btn_sidebar ultimo_btn_sidebar">PROVEEDORES</div></a>
 </div>
