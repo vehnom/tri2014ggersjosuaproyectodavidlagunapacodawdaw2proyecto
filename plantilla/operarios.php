@@ -26,12 +26,12 @@
 						<small>Nuevo Operario</small>
 					</div>
 				</a>
-				<a href="editarOperario.php">
+				<!--<a href="editarOperario.php">
 					<div class="thumb">
 						<h2><i class="icon-pencil"></i></h2>
 						<small>Editar Operario</small>
 					</div>
-				</a>
+				</a>-->
 				<a href="borrarOperario.php">
 				<div class="thumb">
 					<h2><i class="icon-remove"></i></h2>

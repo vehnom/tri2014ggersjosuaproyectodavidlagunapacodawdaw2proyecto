@@ -1,10 +1,10 @@
 <?php
 	session_start();
-	include_once("../myBBDD.php");
+	include_once($_SESSION[".."]."/services/myBBDD.php");
 	$mybd = new myBBDD();
-	include("../../modelo/MOperarios.php");
+	include($_SESSION[".."]."/modelo/MOperarios.php");
 
 	insertDatosOperarioForm($mybd);
 
-	header('Location: ../../plantilla/tablaOperario.php'); 
+	header('Location: ../../plantilla/tablaOperarios.php'); 
 ?>

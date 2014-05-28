@@ -42,7 +42,11 @@ function escribeOperarios($array_operarios){
 	for($i = 0; $i < count($array_operarios); $i++){
 		$string_operarios .= '{';
 		$string_operarios .=  '"Id_Operario":' . $array_operarios[$i]['Id_Operario'] . ',';
-		$string_operarios .=  '"Id_Usuario":' . $array_operarios[$i]['Id_Usuario'] . ',';
+		if($array_operarios[$i]['Id_Usuario'] != NULL){
+			$string_operarios .=  '"Id_Usuario":' . $array_operarios[$i]['Id_Usuario'] . ',';
+		}else{
+			$string_operarios .=  '"Id_Usuario":' . '" "' . ',';
+		}
 		$string_operarios .=  '"Nombre":' . '"' . $array_operarios[$i]['Nombre'] . '"' . ',';
 		$string_operarios .=  '"Apellido":' . '"' . $array_operarios[$i]['Apellido'] . '"' . ',';
 		$string_operarios .=  '"Apellido2":' . '"' . $array_operarios[$i]['Apellido2'] . '"' . ',';

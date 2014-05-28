@@ -10,9 +10,7 @@
 		case "1":
 			$Id = $_POST['listaId'];
 			deleteDatosOperarioxId($mybd, $Id);
-			echo 'Location: '.$_SESSION[".."].'/plantilla/tablaOperarios.php';
-			header('Location: '.$_SESSION[".."].'/plantilla/tablaOperarios.php');
-
+			header('Location: tablaOperarios.php');
 		break;
 		default:
 			$_SESSION['operarios2'] = getOperarios($mybd);

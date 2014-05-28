@@ -18,12 +18,11 @@
 			
 	}
 	function deleteDatosOperarioxId($mybd, $id){
-		$query = "DELETE FROM operarios WHERE Id_Usuario='$id'";
+		$query = "DELETE FROM operarios WHERE Id_Operario='$id'";
 		$result = $mybd -> delete($query);	
 	}
 
 	function insertDatosOperarioForm($mybd){
-		$idUsuario = $_POST['idUsuario']; 
 		$nombre = $_POST['nombre'];
 		$apellido1 = $_POST['apellido1'];
 		$apellido2 = $_POST['apellido2'];
@@ -36,13 +35,14 @@
 		$foto = $_POST['foto'];
 		$fecha = $_POST['fecha'];
 		
-		$query = "INSERT INTO operarios (Id_Usuario, Nombre, Apellido, Apellido2, Telefono, Telefono2, Direccion, DNI, Seg_Social, Observacion, Foto, Fecha_Alta) VALUES
-		(1, '$nombre', '$apellido1', '$apellido2', '$telefono1', '$telefono2', '$direccion', '$dni', '$ss', '$observaciones', '$foto', '$fecha')";
+		$query = "INSERT INTO operarios (Nombre, Apellido, Apellido2, Telefono, Telefono2, Direccion, DNI, Seg_Social, Observacion, Foto, Fecha_Alta) VALUES
+		('$nombre', '$apellido1', '$apellido2', '$telefono1', '$telefono2', '$direccion', '$dni', '$ss', '$observaciones', '$foto', '$fecha')";
 		
 		$result = $mybd -> insert($query);
 	}
-	function updateDatosOperario($mybd,$idUsuario,$nombre,$apellido1,$apellido2,$telefono1,$telefono2,$direccion,$dni,$ss,$observaciones,$foto,$fecha){
-		$query = "UPDATE operarios SET Nombre = '$nombre', Apellido = '$apellido1', Apellido2 = '$apellido2', Telefono = '$telefono1', Telefono2 = '$telefono2', Direccion = '$direccion', DNI = '$dni', Seg_Social = '$ss', Observacion = '$observaciones', Foto = '$foto', Fecha_Alta  = '$fecha' WHERE Id_Usuario = '$idUsuario'";
+
+	function updateDatosOperario($mybd,$idOperario,$nombre,$apellido1,$apellido2,$telefono1,$telefono2,$direccion,$dni,$ss,$observaciones,$foto,$fecha){
+		$query = "UPDATE operarios SET Nombre = '$nombre', Apellido = '$apellido1', Apellido2 = '$apellido2', Telefono = '$telefono1', Telefono2 = '$telefono2', Direccion = '$direccion', DNI = '$dni', Seg_Social = '$ss', Observacion = '$observaciones', Foto = '$foto', Fecha_Alta  = '$fecha' WHERE Id_Operario = '$idOperario'";
 		$result = $mybd -> update($query);		
 	}
 ?>

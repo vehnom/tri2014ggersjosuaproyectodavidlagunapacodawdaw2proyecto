@@ -41,7 +41,7 @@
 							<?php
 
 								for($i = 0; $i < count($_SESSION['operarios2']); $i++){	
-									echo "<option value='" . $_SESSION['operarios2'][$i]["Id_Usuario"] . "'>" . $_SESSION['operarios2'][$i]["Nombre"] . " " . $_SESSION['operarios2'][$i]["Apellido"] . "</option>";
+									echo "<option value='" . $_SESSION['operarios2'][$i]["Id_Operario"] . "'>" . $_SESSION['operarios2'][$i]["Nombre"] . " " . $_SESSION['operarios2'][$i]["Apellido"] . "</option>";
 								}								
 							?>
 							</select>
