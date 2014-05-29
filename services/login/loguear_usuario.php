@@ -21,10 +21,7 @@
 		$_SESSION['logeado'] = 1;
 		header("Location: ../../plantilla/inicio.php");
 	} else {
-		echo "Usuario incorrecto!<br>";
-		echo "Redireccionando al login en 5 segundos...<br>";
-		//echo "<script type='text/javascript'>setTimeout('location.href = ../../plantilla/index.php',2000); </script>";
-		echo "<meta http-equiv='Refresh' content='5'; url='../../plantilla/index.php' />";
+		header("Location: ../../plantilla/error_login.php");
 	}
 
 

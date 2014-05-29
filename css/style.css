@@ -408,6 +408,12 @@ body {
 
 /* COMIENZO LOGIN */
 
+.error_login {
+	color: red;
+	text-align: center;
+	margin-top: 50px;
+}
+
 #nombre_empresa {
 	text-align: center;
 	color: white;
