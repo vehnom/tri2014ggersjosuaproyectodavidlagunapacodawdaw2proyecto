@@ -1,6 +1,7 @@
 <?php 
 	session_start();
 	include($_SESSION[".."]."/services/operarios/SdeleteOperario.php");
+	if(isset($_SESSION['logeado'])){
 ?>
 <!doctype html>
 <html lang="es-ES">
@@ -58,3 +59,15 @@
 	</div>
 </body>
 </html>
+
+<?php
+	} else {
+		echo "Debes estar logueado para poder entrar a la base de datos!<br>";
+		echo "Redireccionando al login en 5 segundos...<br>";
+?>
+
+<script type='text/javascript'>setTimeout('location.href = "./index.php"',5000); </script>
+<?php
+		//echo "<meta http-equiv='Refresh' content='5'; url='index.php' />";
+	}
+?>

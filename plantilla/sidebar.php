@@ -1,8 +1,11 @@
+
 <div id="sideBar">
 		<div class="tit_sidebar">
 			<!-- <h3>Navegador</h3> -->
 			<a href="index.php"><img src="../images/logo.jpg"></a>
 		</div>
+		<div class="nombre_usuario_logeado">Usuario actual: <span><?php echo $_SESSION['usuario'] ?></span></div>
+		<div class="salir_usuario"><a href="../services/login/logout_usuario.php">Salir de mi cuenta</a></div>
 		<a href="#"><div class="btn_sidebar primer_btn_sidebar desp_inicio">INICIO >></div></a>
 		<div class="sub_menu_desplegable sub_inicio">
 			<a href="inicio.php">Pagina principal</a>

@@ -405,3 +405,116 @@ body {
 }
 
 /* FIN FORMULARIO NUEVO AVISO */
+
+/* COMIENZO LOGIN */
+
+#contenedor_login {
+	width: 500px;
+	height: 300px;
+	background-color: #fff;
+	/*background-color: #ebe9e9;*/
+	margin: 270px auto;
+}
+
+#inner_contenedor_login {
+	background-color: #f3f3f3;
+	width: 90%;
+	height: 85%;
+	margin: 5%;
+	float: left;
+	border: 1px solid #ebe9e9;
+}
+
+.input_login {
+	width: 400px;
+	height: 50px;
+	margin-left: 75px;
+}
+
+.first_input_login {
+	margin-top: 50px;
+}
+
+.input_login input[type="text"] {
+	border: 1px solid #ebe9e9;
+	width: 40%;
+	font-family: verdana;
+	font-size: 12px;
+	color: #333;
+	padding: 5px;
+}
+
+.input_login input[type="text"]:focus {
+	background-color: #f7f7f7;
+}
+
+.input_login input[type="submit"] {
+	width: 200px;
+	font-family: verdana;
+	padding: 5px;
+	background-color: #4873A8;
+	border: 1px solid #3A5F8B;
+	height: 35px;
+	margin-top: 15px;
+	color: #f2f2f2;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px 1px black;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-left: 45px;
+	box-shadow: 0px 5px 0px #3A5F8B;
+}
+
+.input_login input[type="submit"]:hover {
+	background-color: #5F94D6;
+	
+}
+
+.input_login label {
+	font-weight: bold;
+	font-size: 12px;
+	display: inline-block;
+	width: 100px;
+	height: 35px;
+}
+
+.input_login input[type="password"] {
+	border: 1px solid #ebe9e9;
+	width: 40%;
+	font-family: verdana;
+	font-size: 12px;
+	color: #333;
+	padding: 5px;
+}
+
+.input_login input[type="password"]:focus {
+	background-color: #f7f7f7;
+}
+
+/* FIN LOGIN */
+
+
+/* USUARIO LOGUEADO */
+
+.nombre_usuario_logeado {
+	text-align: center;
+	margin: 15px auto;
+}
+
+.nombre_usuario_logeado span{
+	font-size: 20px;
+	color: #92C2FD;
+}
+
+.salir_usuario {
+	text-align: center;
+	margin: 15px auto;
+}
+
+.salir_usuario a:link, .salir_usuario a:hover, .salir_usuario a:visited, .salir_usuario a:active{
+	color: red !important;
+}
+
+/* FIN USUARIO LOGUEADO */

@@ -11,12 +11,25 @@
 	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
 	<script type="text/javascript" src="../js/desplegable.js"></script>
 </head>
-<body>
-	<?php include "sidebar.php" ?>
-	<div id="contenido">
-		<div id="contenido_prueba">
-			
-		</div>
+	
+<div id="contenedor_login">
+	<div id="inner_contenedor_login">
+		<form id="form_login" name="form_login" method="post" action="../services/login/loguear_usuario.php">
+			<div class="input_login first_input_login">
+				<label for="usuario">Usuario</label>
+				<input type="text" name="usuario" id="usuario">
+			</div>
+			<div class="input_login">
+				<label for="password">Contrase&ntilde;a</label>
+				<input type="password" name="password" id="password">
+			</div>
+			<div class="input_login">
+				<input type="submit" name="btn_login" id="btn_login">
+			</div>
+		</form>
 	</div>
+
+</div>
+
 </body>
 </html>
