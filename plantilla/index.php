@@ -11,7 +11,10 @@
 	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
 	<script type="text/javascript" src="../js/desplegable.js"></script>
 </head>
-	
+
+<div id="nombre_empresa">
+	<img src="../images/empresa_login.png">
+</div>
 <div id="contenedor_login">
 	<div id="inner_contenedor_login">
 		<form id="form_login" name="form_login" method="post" action="../services/login/loguear_usuario.php">
