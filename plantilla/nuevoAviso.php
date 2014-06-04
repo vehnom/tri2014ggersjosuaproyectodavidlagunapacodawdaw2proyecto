@@ -31,7 +31,17 @@
 			var importe_aviso = document.getElementById('importe_aviso').value;
 			var n_factura_provisinal_aviso = document.getElementById('n_factura_provisinal_aviso').value;
 
-			if(!nota_aviso.length > 0) valida = false; document.getElementById('valida_nota_aviso').innerHTML="<span style='color: red;'>Incorrecto</span>";
+			if(!nota_aviso.length > 0) {
+				valida = false; 
+				document.getElementById('valida_nota_aviso').innerHTML="<span style='color: red;'>Incorrecto</span>";
+			} else {
+				valida = true;
+			}
+
+			if(valida){
+				document.form_nuevo_aviso.submit();
+			}
+			
 		}
 	</script>
 
@@ -40,7 +50,7 @@
 	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenedor_form">
-			<form class="form" id="form_nuevo_aviso" method="post" action="../services/introduceAviso.php">
+			<form name="form_nuevo_aviso" class="form" id="form_nuevo_aviso" method="post" action="../services/introduceAviso.php">
 				<h2>Nuevo Aviso</h2>
 				<div id="form_col_izqda">
 					<div class="form_input">
@@ -129,6 +139,10 @@
 					<div class="form_input">
 						<label for="n_factura_provisinal_aviso">Nº Factura provisional: </label>
 						<input type="text" id="n_factura_provisinal_aviso" name="n_factura_provisinal_aviso">
+					</div>
+
+					<div class="form_input">
+						<input type="hidden" id="introducir_aviso_hidden" name="introducir_aviso_hidden">
 					</div>
 				</div>
 				

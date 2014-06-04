@@ -1,16 +1,16 @@
 <?php
-	
+	session_start();
+
 	include "myBBDD.php";
 	include "getAvisos.php";
 
 	$mybd = new myBBDD();
-	$mybd -> conectar();
 
 	$data_aviso = array();
 	$data_factura = array();
 
 
-	if(isset($_POST['btn_introducir_aviso'])){
+	if(isset($_POST['n_factura_provisinal_aviso'])){
 		$nota_aviso = $_POST['nota_aviso'];
 		$hora_aviso = $_POST['hora_aviso'];
 		$tipo_trabajo_aviso = $_POST['tipo_trabajo_aviso'];
@@ -33,6 +33,8 @@
 		$importe_aviso = $_POST['importe_aviso'];
 		$importe_aviso = str_replace(',', '.', $importe_aviso);
 
+
+
 		
 
 
@@ -46,6 +48,7 @@
 		$data_aviso['fecha_entrada_aviso'] = $fecha_entrada_aviso;
 		$data_aviso['fecha_visita_aviso'] = $fecha_visita_aviso;
 		$data_aviso['estado_aviso'] = $estado_aviso;
+		$data_aviso['ultima_modificacion_por'] = $_SESSION['usuario'];
 
 		//Relleno el array que voy a pasar por parámetro a facturas
 
@@ -70,6 +73,7 @@
 		insertaAviso($data_aviso, $mybd);
 
 		actualizaAvisos($mybd);
+
 		redirigeAvisos();
 
 
@@ -78,15 +82,15 @@
 
 
 	function insertaAviso($data_aviso, $mybd){
-		$query = "INSERT INTO avisos (Id_Factura, Nota, Hora, Tipo_Trabajo, Citado_por, Fecha_Entrada, Fecha_Visitado, Id_Estado_Aviso) 
-		VALUES (". $data_aviso['id_factura_aviso'] .",'" . $data_aviso['nota_aviso'] . "','" . $data_aviso['hora_aviso'] . "','". $data_aviso['tipo_trabajo_aviso'] ."','" . $data_aviso['citado_por_aviso'] . "','" . $data_aviso['fecha_entrada_aviso'] . "','" . $data_aviso['fecha_visita_aviso'] . "', " . $data_aviso['estado_aviso'] . ") ";
+		$query = "INSERT INTO avisos (Id_Factura, Nota, Hora, Tipo_Trabajo, Citado_por, Fecha_Entrada, Fecha_Visitado, Id_Estado_Aviso, Ultima_Modificacion_Por) 
+		VALUES (". $data_aviso['id_factura_aviso'] .",'" . $data_aviso['nota_aviso'] . "','" . $data_aviso['hora_aviso'] . "','". $data_aviso['tipo_trabajo_aviso'] ."','" . $data_aviso['citado_por_aviso'] . "','" . $data_aviso['fecha_entrada_aviso'] . "','" . $data_aviso['fecha_visita_aviso'] . "', " . $data_aviso['estado_aviso'] . ",'".$data_aviso['ultima_modificacion_por']."') ";
 		echo $query;
 		$resultado = $mybd -> insert($query);
 
 		if($resultado){
 			echo "Introducido";
 		} else {
-			echo "No introducido";
+			echo "No introducido" . mysql_error($resultado);
 		}
 	}
 
