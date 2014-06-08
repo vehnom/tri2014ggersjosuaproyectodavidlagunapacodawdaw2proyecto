@@ -37,7 +37,7 @@
 					<small>Presupuestos</small>
 				</div>
 
-				<a href="flota.php">
+				<a href="tablaVehiculos.php">
 					<div class="thumb">
 						<h2><i class="icon-cars"></i></h2>
 						<small>Flota Veh&iacute;culos</small>

@@ -18,7 +18,7 @@
 	<div id="contenido">
 		<div id="contenido_thumbs">
 			<div class="fila_thumbs">
-				<a href="tablaFlota.php">
+				<a href="tablaVehiculos.php">
 					<div class="thumb">
 						<h2><i class="icon-search"></i></h2>
 						<small>Ver Veh&iacute;culos</small>
@@ -30,17 +30,11 @@
 						<small>Nuevo Veh&iacute;culo</small>
 					</div>
 				</a>
-				<a href="editarVehiculo.php">
-					<div class="thumb">
-						<h2><i class="icon-pencil"></i></h2>
-						<small>Editar Veh&iacute;culo</small>
-					</div>
-				</a>
 				<a href="borrarVehiculo.php">
-				<div class="thumb">
-					<h2><i class="icon-remove"></i></h2>
-					<small>Borrar Veh&iacute;culo</small>
-				</div>
+					<div class="thumb">
+						<h2><i class="icon-remove"></i></h2>
+						<small>Borrar Veh&iacute;culo</small>
+					</div>
 				</a>
 			</div>
 		</div>

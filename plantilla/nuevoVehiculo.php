@@ -1,48 +1,9 @@
 <?php
-	include_once("../services/myBBDD.php");
 	session_start();
-	
-
+	include_once($_SESSION[".."]."/services/myBBDD.php");
 	$mybd = new myBBDD();
-	$array_id = getIdOperarios($mybd);
-	$array_nombre = getNombreOperarios($mybd);
-	$array_apellidos = getApellidoOperarios($mybd);
-
-	function getIdOperarios($mybd){
-		$query = "SELECT Id_Operario FROM operarios";
-		$array_id = array();
-		$result = $mybd -> consulta($query);
-
-		while($fila = mysql_fetch_assoc($result)){
-			array_push($array_id, $fila);
-		}
-
-		return $array_id;
-	}
-	
-	function getNombreOperarios($mybd){
-		$query = "SELECT NOMBRE FROM operarios";
-		$array_nombre = array();
-		$result = $mybd -> consulta($query);
-
-		while($fila = mysql_fetch_assoc($result)){
-			array_push($array_nombre, $fila);
-		}
-
-		return $array_nombre;
-	}
-	
-	function getApellidoOperarios($mybd){
-		$query = "SELECT APELLIDO FROM operarios";
-		$array_apellidos = array();
-		$result = $mybd -> consulta($query);
-
-		while($fila = mysql_fetch_assoc($result)){
-			array_push($array_apellidos, $fila);
-		}
-
-		return $array_apellidos;
-	}
+	include($_SESSION[".."]."/modelo/MVehiculo.php");
+	$_SESSION['operariosVehiculo'] = getOperarios($mybd);
 	if(isset($_SESSION['logeado'])){
 ?>
 
@@ -57,12 +18,19 @@
 	<script type="text/javascript" src="../js/desplegable.js"></script>
 	<script type="text/javascript" src="../js/script.js"></script>
 	<link href="../metro/min/iconFont.min.css" rel="stylesheet">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btn_insert_vehiculo").on("click", function(){
+				$("#hideVehiculo").val("1");
+			});
+		});
+	</script>
 </head>
 <body>
 	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenedor_form">
-			<form class="form" id="form_nuevo_vehiculo" action="../services/flota/insertVehiculo.php" method="post">
+			<form class="form" id="form_insert_vehiculo" action="../services/flota/SinsertVehiculo.php" method="post">
 				<h2> Crear Veh&iacute;culo </h2>
 				<div id="form_col_center">
 					<div class="form_input">
@@ -74,8 +42,8 @@
 						<label for="idOperario">Id Operario: </label>
 						<select id="listaId" name="listaId">
 						<?php
-							for($i = 0; $i < count($array_id); $i++){
-								echo "<option value=" . $array_id[$i]['Id_Operario'] . " id=" . $array_id[$i]['Id_Operario'] . " name=" . $array_id[$i]['Id_Operario'] . ">" . $array_nombre[$i]['NOMBRE'] . " " . $array_apellidos[$i]['APELLIDO'] . "</option>";
+							for($i = 0; $i < count($_SESSION['operariosVehiculo']); $i++){
+								echo "<option value=" . $_SESSION['operariosVehiculo'][$i]["Id_Operario"] . ">" . $_SESSION['operariosVehiculo'][$i]["Nombre"] . " " . $_SESSION['operariosVehiculo'][$i]["Apellido"] . "</option>";
 							}							
 						?>
 						</select>
@@ -98,7 +66,7 @@
 				</div>
 				
 				<div class="form_input">
-					<input type="submit" name="btn_introducir_vehiculo" id="btn_introducir_vehiculo" value="Añadir"/>
+					<input type="submit" name="btn_insert_vehiculo" id="btn_insert_vehiculo" value="Guardar Cambios"/>
 				</div>
 			</form>
 		</div>

@@ -1,48 +1,7 @@
 <?php
-	include_once("../services/myBBDD.php");
 	session_start();
+	include($_SESSION[".."]."/services/flota/SdeleteVehiculo.php");
 	if(isset($_SESSION['logeado'])){
-
-	$mybd = new myBBDD();
-	$array_matricula = getMatriculaVehiculos($mybd);
-	$array_marca = getMarcaVehiculos($mybd);
-	$array_modelo = getModeloVehiculos($mybd);
-
-	function getMatriculaVehiculos($mybd){
-		$query = "SELECT MATRICULA FROM flota_vehiculos";
-		$array_matricula = array();
-		$result = $mybd -> consulta($query);
-
-		while($fila = mysql_fetch_assoc($result)){
-			array_push($array_matricula, $fila);
-		}
-
-		return $array_matricula;
-	}
-	
-	function getMarcaVehiculos($mybd){
-		$query = "SELECT MARCA FROM flota_vehiculos";
-		$array_marca = array();
-		$result = $mybd -> consulta($query);
-
-		while($fila = mysql_fetch_assoc($result)){
-			array_push($array_marca, $fila);
-		}
-
-		return $array_marca;
-	}
-	
-	function getModeloVehiculos($mybd){
-		$query = "SELECT MODELO FROM flota_vehiculos";
-		$array_modelo = array();
-		$result = $mybd -> consulta($query);
-
-		while($fila = mysql_fetch_assoc($result)){
-			array_push($array_modelo, $fila);
-		}
-
-		return $array_modelo;
-	}
 ?>
 
 <!doctype html>
@@ -60,9 +19,11 @@
 <script type="text/javascript">
 	function comprobar(){
 		var borrarVehiculo = confirm('¿Realmente desea borra este vehiculo?');
-	
 		if(borrarVehiculo == true){
+			$("#hideVehiculo").val("1");
 			document.formBorrar.submit();
+		}else{
+			$("#hideVehiculo").val("0");
 		}
 	}
 </script>
@@ -73,14 +34,14 @@
 		<div id="contenido_thumbs">
 			<div class="fila_thumbs">
 				<center>
-					<form action="../services/flota/deleteVehiculo.php" method="post" id="formBorrar" name="formBorrar">
+					<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="formBorrar" name="formBorrar">
 						<h2 style="font-size:60px; color: #aaa;"> Borrar Vehiculo </h2>
 						<div class="thumb">
 							<p> Listado matriculas </p>
 							<select id="listaMatricula" name="listaMatricula">
 							<?php
-								for($i = 0; $i < count($array_matricula); $i++){	
-									echo "<option value=" . $array_matricula[$i]['MATRICULA'] . " id=" . $array_matricula[$i]['MATRICULA'] . " name=" .  $array_matricula[$i]['MATRICULA'] . ">" . $array_matricula[$i]['MATRICULA'] . " - " . $array_marca[$i]['MARCA'] .  " " . $array_modelo[$i]['MODELO'] . "</option>";
+								for($i = 0; $i < count($_SESSION['vehiculos2']); $i++){	
+									echo "<option value=" . $_SESSION['vehiculos2'][$i]["Id_Vehiculo"] . ">" . $_SESSION['vehiculos2'][$i]["Matricula"] . " - " . $_SESSION['vehiculos2'][$i]["Marca"] .  " " . $_SESSION['vehiculos2'][$i]["Modelo"] . "</option>";
 								}								
 							?>
 							</select>
