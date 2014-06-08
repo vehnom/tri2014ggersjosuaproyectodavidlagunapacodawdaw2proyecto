@@ -61,7 +61,7 @@
 
 					<div class="form_input">
 						<label for="modelo">Modelo: </label>
-						<input style="width: 200px;" type="tel" id="modelo" name="modelo" placeholder="Modelo" required/>
+						<input style="width: 200px;" type="text" id="modelo" name="modelo" placeholder="Modelo" required/>
 					</div>
 				</div>
 				

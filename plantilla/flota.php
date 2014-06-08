@@ -36,6 +36,12 @@
 						<small>Borrar Veh&iacute;culo</small>
 					</div>
 				</a>
+				<a href="itvVehiculo.php">
+					<div class="thumb">
+						<h2><i class="icon-clipboard-2"></i></h2>
+						<small>Pasar ITV</small>
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>

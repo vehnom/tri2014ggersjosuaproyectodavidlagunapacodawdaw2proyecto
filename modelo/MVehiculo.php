@@ -38,4 +38,21 @@
 		$query = "DELETE FROM flota_vehiculos WHERE MATRICULA='$matricula'";
 		$result = $mybd -> delete($query);
 	}
+	
+	function pasarItv($mybd){
+		$idItv = $_POST['idItv'];
+		$estado = $_POST['estado'];
+		$fecha = $_POST['fecha'];
+		
+		$query = "INSERT INTO itv (Id_ITV, Estado, Fecha_Pasar_ITV) VALUES ($idItv, '$estado', '$fecha')";
+		$result = $mybd -> insert($query);
+	}
+	
+	function historialItv($mybd){
+		$idVehiculo = $_POST['idVehiculo'];
+		$idItv = $_POST['idItv'];
+	
+		$query = "INSERT INTO historial_itv (Id_Vehiculo, Id_ITV) VALUES ($idVehiculo, $idItv)";
+		$result = $mybd -> insert($query);
+	}
 ?>
