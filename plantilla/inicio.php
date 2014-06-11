@@ -43,11 +43,12 @@
 						<small>Flota Veh&iacute;culos</small>
 					</div>
 				</a>
-				
-				<div class="thumb">
-					<h2><i class="icon-clipboard-2"></i></h2>
-					<small>Avisos diarios</small>
-				</div>
+				<a href="tablaProductos.php">
+					<div class="thumb">
+						<h2><i class="icon-book"></i></h2>
+						<small>Productos</small>
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>

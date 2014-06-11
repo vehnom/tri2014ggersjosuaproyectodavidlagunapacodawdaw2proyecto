@@ -19,7 +19,7 @@
 	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenido_prueba">
-		<h2>Tabla de avisos</h2>
+		<h2>Lista de avisos</h2>
 		<hr style="margin-bottom: 25px;">
 		<table id="tabla_avisos" class="display" cellspacing="0" width="100%">
         <thead>

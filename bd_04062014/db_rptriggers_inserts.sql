@@ -40,3 +40,16 @@ INSERT INTO `operarios` (`Id_Operario`, `Id_Usuario`, `Nombre`, `Apellido`, `Ape
 
 INSERT INTO `flota_vehiculos` (`Id_Vehiculo`, `Id_Operario`, `Matricula`, `Marca`, `Modelo`) VALUES
 (1, 1, '4589HKK', 'Mercedes', 'Vito');
+
+INSERT INTO `proveedores` (`Id_Proveedor`, `Nombre`, `Apellido1`, `Apellido2`, `Nombre_Empresa`, `Telefono1`, `Telefono2`, `NIF`, `Direccion`, `Cod_Postal`, `Localidad`, `Provincia`, `Referencia`, `Observaciones`) VALUES
+(1,'pepe','perez','perez','Mariscos Recio', '132456789', '987654321', '01234567A', 'Calle pez 10', '28020', 'Getafe','Madrid','contacto dfe terceras personas','no cobra mucho');
+
+INSERT INTO `categorias_productos` (`Id_Categoria`, `Nombre_Categoria`, `Descripcion_Categoria`) VALUES
+(1,'Puerta','Todo tipo de puertas'),
+(2,'Cerraduras','Todo tipo de cerraduras');
+
+INSERT INTO `productos` (`Id_Producto`, `Id_Categoria`, `Id_Proveedor`, `Nombre`, `Cantidad_Unidad`, `Detalle`, `Precio_Unidad`, `Unidades_Existentes`, `Precio_ESP`, `Precio_COM`, `Fabricante`, `CERC_CARP`) VALUES
+(1,1,1,'Puerta blindada',20,'Puerta de acero', 1000.00, 100, 950.00, 985.00, 'Balay','no se que es esto'),
+(2,1,1,'Puerta acero inoxidable',50,'Puerta de acero inoxidable', 1500.00, 300, 980.00, 960.00, 'Balay','no se que es esto'),
+(3,2,1,'Cerradura magnetica',90,'Cerradura magnetizada', 2000.00, 20, 0.00, 985.00, 'Balay','no se que es esto'),
+(4,2,1,'Cerrojo biometrico',100,'lector de huiellas dactilar y de iris', 8000.00, 500, 350.00, 500.00, 'Balay','no se que es esto');
