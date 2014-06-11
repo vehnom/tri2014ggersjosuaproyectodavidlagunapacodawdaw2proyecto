@@ -11,11 +11,17 @@ INSERT INTO `clientes` (`Id_Cliente`, `Nombre`, `Apellido2`, `Apellido1`, `Direc
 (1, 'Francisco', 'Castro', 'Robles', 'Cueva de las Margaritas 18', '28905', 'Getafe', 'Madrid', '639654587', NULL, '98754565S', 'No tenia ninguna cerradura', 'francisco@mail.com', 0);
 
 INSERT INTO `facturas` (`Id_Factura`, `Id_Nivel_Reclamacion`, `Id_Cliente`, `Fecha`, `Procedencia`, `Poliza`, `Estado`, `Tipo_Trabajo`, `Requiere_Profesional`, `Importe`, `Aceptacion`, `Cobrado`, `NFac_Provisional`, `Hora`) VALUES
-(1, 1, 1, '2014-05-14 19:01:31', 'AXA', '1874874148741', 'Sigue', 'Cerrajeria', 'No', '150.00', 1, 1, '8748741845', '19:43:00');
+(1, 1, 1, '2014-06-04 18:04:09', 'AXA', '1874874148741', '1', 'Cerrajeria', 'No', '150.00', 1, 1, '8748741845', '19:43:00'),
+(2, 0, 1, '2014-06-04 18:00:08', 'AXA', '684684786', '1', 'Cerrajeria', 'Si', '98.66', 0, 0, '57684684', '01:02:00'),
+(3, 0, 1, '2014-06-04 18:00:41', 'AXA', '684684786', '1', 'Cerrajeria', 'Si', '98.66', 0, 0, '57684684', '01:02:00'),
+(4, 0, 1, '2014-06-04 18:02:25', 'AXA', '684684786', '1', 'Cerrajeria', 'Si', '98.66', 0, 0, '57684684', '01:02:00'),
+(5, 0, 1, '2014-06-04 18:08:35', 'AXA', '684684786', '1', 'Cerrajeria', 'Si', '98.66', 0, 0, '57684684', '01:02:00');
 
 INSERT INTO `avisos` (`Id_Aviso`, `Id_Pedido`, `Id_Factura`, `Nota`, `Quedada_dia`, `Hora`, `Tipo_Trabajo`, `Citado_Por`, `Fecha_Entrada`, `Fecha_Visitado`, `Coord_Longitud`, `Coord_Latitud`, `Id_Estado_Aviso`) VALUES
 (1, NULL, 1, 'Colocar cerrojo nuevo en puerta Kiuso', '2014-05-14 19:37:46', '19:43:00', 'Cerrajeria', 'Paco', '2014-05-14 22:00:00', '2014-05-15 22:00:00', NULL, NULL, 1),
-(5, NULL, 1, 'Blablabla blablablabla', '2014-05-15 19:37:46', '14:40:00', 'Cerrajeria', 'Pepe', '2014-05-07 22:00:00', '2014-05-12 22:00:00', NULL, NULL, 0);
+(5, NULL, 1, 'Blablabla blablablabla', '2014-05-15 19:37:46', '14:40:00', 'Cerrajeria', 'Pepe', '2014-05-07 22:00:00', '2014-05-12 22:00:00', NULL, NULL, 0),
+(6, NULL, 4, 'asdasd', '2014-06-04 18:02:25', '01:02:00', 'Cerrajeria', 'Paco', '2014-02-03 01:02:00', '2014-10-04 02:04:00', NULL, NULL, 1, 'pepe'),
+(7, NULL, 5, 'asdasd', '2014-06-04 18:08:35', '01:02:00', 'Cerrajeria', 'Paco', '2014-02-03 01:02:00', '2014-10-04 02:04:00', NULL, NULL, 1, 'pepe');
 
 INSERT INTO `niveles_usuario` (`Id_Nivel_Usuario`, `Nombre_Nivel`, `Descripcion_Nivel`) VALUES
 (0, 'Empleado', 'Nivel de usuario básico'),
@@ -28,6 +34,9 @@ INSERT INTO `usuario` (`Id_Usuario`, `Id_Nivel_Usuario`, `Nick`, `Password`) VAL
 (3, 2, 'pepon', 'pepon123');
 
 INSERT INTO `operarios` (`Id_Operario`, `Id_Usuario`, `Nombre`, `Apellido`, `Apellido2`, `Telefono`, `Telefono2`, `Direccion`, `DNI`, `Seg_Social`, `Observacion`, `Foto`, `Fecha_Alta`) VALUES
-(1, 1, 'pepe', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 1', '12345678A', 'asegurado', 'trastorno bipolar', 'demasiado feo', '2014-05-13'),
-(2, 2, 'pepa', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 2', '12345678B', 'sin asegurar', 'buen trabajador', 'demasiado fea', '2014-05-12'),
-(3, 3, 'pepon', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 3', '12345678C', 'asegurado', 'conoce internet', 'increiblemente orrible', '2014-05-14');
+(1, 1, 'pepe222', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 1', '12345678A', 'asegurado', 'trastorno bipolar', 'demasiado feo', '2014-05-13'),
+(2, 2, 'pepaca', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 2', '12345678B', 'sin asegurar', 'buen trabajador', 'demasiado fea', '2014-05-12'),
+(3, 3, 'peponazojeje', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 34', '12345678C', 'asegurado', 'conoce internet', 'increiblemente orrible', '2014-05-14');
+
+INSERT INTO `flota_vehiculos` (`Id_Vehiculo`, `Id_Operario`, `Matricula`, `Marca`, `Modelo`) VALUES
+(1, 1, '4589HKK', 'Mercedes', 'Vito');

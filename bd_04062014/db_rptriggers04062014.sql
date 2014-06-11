@@ -67,16 +67,6 @@ CREATE TABLE IF NOT EXISTS `avisos` (
   KEY `Id_Estado_Aviso` (`Id_Estado_Aviso`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
---
--- Volcado de datos para la tabla `avisos`
---
-
-INSERT INTO `avisos` (`Id_Aviso`, `Id_Pedido`, `Id_Factura`, `Nota`, `Quedada_dia`, `Hora`, `Tipo_Trabajo`, `Citado_Por`, `Fecha_Entrada`, `Fecha_Visitado`, `Coord_Longitud`, `Coord_Latitud`, `Id_Estado_Aviso`, `Ultima_Modificacion_Por`) VALUES
-(1, NULL, 1, 'Colocar cerrojo nuevo en puerta Kiuso', '2014-05-14 17:37:46', '19:43:00', 'Cerrajeria', 'Paco', '2014-05-14 20:00:00', '2014-05-15 20:00:00', NULL, NULL, 1, ''),
-(5, NULL, 1, 'Blablabla blablablabla', '2014-05-15 17:37:46', '14:40:00', 'Cerrajeria', 'Pepe', '2014-05-07 20:00:00', '2014-05-12 20:00:00', NULL, NULL, 0, ''),
-(6, NULL, 4, 'asdasd', '2014-06-04 18:02:25', '01:02:00', 'Cerrajeria', 'Paco', '2014-02-03 01:02:00', '2014-10-04 02:04:00', NULL, NULL, 1, 'pepe'),
-(7, NULL, 5, 'asdasd', '2014-06-04 18:08:35', '01:02:00', 'Cerrajeria', 'Paco', '2014-02-03 01:02:00', '2014-10-04 02:04:00', NULL, NULL, 1, 'pepe');
-
 -- --------------------------------------------------------
 
 --
@@ -141,13 +131,6 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   UNIQUE KEY `NIF` (`NIF`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
---
--- Volcado de datos para la tabla `clientes`
---
-
-INSERT INTO `clientes` (`Id_Cliente`, `Nombre`, `Apellido2`, `Apellido1`, `Direccion`, `Cod_Postal`, `Localidad`, `Provincia`, `Telefono1`, `Telefono2`, `NIF`, `Observaciones`, `Email`, `Moroso`) VALUES
-(1, 'Francisco', 'Castro', 'Robles', 'Cueva de las Margaritas 18', '28905', 'Getafe', 'Madrid', '639654587', NULL, '98754565S', 'No tenia ninguna cerradura', 'francisco@mail.com', 0);
-
 -- --------------------------------------------------------
 
 --
@@ -204,13 +187,6 @@ CREATE TABLE IF NOT EXISTS `estados_avisos` (
   PRIMARY KEY (`Id_Estado_Aviso`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `estados_avisos`
---
-
-INSERT INTO `estados_avisos` (`Id_Estado_Aviso`, `Nombre_Estado`) VALUES
-(0, 'Sigue'),
-(1, 'Terminado');
 
 -- --------------------------------------------------------
 
@@ -238,17 +214,6 @@ CREATE TABLE IF NOT EXISTS `facturas` (
   KEY `Id_Nivel_Reclamacion` (`Id_Nivel_Reclamacion`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
---
--- Volcado de datos para la tabla `facturas`
---
-
-INSERT INTO `facturas` (`Id_Factura`, `Id_Nivel_Reclamacion`, `Id_Cliente`, `Fecha`, `Procedencia`, `Poliza`, `Estado`, `Tipo_Trabajo`, `Requiere_Profesional`, `Importe`, `Aceptacion`, `Cobrado`, `NFac_Provisional`, `Hora`) VALUES
-(1, 1, 1, '2014-06-04 18:04:09', 'AXA', '1874874148741', '1', 'Cerrajeria', 'No', '150.00', 1, 1, '8748741845', '19:43:00'),
-(2, 0, 1, '2014-06-04 18:00:08', 'AXA', '684684786', '1', 'Cerrajeria', 'Si', '98.66', 0, 0, '57684684', '01:02:00'),
-(3, 0, 1, '2014-06-04 18:00:41', 'AXA', '684684786', '1', 'Cerrajeria', 'Si', '98.66', 0, 0, '57684684', '01:02:00'),
-(4, 0, 1, '2014-06-04 18:02:25', 'AXA', '684684786', '1', 'Cerrajeria', 'Si', '98.66', 0, 0, '57684684', '01:02:00'),
-(5, 0, 1, '2014-06-04 18:08:35', 'AXA', '684684786', '1', 'Cerrajeria', 'Si', '98.66', 0, 0, '57684684', '01:02:00');
-
 -- --------------------------------------------------------
 
 --
@@ -265,13 +230,6 @@ CREATE TABLE IF NOT EXISTS `flota_vehiculos` (
   UNIQUE KEY `Matricula` (`Matricula`),
   KEY `Id_Operario` (`Id_Operario`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Volcado de datos para la tabla `flota_vehiculos`
---
-
-INSERT INTO `flota_vehiculos` (`Id_Vehiculo`, `Id_Operario`, `Matricula`, `Marca`, `Modelo`) VALUES
-(1, 1, '4589HKK', 'Mercedes', 'Vito');
 
 -- --------------------------------------------------------
 
@@ -366,15 +324,6 @@ CREATE TABLE IF NOT EXISTS `niveles_reclamaciones` (
   PRIMARY KEY (`Id_Nivel_Reclamacion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `niveles_reclamaciones`
---
-
-INSERT INTO `niveles_reclamaciones` (`Id_Nivel_Reclamacion`, `Nombre_Nivel_Reclamacion`, `Descripcion_Nivel_Reclamacion`) VALUES
-(0, 'Normal', 'Nivel de reclamaci?n normal'),
-(1, 'Urgente', 'Nivel de reclamaci?n urgente'),
-(2, 'Muy Urgente', 'Nivel de reclamaci?n muy urgente');
-
 -- --------------------------------------------------------
 
 --
@@ -387,15 +336,6 @@ CREATE TABLE IF NOT EXISTS `niveles_usuario` (
   `Descripcion_Nivel` varchar(100) NOT NULL,
   PRIMARY KEY (`Id_Nivel_Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `niveles_usuario`
---
-
-INSERT INTO `niveles_usuario` (`Id_Nivel_Usuario`, `Nombre_Nivel`, `Descripcion_Nivel`) VALUES
-(0, 'Empleado', 'Nivel de usuario b?sico'),
-(1, 'Comun', 'Nivel de usuario normal'),
-(2, 'Administrador', 'Nivel de usuario avanzado');
 
 -- --------------------------------------------------------
 
@@ -421,15 +361,6 @@ CREATE TABLE IF NOT EXISTS `operarios` (
   UNIQUE KEY `DNI` (`DNI`),
   KEY `Id_Usuario` (`Id_Usuario`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Volcado de datos para la tabla `operarios`
---
-
-INSERT INTO `operarios` (`Id_Operario`, `Id_Usuario`, `Nombre`, `Apellido`, `Apellido2`, `Telefono`, `Telefono2`, `Direccion`, `DNI`, `Seg_Social`, `Observacion`, `Foto`, `Fecha_Alta`) VALUES
-(1, 1, 'pepe222', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 1', '12345678A', 'asegurado', 'trastorno bipolar', 'demasiado feo', '2014-05-13'),
-(2, 2, 'pepaca', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 2', '12345678B', 'sin asegurar', 'buen trabajador', 'demasiado fea', '2014-05-12'),
-(3, 3, 'peponazojeje', 'perez', 'perez2', '123456789', '987654321', 'CALLE SOSPECHA 34', '12345678C', 'asegurado', 'conoce internet', 'increiblemente orrible', '2014-05-14');
 
 -- --------------------------------------------------------
 
@@ -526,15 +457,6 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`Id_Usuario`),
   KEY `Id_Nivel_Usuario` (`Id_Nivel_Usuario`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Volcado de datos para la tabla `usuario`
---
-
-INSERT INTO `usuario` (`Id_Usuario`, `Id_Nivel_Usuario`, `Nick`, `Password`) VALUES
-(1, 0, 'pepe', 'pepe123'),
-(2, 1, 'pepa', 'pepa123'),
-(3, 2, 'pepon', 'pepon123');
 
 -- --------------------------------------------------------
 

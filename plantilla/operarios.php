@@ -42,6 +42,12 @@
 					<small>Borrar Operario</small>
 				</div>
 				</a>
+				<a href="vacacionesOperario.php">
+				<div class="thumb">
+					<h2><i class="icon-calendar"></i></h2>
+					<small>Vacaciones Operarios</small>
+				</div>
+				</a>
 			</div>
 		</div>
 	</div>
