@@ -115,8 +115,8 @@ CREATE TABLE IF NOT EXISTS `categorias_productos` (
 CREATE TABLE IF NOT EXISTS `clientes` (
   `Id_Cliente` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(100) NOT NULL,
-  `Apellido2` varchar(100) DEFAULT NULL,
   `Apellido1` varchar(100) NOT NULL,
+  `Apellido2` varchar(100) DEFAULT NULL,
   `Direccion` varchar(100) NOT NULL,
   `Cod_Postal` varchar(10) NOT NULL,
   `Localidad` varchar(100) NOT NULL,

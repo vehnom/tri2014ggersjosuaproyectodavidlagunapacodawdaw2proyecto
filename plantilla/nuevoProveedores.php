@@ -82,7 +82,7 @@
 					</div>
 					<div class="form_input">
 						<label for="observaciones">Observaciones: </label>
-						<textarea id="observaciones" name="observaciones" placeholder="Observaciones" no-rezize><?php echo $_SESSION['operario']['Observacion']; ?></textarea>
+						<textarea id="observaciones" name="observaciones" placeholder="Observaciones" no-rezize></textarea>
 					</div>
 					<div class="form_input">
 						<label for="referencias">Referencias: </label>
