@@ -39,7 +39,6 @@
 		$observaciones = $_POST['observaciones'];
 
 		$query = "INSERT INTO `proveedores`(Nombre, Apellido1, Apellido2, Nombre_Empresa, Telefono1, Telefono2, NIF, Direccion, Cod_Postal, Localidad, Provincia, Referencia, Observaciones) VALUES('$nombre','$apellido1','$apellido2','$nombreEmpresa','$telefono1','$telefono2','$nif','$direccion','$codPostal','$localidad','$provincia','$referencias','$observaciones')";
-		//$_SESSION["queryprueba"] = $query;
 		$result = $mybd -> insert($query);
 	}
 

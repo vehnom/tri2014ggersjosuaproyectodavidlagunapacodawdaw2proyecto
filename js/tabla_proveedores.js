@@ -15,7 +15,7 @@ $(document).ready(function() {
             { "data": "Localidad" }
         ]
     });
-    $("#tabla_proveedores tbody").on("click",function(event){
+    /*$("#tabla_proveedores tbody").on("click",function(event){
         location.href = "../services/proveedores/SeditarProveedor.php?u=" + event.target.parentNode.cells[0].textContent; 
-    });
+    });*/
 });

@@ -1,5 +1,5 @@
 <?php
-    include_once "../services/operarios/getOperarios.php";
+    include_once "../services/proveedores/getProveedores.php";
     session_start();
     if(isset($_SESSION['logeado'])){
 ?>
