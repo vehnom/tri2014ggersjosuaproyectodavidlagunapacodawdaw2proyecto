@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
 	<script type="text/javascript" src="../js/desplegable.js"></script>
 	<script type="text/javascript" src="../js/jquery.dataTables.js"></script>
-	<script type="text/javascript" src="../js/tabla_operarios.js"></script>
+	<script type="text/javascript" src="../js/tabla_proveedores.js"></script>
 </head>
 <body>
 	<?php include "sidebar.php" ?>
@@ -22,40 +22,32 @@
 		<div id="contenido_prueba">
 		<h2>Lista de Proveedores</h2>
 		<hr style="margin-bottom: 25px;">
-		<table id="tabla_operarios" class="display" cellspacing="0" width="100%">
+		<table id="tabla_proveedores" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th>Id_Operario</th>
-				<th>Id_Usuario</th>
+                <th>Id_Proveedor</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Apellido2</th>
+                <th>Nombre_Empresa</th>
                 <th>Telefono</th>
-                <th>Telefono2</th>
+                <th>NIF</th>
                 <th>Direccion</th>
-                <th>DNI</th>
-                <th>Seg_Social</th>
-                <th>Observacion</th>
-                <th>Foto</th>
-                <th>Fecha_Alta</th>
+                <th>Poblacion</th>
             </tr>
         </thead>
  
         <tfoot>
             <tr>
-                <th>Id_Operario</th>
-				<th>Id_Usuario</th>
+                <th>Id_Proveedor</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Apellido2</th>
+                <th>Nombre_Empresa</th>
                 <th>Telefono</th>
-                <th>Telefono2</th>
+                <th>NIF</th>
                 <th>Direccion</th>
-                <th>DNI</th>
-                <th>Seg_Social</th>
-                <th>Observacion</th>
-                <th>Foto</th>
-                <th>Fecha_Alta</th>
+                <th>Poblacion</th>
             </tr>
         </tfoot>
     </table>

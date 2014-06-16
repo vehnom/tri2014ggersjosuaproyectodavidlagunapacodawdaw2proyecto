@@ -2,12 +2,12 @@
 	//session_start();
 	function getProveedores($mybd){
 		$query = "SELECT * FROM proveedores";
-		$array_operarios = array();
+		$array_proveedores = array();
 		$result = $mybd -> consulta($query);
 		while($fila = mysql_fetch_assoc($result)){
-			array_push($array_operarios, $fila);
+			array_push($array_proveedores, $fila);
 		}
-		return $array_operarios;
+		return $array_proveedores;
 	}
 
 	function getProveedoresxId($mybd, $id){
@@ -38,7 +38,7 @@
 		$referencias = $_POST['referencias'];
 		$observaciones = $_POST['observaciones'];
 
-		$query = "INSERT INTO `proveedores`( `Nombre`, `Apellido1`, `Apellido2`, `Nombre_Empresa`, `Telefono1`, `Telefono2`, `NIF`, `Direccion`, `Cod_Postal`, `Localidad`, `Provincia`, `Referencia`, `Observaciones`) VALUES('$nombre','$apellido1','$apellido2','$nombreEmpresa','$telefono1','$telefono2','$nif','$direccion','$codPostal','$localidad','$provincia','$referencias','$observaciones')";
+		$query = "INSERT INTO `proveedores`(Nombre, Apellido1, Apellido2, Nombre_Empresa, Telefono1, Telefono2, NIF, Direccion, Cod_Postal, Localidad, Provincia, Referencia, Observaciones) VALUES('$nombre','$apellido1','$apellido2','$nombreEmpresa','$telefono1','$telefono2','$nif','$direccion','$codPostal','$localidad','$provincia','$referencias','$observaciones')";
 		//$_SESSION["queryprueba"] = $query;
 		$result = $mybd -> insert($query);
 	}
