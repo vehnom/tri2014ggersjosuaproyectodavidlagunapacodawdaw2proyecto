@@ -6,13 +6,17 @@ $(document).ready(function() {
         "columns": [
             { "data": "Id_Proveedor" },
             { "data": "Nombre" },
-            { "data": "Apellido" },
+            { "data": "Apellido1" },
             { "data": "Apellido2" },
             { "data": "Nombre_Empresa" },
             { "data": "Telefono1" },
+            { "data": "Telefono2" },
             { "data": "NIF" },
             { "data": "Direccion" },
-            { "data": "Localidad" }
+            { "data": "Cod_Postal" },
+            { "data": "Provincia" },
+            { "data": "Referencia" },
+            { "data": "Observaciones" },
         ]
     });
     /*$("#tabla_proveedores tbody").on("click",function(event){

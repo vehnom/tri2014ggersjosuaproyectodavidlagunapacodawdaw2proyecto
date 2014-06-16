@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 { "data": []}
+=======
+<<<<<<< HEAD
+{ "data": [{"Id_Proveedor":1,"Nombre":"David","Apellido1":"García","Apellido2":"da","Nombre_Empresa":"da","Telefono1":"659026059","Telefono2":659026059,"NIF":"da","Direccion":"Islas canarias 139","Cod_Postal":"28905","Localidad":"Getafe","Provincia":"Madrid","Referencia":"da","Observaciones":"qwewqeweqwe"},{"Id_Proveedor":2,"Nombre":"Pepe","Apellido1":"pepe","Apellido2":"epepe","Nombre_Empresa":"pepe","Telefono1":"916523163","Telefono2":561651899,"NIF":"5456456a","Direccion":"asdasdasd","Cod_Postal":"889291","Localidad":"dasdasd","Provincia":"dasdasd","Referencia":"dasdasd","Observaciones":"dasdasd"}]}
+=======
+{ "data": [{"Id_Proveedor":1,"Nombre":"pepe","Apellido1":"perez","Apellido2":"perez","Nombre_Empresa":"Mariscos Recio","Telefono1":"132456789","Telefono2":987654321,"NIF":"01234567A","Direccion":"Calle pez 10","Cod_Postal":"28020","Localidad":"Getafe","Provincia":"Madrid","Referencia":"contacto dfe terceras personas","Observaciones":"no cobra mucho"},{"Id_Proveedor":2,"Nombre":"asafa","Apellido1":"asd","Apellido2":"wadqwe","Nombre_Empresa":"asdadw","Telefono1":"123123321","Telefono2":123321321,"NIF":"yuiuyasidu","Direccion":"ayqwoeuiyqwioeuy","Cod_Postal":"uioyqwe","Localidad":"oqyweuioqwyeiou","Provincia":"uiqwyeiouy","Referencia":"quiwyeioque","Observaciones":"qweyqwuioeyqwioeuy"},{"Id_Proveedor":3,"Nombre":"asafa","Apellido1":"qweiyu","Apellido2":"yqiuoweyiou","Nombre_Empresa":"Âºouiyqwoieuy","Telefono1":"123871928","Telefono2":761823512,"NIF":"5615237823","Direccion":"6125312667","Cod_Postal":"ghhadsgf","Localidad":"67123567167ghsdyfg","Provincia":"asdhfg","Referencia":"hgkhkj","Observaciones":"jhgkjhgk"}]}
+>>>>>>> origin/master
+>>>>>>> origin/master
