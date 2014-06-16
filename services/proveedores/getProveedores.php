@@ -68,7 +68,7 @@ function escribeProveedores($array_proveedores){
 		if($array_proveedores[$i]['Observaciones'] != NULL){
 			$string_proveedores .=  '"Observaciones":"' . $array_proveedores[$i]['Observaciones'] . '"';
 		}else{
-			$string_proveedores .=  '"Observaciones":' . '" "' . '"';
+			$string_proveedores .=  '"Observaciones":' . '" "' . '';
 		}
 		
 		if($i == (count($array_proveedores) - 1)){

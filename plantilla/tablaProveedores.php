@@ -20,37 +20,45 @@
 	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenido_prueba">
-		<h2>Lista de Proveedores</h2>
-		<hr style="margin-bottom: 25px;">
-		<table id="tabla_proveedores" class="display" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th>Id_Proveedor</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Apellido2</th>
-                <th>Nombre_Empresa</th>
-                <th>Telefono</th>
-                <th>NIF</th>
-                <th>Direccion</th>
-                <th>Poblacion</th>
-            </tr>
-        </thead>
- 
-        <tfoot>
-            <tr>
-                <th>Id_Proveedor</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Apellido2</th>
-                <th>Nombre_Empresa</th>
-                <th>Telefono</th>
-                <th>NIF</th>
-                <th>Direccion</th>
-                <th>Poblacion</th>
-            </tr>
-        </tfoot>
-    </table>
+    		<h2>Lista de Proveedores</h2>
+    		<hr style="margin-bottom: 25px;">
+    		<table id="tabla_proveedores" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Id_Proveedor</th>
+                        <th>Nombre</th>
+                        <th>Apellido1</th>
+                        <th>Apellido2</th>
+                        <th>Nombre_Empresa</th>
+                        <th>Telefono1</th>
+                        <th>Telefono2</th>
+                        <th>NIF</th>
+                        <th>Direccion</th>
+                        <th>Cod_Postal</th>
+                        <th>Provincia</th>
+                        <th>Referencia</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                        <th>Id_Proveedor</th>
+                        <th>Nombre</th>
+                        <th>Apellido1</th>
+                        <th>Apellido2</th>
+                        <th>Nombre_Empresa</th>
+                        <th>Telefono1</th>
+                        <th>Telefono2</th>
+                        <th>NIF</th>
+                        <th>Direccion</th>
+                        <th>Cod_Postal</th>
+                        <th>Provincia</th>
+                        <th>Referencia</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </tfoot>
+            </table>
 		</div>
 	</div>
 </body>
