@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#tabla_vehiculos').dataTable( {
+    $('#tabla_clientes').dataTable( {
         "ajax": "../services/clientes/clientes.txt",
         "bFilter": false,
         "scrollX": true,
@@ -16,7 +16,7 @@ $(document).ready(function() {
 			{ "data": "Moroso" }, 
         ]
     });
-    /*$("#tabla_vehiculos tbody").on("click",function(event){
-        location.href = "../services/operarios/SeditarOperario.php?u=" + event.target.parentNode.cells[0].textContent; 
-    });*/
+    $("#tabla_clientes tbody").on("click",function(event){
+        location.href = "../services/clientes/SeditarCliente.php?u=" + event.target.parentNode.cells[0].textContent; 
+    });
 });

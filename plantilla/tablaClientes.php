@@ -23,7 +23,7 @@
 		<div id="contenido_prueba">
 		<h2>Lista de Clientes</h2>
 		<hr style="margin-bottom: 25px;">
-		<table id="tabla_vehiculos" class="display" cellspacing="0" width="100%">
+		<table id="tabla_clientes" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th>Id_Cliente</th>

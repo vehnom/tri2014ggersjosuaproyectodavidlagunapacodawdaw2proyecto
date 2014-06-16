@@ -38,7 +38,7 @@
 		$moroso = $_POST['moroso'];
 	
 		$query = "INSERT INTO clientes (Nombre, Apellido1, Apellido2, Direccion, Cod_Postal, Localidad, Provincia, Telefono1, Telefono2, NIF, Observaciones, Email, Moroso) VALUES
-		('$nombre', '$apellido1', '$apellido2', '$direccion', '$cpostal', '$localidad', '$provincia', '$telefono1', '$telefono2', '$dni', '$observaciones', '$email', '$Moroso')";
+		('$nombre', '$apellido1', '$apellido2', '$direccion', '$cpostal', '$localidad', '$provincia', '$telefono1', '$telefono2', '$dni', '$observaciones', '$email', '$moroso')";
 		
 		$result = $mybd -> insert($query);
 	}
