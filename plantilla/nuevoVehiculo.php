@@ -32,12 +32,7 @@
 		<div id="contenedor_form">
 			<form class="form" id="form_insert_vehiculo" action="../services/flota/SinsertVehiculo.php" method="post">
 				<h2> Crear Veh&iacute;culo </h2>
-				<div id="form_col_center">
-					<div class="form_input">
-						<label for="idVehiculo">Id Veh&iacute;culo: </label>
-						<input style="width: 100px;" type="text" id="idVehiculo" name="idVehiculo" placeholder="Id vehiculo" required/>
-					</div>
-			
+				<div id="form_col_center">			
 					<div class="form_input">
 						<label for="idOperario">Id Operario: </label>
 						<select id="listaId" name="listaId">

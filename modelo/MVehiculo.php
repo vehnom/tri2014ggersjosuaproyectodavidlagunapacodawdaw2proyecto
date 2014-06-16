@@ -22,14 +22,13 @@
 	}
 		
 	function insertDatosVehiculoForm($mybd){
-		$idVehiculo = $_POST['idVehiculo']; 
 		$idOperario = $_POST['listaId'];
 		$matricula = $_POST['matricula'];
 		$marca = $_POST['marca'];
 		$modelo = $_POST['modelo'];
 		
-		$query = "INSERT INTO flota_vehiculos (Id_Vehiculo, Id_Operario, Matricula, Marca, Modelo) VALUES
-		($idVehiculo, '$idOperario', '$matricula', '$marca', '$modelo')";
+		$query = "INSERT INTO flota_vehiculos (Id_Operario, Matricula, Marca, Modelo) VALUES
+		('$idOperario', '$matricula', '$marca', '$modelo')";
 		
 		$result = $mybd -> insert($query);
 	}
@@ -40,19 +39,22 @@
 	}
 	
 	function pasarItv($mybd){
-		$idItv = $_POST['idItv'];
 		$estado = $_POST['estado'];
 		$fecha = $_POST['fecha'];
 		
-		$query = "INSERT INTO itv (Id_ITV, Estado, Fecha_Pasar_ITV) VALUES ($idItv, '$estado', '$fecha')";
+		$query = "INSERT INTO itv (Estado, Fecha_Pasar_ITV) VALUES ('$estado', '$fecha')";
 		$result = $mybd -> insert($query);
 	}
 	
 	function historialItv($mybd){
 		$idVehiculo = $_POST['idVehiculo'];
-		$idItv = $_POST['idItv'];
+		
+		$query = "SELECT Id_ITV FROM itv order by Id_ITV desc limit 1";
+		$result = $mybd -> consulta($query);
+		
+		echo $result;
 	
-		$query = "INSERT INTO historial_itv (Id_Vehiculo, Id_ITV) VALUES ($idVehiculo, $idItv)";
+		$query = "INSERT INTO historial_itv (Id_Vehiculo, Id_ITV) VALUES ($idVehiculo, $result)";
 		$result = $mybd -> insert($query);
 	}
 ?>

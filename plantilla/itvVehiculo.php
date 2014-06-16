@@ -32,12 +32,7 @@
 		<div id="contenedor_form">
 			<form class="form" id="form_insert_itv" action="../services/flota/SinsertItv.php" method="post">
 				<h2> Pasar ITV </h2>
-				<div id="form_col_center">
-					<div class="form_input">
-						<label for="id_Itv">Id ITV: </label>
-						<input style="width: 100px;" type="text" id="idItv" name="idItv" placeholder="Id ITV" required/>
-					</div>
-			
+				<div id="form_col_center">		
 					<div class="form_input">
 						<label for="estado_Itv">Estado ITV: </label>
 						<select id="estado" name="estado">
