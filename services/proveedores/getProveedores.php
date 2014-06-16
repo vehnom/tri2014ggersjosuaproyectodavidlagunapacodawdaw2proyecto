@@ -34,19 +34,19 @@ function escribeProveedores($array_proveedores){
 		$string_proveedores .=  '"Nombre":' . '"' . $array_proveedores[$i]['Nombre'] . '"' . ',';
 		
 		if($array_proveedores[$i]['Apellido1'] != NULL){
-			$string_proveedores .=  '"Apellido1":' . $array_proveedores[$i]['Apellido1'] . ',';
+			$string_proveedores .=  '"Apellido1":"' . $array_proveedores[$i]['Apellido1'] . '",';
 		}else{
 			$string_proveedores .=  '"Apellido1":' . '" "' . ',';
 		}
 		
 		if($array_proveedores[$i]['Apellido2'] != NULL){
-			$string_proveedores .=  '"Apellido2":' . $array_proveedores[$i]['Apellido2'] . ',';
+			$string_proveedores .=  '"Apellido2":"' . $array_proveedores[$i]['Apellido2'] . '",';
 		}else{
 			$string_proveedores .=  '"Apellido2":' . '" "' . ',';
 		}
 		
 		if($array_proveedores[$i]['Nombre_Empresa'] != NULL){
-			$string_proveedores .=  '"Nombre_Empresa":' . $array_proveedores[$i]['Nombre_Empresa'] . ',';
+			$string_proveedores .=  '"Nombre_Empresa":"' . $array_proveedores[$i]['Nombre_Empresa'] . '",';
 		}else{
 			$string_proveedores .=  '"Nombre_Empresa":' . '" "' . ',';
 		}
@@ -66,7 +66,7 @@ function escribeProveedores($array_proveedores){
 		$string_proveedores .=  '"Referencia":' . '"' . $array_proveedores[$i]['Referencia'] . '"' . ',';
 		
 		if($array_proveedores[$i]['Observaciones'] != NULL){
-			$string_proveedores .=  '"Observaciones":' . $array_proveedores[$i]['Observaciones'] . '"';
+			$string_proveedores .=  '"Observaciones":"' . $array_proveedores[$i]['Observaciones'] . '"';
 		}else{
 			$string_proveedores .=  '"Observaciones":' . '" "' . '"';
 		}

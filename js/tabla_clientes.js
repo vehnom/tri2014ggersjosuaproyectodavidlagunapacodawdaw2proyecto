@@ -16,6 +16,7 @@ $(document).ready(function() {
 			{ "data": "Moroso" }, 
         ]
     });
+<<<<<<< HEAD
 
     setTimeout(function(){cambiaCeldaMorosos();},100);
 
@@ -42,4 +43,9 @@ $(document).ready(function() {
         }
     }
 }
+=======
+    $("#tabla_clientes tbody").on("click",function(event){
+        location.href = "../services/clientes/SeditarCliente.php?u=" + event.target.parentNode.cells[0].textContent; 
+    });
+>>>>>>> origin/master
 });

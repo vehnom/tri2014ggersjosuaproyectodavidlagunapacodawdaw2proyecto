@@ -93,9 +93,15 @@
 
 					<div class="form_input">
 						<label for="moroso">Moroso: </label>
+<<<<<<< HEAD
 						<select id="moroso">
 							<option value="1" id="si"> SI </option>
 							<option value="0" id="no" selected> NO </option>
+=======
+						<select id="moroso" name="moroso">
+							<option value="1"> SI </option>
+							<option value="0"> NO </option>
+>>>>>>> origin/master
 						</select>
 					</div>	
 				</div>
