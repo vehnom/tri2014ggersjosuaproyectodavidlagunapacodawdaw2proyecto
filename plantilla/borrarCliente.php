@@ -18,7 +18,7 @@
 	
 <script type="text/javascript">
 	function comprobar(){
-		var borrarCliente = confirm('¿Realmente desea borra este cliente?');
+		var borrarCliente = confirm('¿Realmente desea borrar este cliente?');
 		if(borrarCliente == true){
 			$("#hideCliente").val("1");
 			document.formBorrar.submit();
@@ -48,6 +48,8 @@
 
 							<br>
 							<br>
+
+							<input type="hidden" id="hideCliente" name="hideCliente">
 						
 							<input type="button" id="borrar" name="borrar" value="Borrar Cliente" onclick="comprobar();"/>
 						</div>
