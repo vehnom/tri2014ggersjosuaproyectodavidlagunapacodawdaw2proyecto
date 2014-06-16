@@ -18,7 +18,8 @@
 			
 	}
 	function deleteDatosCliente($mybd, $id){
-		$query = "DELETE FROM clientes WHERE Id_Cliente='$id'";
+		$query = "DELETE FROM clientes WHERE Id_Cliente=".$id;
+		error_log($query);
 		$result = $mybd -> delete($query);	
 	}
 
