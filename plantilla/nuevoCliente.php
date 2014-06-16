@@ -94,8 +94,8 @@
 					<div class="form_input">
 						<label for="moroso">Moroso: </label>
 						<select id="moroso">
-							<option id="si"> SI </option>
-							<option id="no" selected> NO </option>
+							<option value="1" id="si"> SI </option>
+							<option value="0" id="no" selected> NO </option>
 						</select>
 					</div>	
 				</div>

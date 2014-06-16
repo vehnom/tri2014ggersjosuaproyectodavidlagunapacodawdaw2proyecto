@@ -39,13 +39,13 @@
 		$moroso = $_POST['moroso'];
 	
 		$query = "INSERT INTO clientes (Nombre, Apellido1, Apellido2, Direccion, Cod_Postal, Localidad, Provincia, Telefono1, Telefono2, NIF, Observaciones, Email, Moroso) VALUES
-		('$nombre', '$apellido1', '$apellido2', '$direccion', '$cpostal', '$localidad', '$provincia', '$telefono1', '$telefono2', '$dni', '$observaciones', '$email', '$Moroso')";
+		('$nombre', '$apellido1', '$apellido2', '$direccion', '$cpostal', '$localidad', '$provincia', '$telefono1', '$telefono2', '$dni', '$observaciones', '$email', '$moroso')";
 		
 		$result = $mybd -> insert($query);
 	}
 
-	function updateDatosCliente($mybd,$idOperario,$nombre,$apellido1,$apellido2,$telefono1,$telefono2,$direccion,$dni,$ss,$observaciones,$foto,$fecha){
-		$query = "UPDATE clientes SET Nombre = '$nombre', Apellido = '$apellido1', Apellido2 = '$apellido2', Telefono = '$telefono1', Telefono2 = '$telefono2', Direccion = '$direccion', DNI = '$dni', Seg_Social = '$ss', Observacion = '$observaciones', Foto = '$foto', Fecha_Alta  = '$fecha' WHERE Id_Operario = '$idOperario'";
+	function updateDatosCliente($mybd,$idCliente,$nombre,$apellido1,$apellido2,$telefono1,$telefono2,$direccion,$nif,$codPostal,$observaciones,$localidad,$provincia, $email, $moroso){
+		$query = "UPDATE clientes SET Nombre = '$nombre', Apellido1 = '$apellido1', Apellido2 = '$apellido2', Telefono1 = '$telefono1', Telefono2 = '$telefono2', Direccion = '$direccion', NIF = '$nif', Observaciones = '$observaciones', Localidad = '$localidad', Provincia = '$provincia', Cod_Postal  = '$codPostal', Email  = '$email', Moroso  = '$moroso' WHERE Id_Cliente = '$idCliente'";
 		$result = $mybd -> update($query);		
 	}
 ?>
