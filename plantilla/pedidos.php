@@ -18,38 +18,23 @@
 	<div id="contenido">
 		<div id="contenido_thumbs">
 			<div class="fila_thumbs">
-				<a href="avisos.php">
+				<a href="tablaPedidos.php">
 					<div class="thumb">
-						<h2><i class="icon-clipboard-2"></i></h2>
-						<small>Avisos diarios</small>
+						<h2><i class="icon-search"></i></h2>
+						<small>Ver Pedidos</small>
 					</div>
 				</a>
-				
-				<a href="nuevoAviso.php">
+				<a href="nuevoPedido.php">
 					<div class="thumb">
 						<h2><i class="icon-pencil"></i></h2>
-						<small>Nuevo Aviso</small>
+						<small>Nuevo Pedido</small>
 					</div>
 				</a>
-				
-				<a href="pedidos.php">
-					<div class="thumb">
-						<h2><i class="icon-files"></i></h2>
-						<small>Pedidos</small>
-					</div>
-				</a>
-
-				<a href="tablaVehiculos.php">
-					<div class="thumb">
-						<h2><i class="icon-cars"></i></h2>
-						<small>Flota Veh&iacute;culos</small>
-					</div>
-				</a>
-				<a href="tablaProductos.php">
-					<div class="thumb">
-						<h2><i class="icon-book"></i></h2>
-						<small>Productos</small>
-					</div>
+				<a href="borrarPedido.php">
+				<div class="thumb">
+					<h2><i class="icon-remove"></i></h2>
+					<small>Borrar Pedido</small>
+				</div>
 				</a>
 			</div>
 		</div>

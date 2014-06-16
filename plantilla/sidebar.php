@@ -1,4 +1,3 @@
-
 <div id="sideBar">
 		<div class="tit_sidebar">
 			<!-- <h3>Navegador</h3> -->
@@ -26,4 +25,5 @@
 		<a href="proveedores.php"><div class="btn_sidebar ultimo_btn_sidebar">PROVEEDORES</div></a>
 		<a href="flota.php"><div class="btn_sidebar ultimo_btn_sidebar">FLOTA VEHICULOS</div></a>
 		<a href="clientes.php"><div class="btn_sidebar ultimo_btn_sidebar">CLIENTES</div></a>
+		<a href="pedidos.php"><div class="btn_sidebar ultimo_btn_sidebar">PEDIDOS</div></a>
 </div>
