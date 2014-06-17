@@ -56,7 +56,6 @@
 			$valor = $fila["Id_ITV"];
 		}
 		
-
 		$query = "INSERT INTO historial_itv (Id_Vehiculo, Id_ITV) VALUES ($idVehiculo, $valor)";
 		$result = $mybd -> insert($query);
 	}

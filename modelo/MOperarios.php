@@ -45,4 +45,18 @@
 		$query = "UPDATE operarios SET Nombre = '$nombre', Apellido = '$apellido1', Apellido2 = '$apellido2', Telefono = '$telefono1', Telefono2 = '$telefono2', Direccion = '$direccion', DNI = '$dni', Seg_Social = '$ss', Observacion = '$observaciones', Foto = '$foto', Fecha_Alta  = '$fecha' WHERE Id_Operario = '$idOperario'";
 		$result = $mybd -> update($query);		
 	}
+	
+	function insertVacaciones($mybd){
+		$operario = $_POST['idOperario'];
+		$fechaInicio = $_POST['fecha_inicio'];
+		$fechaFin = $_POST['fecha_fin'];
+		
+		$dias = (strtotime($fechaInicio)-strtotime($fechaFin))/86400;
+		$dias = abs($dias); $dias = floor($dias);
+		
+		$query = "INSERT INTO vacaciones(Id_Operario,Fecha_Ini,Fecha_Fin,Cantidad_Vacaciones) VALUES
+		($operario,'$fechaInicio','$fechaFin',$dias)";
+		
+		$result = $mybd -> insert($query);
+	}
 ?>
