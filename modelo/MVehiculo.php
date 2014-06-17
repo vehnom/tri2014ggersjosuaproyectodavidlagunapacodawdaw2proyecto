@@ -52,9 +52,12 @@
 		$query = "SELECT Id_ITV FROM itv order by Id_ITV desc limit 1";
 		$result = $mybd -> consulta($query);
 		
-		echo $result;
-	
-		$query = "INSERT INTO historial_itv (Id_Vehiculo, Id_ITV) VALUES ($idVehiculo, $result)";
+		if($fila = mysql_fetch_assoc($result)){
+			$valor = $fila["Id_ITV"];
+		}
+		
+
+		$query = "INSERT INTO historial_itv (Id_Vehiculo, Id_ITV) VALUES ($idVehiculo, $valor)";
 		$result = $mybd -> insert($query);
 	}
 ?>
