@@ -529,3 +529,50 @@ body {
 }
 
 /* FIN USUARIO LOGUEADO */
+
+/* PEDIDOS */
+#cont_pedido{
+	width: 95%;
+	height: 850px;
+	float: left;
+	margin: 2.5%;
+}
+#cat_productos{
+	float: left;
+	width: 60%;
+	height: 100%;
+}
+#prod_pedido{
+	float: left;
+	width: 40%;
+	height: 75%;
+}
+#btns_pedido{
+	float: left;
+	width: 40%;
+	height: 25%;
+}
+#carrito_pedido{
+	float: left;
+	width: 100%;
+	height: 80%;
+	background-color: #ddd;
+}
+#total_pedido{
+	float:left;
+	width: 100%;
+	height: 20%;
+	background-color: #333;
+}
+#total_pedido input{
+	float:left;
+	width: 50%;
+	margin-top: 15px;
+}
+#total_pedido label{
+	float: left;
+	width: 35%;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+/* FIN PEDIDOS */

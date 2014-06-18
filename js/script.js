@@ -27,3 +27,19 @@ function validarDNI(dni) {
 		//txtdni.style.borderColor="red";
 	}
 }
+
+function subirbajarCantidad(id,estado){
+	if(estado == "+"){
+		var cantidad = $("#cantidad_"+id).val();
+		cantidad = parseInt(cantidad) + 1;
+		if(cantidad <= 99){
+			$("#cantidad_"+id).val(cantidad);
+		}
+	}else{
+		var cantidad = $("#cantidad_"+id).val();
+		cantidad = parseInt(cantidad) - 1;
+		if(cantidad >= 0){
+			$("#cantidad_"+id).val(cantidad);
+		}
+	}
+}
