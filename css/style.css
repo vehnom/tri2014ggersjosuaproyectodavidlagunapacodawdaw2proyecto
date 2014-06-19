@@ -437,6 +437,12 @@ body {
 	margin-top: 50px;
 }
 
+.error_login a, .error_login a:link, .error_login a:hover, .error_login a:active{
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+}
+
 #nombre_empresa {
 	text-align: center;
 	color: white;
