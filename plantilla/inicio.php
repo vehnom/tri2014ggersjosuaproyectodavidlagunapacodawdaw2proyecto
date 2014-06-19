@@ -18,10 +18,10 @@
 	<div id="contenido">
 		<div id="contenido_thumbs">
 			<div class="fila_thumbs">
-				<a href="avisos.php">
+				<a href="../services/avisos/SavisosMapa.php">
 					<div class="thumb">
 						<h2><i class="icon-clipboard-2"></i></h2>
-						<small>Avisos diarios</small>
+						<small>Avisos</small>
 					</div>
 				</a>
 				
