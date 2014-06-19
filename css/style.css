@@ -575,4 +575,57 @@ body {
 	margin-top: 15px;
 	margin-left: 10px;
 }
+
+.desp_cat {
+	border-radius: 5px;
+}
+
+a#boton_pedidos_desp , a:link#boton_pedidos_desp, a:visited#boton_pedidos_desp, a:active#boton_pedidos_desp{
+	color: white !important;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+}
+
+a:hover#boton_pedidos_desp {
+	color: #333 !important;
+}
+
+.sub_container_pedidos {
+	margin-left: 18px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	margin-bottom: 10px;
+	box-shadow: 0 0.5em 0.5em rgb(214, 214, 214);
+}
+
+a.contenedor_sub_pedido, a:link.contenedor_sub_pedido, a:active.contenedor_sub_pedido, a:visited.contenedor_sub_pedido  {
+	color: white !important;
+	text-decoration: none;
+}
+
+.btncomprar {
+	width: 100px;
+	font-family: verdana;
+	padding: 5px;
+	background-color: #4873A8;
+	border: 1px solid #3A5F8B;
+	height: 35px;
+	margin-top: 15px;
+	color: #f2f2f2;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px 1px black;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-left: -3px;
+	box-shadow: 0px 5px 0px #3A5F8B;
+}
+
+.btncomprar:hover {
+	cursor: pointer;
+	background-color: #5F94D6;
+}
+
 /* FIN PEDIDOS */

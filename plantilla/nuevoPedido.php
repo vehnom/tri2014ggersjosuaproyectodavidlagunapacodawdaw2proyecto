@@ -21,13 +21,13 @@
 		<div id="cont_pedido">
 			<div id="cat_productos">
 				<?php for($i = 0; $i < count($_SESSION['categorias']); $i++){?>
-				<a href="#" ><div id="cat_<?php echo $_SESSION['categorias'][$i]['Id_Categoria'];?>" class="btn_sidebar desp_cat"><?php echo $_SESSION['categorias'][$i]['Nombre_Categoria'];?></div></a>
-				<div id="submenu_cat_<?php echo $_SESSION['categorias'][$i]['Id_Categoria'];?>" class="sub_menu_desplegable sub_inicio">
+				<a id="boton_pedidos_desp" href="#" ><div id="cat_<?php echo $_SESSION['categorias'][$i]['Id_Categoria'];?>" class="btn_sidebar desp_cat"><?php echo $_SESSION['categorias'][$i]['Nombre_Categoria'];?></div></a>
+				<div id="submenu_cat_<?php echo $_SESSION['categorias'][$i]['Id_Categoria'];?>" class="sub_menu_desplegable sub_inicio sub_container_pedidos">
 					<?php for($e = 0; $e < count($_SESSION['productos']); $e++){ 
 						if($_SESSION['categorias'][$i]['Id_Categoria'] == $_SESSION['productos'][$e]["Id_Categoria"]){
 							$subir = 'subirbajarCantidad("'.$_SESSION['productos'][$e]['Id_Producto'].'","+");';
 							$bajar = 'subirbajarCantidad("'.$_SESSION['productos'][$e]['Id_Producto'].'","-");';
-							echo "<a href='#' id='".$_SESSION['productos'][$e]['Id_Producto']."'>".$_SESSION['productos'][$e]['Nombre']." <div class='cantidad'><button type='button' onclick='$bajar'>-</button><input type='text' value='0' id='cantidad_".$_SESSION['productos'][$e]['Id_Producto']."'/><button type='button' onclick='$subir'>+</button></div><div><button  class='btncomprar' id='btncomprar_".$_SESSION['productos'][$e]['Id_Producto']."' type='button'>Comprar</button></div></a>";
+							echo "<a class='contenedor_sub_pedido' href='#' id='".$_SESSION['productos'][$e]['Id_Producto']."'>".$_SESSION['productos'][$e]['Nombre']." <div class='cantidad'><button type='button' onclick='$bajar'>-</button><input type='text' value='0' id='cantidad_".$_SESSION['productos'][$e]['Id_Producto']."'/><button type='button' onclick='$subir'>+</button></div><div><button  class='btncomprar' id='btncomprar_".$_SESSION['productos'][$e]['Id_Producto']."' type='button'>Comprar</button></div></a>";
 						}			
 					}
 				echo "</div>";
