@@ -1,4 +1,5 @@
 <?php
+	include_once "../services/avisos/getAvisos.php";
     session_start();
     if(isset($_SESSION['logeado'])){
 ?>
