@@ -15,6 +15,6 @@
 		default:
 			$idProveedor = $_GET['p']; 
 			$_SESSION['proveedores'] = getProveedoresxId($mybd,$idProveedor);
-			header('Location: ../../plantilla/editarProveedor.php);
+			header('Location: ../../plantilla/editarProveedor.php');
 	}
 ?>

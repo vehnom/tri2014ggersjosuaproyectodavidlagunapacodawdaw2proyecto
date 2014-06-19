@@ -8,7 +8,6 @@
 		<a href="#"><div class="btn_sidebar primer_btn_sidebar desp_inicio">INICIO >></div></a>
 		<div class="sub_menu_desplegable sub_inicio">
 			<a href="inicio.php">Pagina principal</a>
-			<a href="#">Item 2</a>
 			<a href="#">Item 3</a>
 			<a href="#">Item 4</a>
 			<a href="#">Item 5</a>
@@ -17,6 +16,7 @@
 		<div class="sub_menu_desplegable sub_avisos">
 			<a href="avisos.php">Avisos diarios</a>
 			<a href="nuevoAviso.php">Nuevo aviso</a>
+			<a href="mapaAvisos.php">Avisos Mapa</a>
 			<a href="#">Item 3</a>
 			<a href="#">Item 4</a>
 			<a href="#">Item 5</a>
