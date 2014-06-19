@@ -20,11 +20,12 @@
       #map_canvas { height: 100% }
     </style>
     <script type="text/javascript"
-      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAo-YWw2bLSgA3pB-aT2dZKSZbVNoraHrE&sensor=SET_TO_TRUE_OR_FALSE">
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCgajOZ2z49GqITiicD84WyPmR7T0OEtSQ&sensor=SET_TO_TRUE_OR_FALSE">
     </script>
     <script type="text/javascript">
       function initialize() {
       	 var n=1;
+      	 var popup;
         var mapOptions = {
           center: new google.maps.LatLng(40.2970266, -3.7493709),
           zoom:7,
@@ -51,10 +52,12 @@
 	        /*var noticia = "<?php echo $_SESSION['avisos'][$i]['Tipo_Trabajo']; ?>";
 	        alert(noticia);*/
 	        google.maps.event.addListener(marker, 'click', function(){
-	            var popup = new google.maps.InfoWindow();
+	            if(!popup){
+	                popup = new google.maps.InfoWindow();
+	            }
 	            var note = ''+tipo[id];
 	            popup.setContent(note);
-	            popup.open(map, marker);
+	            popup.open(map, this);
 	        });
 	    }
       }
