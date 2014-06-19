@@ -1,1 +1,1 @@
-{ "data": []}
+{ "data": [{"Id_Proveedor":1,"Nombre":"pepe","Apellido1":"perez","Apellido2":"perez","Nombre_Empresa":"Mariscos Recio","Telefono1":"132456789","Telefono2":987654321,"NIF":"01234567A","Direccion":"Calle pez 10","Cod_Postal":"28020","Localidad":"Getafe","Provincia":"Madrid","Referencia":"contacto dfe terceras personas","Observaciones":"no cobra mucho"}]}

@@ -35,7 +35,7 @@
 			<div class="fila_thumbs">
 				<center>
 					<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="formBorrar" name="formBorrar">
-						<h2 style="font-size:60px; color: #aaa;"> Borrar Cliente </h2>
+						<h2> Borrar Cliente </h2>
 						<div class="thumb">
 							<p> Listado clientes </p>
 							<select id="listaCliente" name="listaCliente">

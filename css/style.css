@@ -197,9 +197,25 @@ body {
 	margin-bottom:10px;
 }
 
-#formBorrar input[type=submit]{
-	padding:10px;
-	font-size:25px;
+#formBorrar input[type=button]{
+	width: 200px;
+	font-family: verdana;
+	padding: 5px;
+	background-color: #4873A8;
+	border: 1px solid #3A5F8B;
+	height: 35px;
+	margin-top: 15px;
+	color: #f2f2f2;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px 1px black;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+#formBorrar input[type=button]:hover {
+	background-color: #7CA3CC;
 }
 
 #formBorrar .thumb{

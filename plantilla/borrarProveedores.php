@@ -35,7 +35,7 @@
 				<center>
 					<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="formBorrar" name="formBorrar">
 						<input type="hidden" id="hideProveedor" name="hideProveedor" value="0">
-						<h2 style="font-size:60px; color: #aaa;"> Borrar Proveedor </h2>
+						<h2> Borrar Proveedor </h2>
 						<div class="thumb">
 							<p> Listado Proveedores </p>
 							<select id="listaId" name="listaId">

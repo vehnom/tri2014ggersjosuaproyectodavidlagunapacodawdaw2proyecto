@@ -35,9 +35,9 @@
 			<div class="fila_thumbs">
 				<center>
 					<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="formBorrar" name="formBorrar">
-						<h2 style="font-size:60px; color: #aaa;"> Borrar Vehiculo </h2>
+						<h2> Borrar Vehiculo </h2>
 						<div class="thumb">
-							<p> Listado matriculas </p>
+							<p> Listado vehículos </p>
 							<select id="listaMatricula" name="listaMatricula">
 							<?php
 								for($i = 0; $i < count($_SESSION['vehiculos2']); $i++){	

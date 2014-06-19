@@ -35,9 +35,9 @@
 				<center>
 					<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="formBorrar" name="formBorrar">
 						<input type="hidden" id="hidePedido" name="hidePedido" value="0">
-						<h2 style="font-size:60px; color: #aaa;"> Borrar Pedido </h2>
+						<h2> Borrar Pedido </h2>
 						<div class="thumb">
-							<p> Listado Pedidoes </p>
+							<p> Listado Pedidos </p>
 							<select id="listaId" name="listaId">
 							<?php
 								for($i = 0; $i < count($_SESSION['pedidos']); $i++){	

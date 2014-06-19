@@ -26,7 +26,7 @@
 	<div id="contenido">
 		<div id="contenedor_form">
 			<form class="form" id="form_insert_operario" action="../services/operarios/SinsertOperario.php" method="post">
-				<h2> Editar operario </h2>
+				<h2> Nuevo operario </h2>
 				<div id="form_col_izqda">
 					<input type="hidden" id="hideOperario" name="hideOperario" value="0">
 			
