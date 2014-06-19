@@ -27,7 +27,7 @@
 						if($_SESSION['categorias'][$i]['Id_Categoria'] == $_SESSION['productos'][$e]["Id_Categoria"]){
 							$subir = 'subirbajarCantidad("'.$_SESSION['productos'][$e]['Id_Producto'].'","+");';
 							$bajar = 'subirbajarCantidad("'.$_SESSION['productos'][$e]['Id_Producto'].'","-");';
-							echo "<a class='contenedor_sub_pedido' href='#' id='".$_SESSION['productos'][$e]['Id_Producto']."'>".$_SESSION['productos'][$e]['Nombre']." <div class='cantidad'><button type='button' onclick='$bajar'>-</button><input type='text' value='0' id='cantidad_".$_SESSION['productos'][$e]['Id_Producto']."'/><button type='button' onclick='$subir'>+</button></div><div><button  class='btncomprar' id='btncomprar_".$_SESSION['productos'][$e]['Id_Producto']."' type='button'><i class='icon-cart-2 on-left'></i> Comprar</button></div></a>";
+							echo "<a class='contenedor_sub_pedido' href='#' id='".$_SESSION['productos'][$e]['Id_Producto']."'>".$_SESSION['productos'][$e]['Nombre']." <div class='cantidad'><button type='button' onclick='$bajar'>-</button><input id='hidden_".$_SESSION['productos'][$e]['Id_Producto']."' value='".$_SESSION['productos'][$e]['Precio_Unidad']."' type='hidden' /><input type='text' value='0' id='cantidad_".$_SESSION['productos'][$e]['Id_Producto']."'/><button type='button' onclick='$subir'>+</button></div><div><button  class='btncomprar' id='btncomprar_".$_SESSION['productos'][$e]['Id_Producto']."' type='button'><i class='icon-cart-2 on-left'></i> Comprar</button></div></a>";
 						}			
 					}
 				echo "</div>";
@@ -54,13 +54,9 @@
 						<input type="text" name="seguimiento_productos" id="seguimiento_productos"/>
 					</div>
 					<div>
-						<label>Cantidad: </label>
-						<input type="text" name="cantidad_productos" id="cantidad_productos"/>
-					</div>
-					<div>
 						<input type="hidden" name="carrito_productos" id="carrito_productos" />
 						<button type="submit"><i class="icon-floppy on-left"></i> Guardar</button>
-						<button type="button" onclick="$('#carrito_pedido').html('');$('#total_pedido input').eq(1).val('0');"><i class="icon-remove on-left"></i> Limpiar</button>
+						<button type="button" onclick="$('#carrito_pedido').html('');$('#total_pedido input').eq(1).val('0');$('.btncomprar').removeAttr('disabled');"><i class="icon-remove on-left"></i> Limpiar</button>
 					</div>
 				</form>
 				
