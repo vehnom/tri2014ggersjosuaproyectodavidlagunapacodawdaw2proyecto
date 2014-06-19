@@ -3,7 +3,7 @@ include_once("../services/myBBDD.php");
 
 $mybd = new myBBDD();
 	
-actualizaAvisos($mybd);
+$actualiza = actualizaAvisos($mybd);
 
 function actualizaAvisos($mybd){
 	$array_avisos = getAvisos($mybd);

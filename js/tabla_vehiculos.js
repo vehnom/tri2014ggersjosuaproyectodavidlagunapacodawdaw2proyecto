@@ -11,7 +11,7 @@ $(document).ready(function() {
             { "data": "Modelo" }
         ]
     });
-    /*$("#tabla_vehiculos tbody").on("click",function(event){
-        location.href = "../services/operarios/SeditarOperario.php?u=" + event.target.parentNode.cells[0].textContent; 
-    });*/
+    $("#tabla_vehiculos tbody").on("click",function(event){
+        location.href = "proximas_itv.php?id_vehiculo=" + event.target.parentNode.cells[0].textContent; 
+    });
 });
