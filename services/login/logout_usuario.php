@@ -1,8 +1,18 @@
 <?php
 session_start();
 
-unset($_SESSION['usuario']);
-unset($_SESSION['logeado']);
+$decision = "0";
 
-header("Location: ../../plantilla/index.php");
+if(isset($_POST['cerrarSesion'])){
+	$decision = $_POST['cerrarSesion'];
+}
+
+switch($decision){
+	case "1":
+		unset($_SESSION['usuario']);
+		unset($_SESSION['logeado']);
+		
+		header("Location: ../../plantilla/index.php");
+	break;
+}
 ?>

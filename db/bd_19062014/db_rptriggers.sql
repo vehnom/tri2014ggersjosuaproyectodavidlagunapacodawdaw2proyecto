@@ -72,10 +72,10 @@ CREATE TABLE IF NOT EXISTS `avisos` (
 --
 
 INSERT INTO `avisos` (`Id_Aviso`, `Id_Pedido`, `Id_Factura`, `Nota`, `Quedada_dia`, `Hora`, `Tipo_Trabajo`, `Citado_Por`, `Fecha_Entrada`, `Fecha_Visitado`, `Coord_Longitud`, `Coord_Latitud`, `Id_Estado_Aviso`, `Ultima_Modificacion_Por`) VALUES
-(1, NULL, 1, 'Colocar cerrojo nuevo en puerta Kiuso', '2014-05-14 17:37:46', '19:43:00', 'Cerrajeria', 'Paco', '2014-05-14 20:00:00', '2014-05-15 20:00:00', NULL, NULL, 1, ''),
-(5, NULL, 1, 'Blablabla blablablabla', '2014-05-15 17:37:46', '14:40:00', 'Cerrajeria', 'Pepe', '2014-05-07 20:00:00', '2014-05-12 20:00:00', NULL, NULL, 0, ''),
-(6, NULL, 4, 'asdasd', '2014-06-04 18:02:25', '01:02:00', 'Cerrajeria', 'Paco', '2014-02-03 01:02:00', '2014-10-04 02:04:00', NULL, NULL, 1, 'pepe'),
-(7, NULL, 5, 'asdasd', '2014-06-04 18:08:35', '01:02:00', 'Cerrajeria', 'Paco', '2014-02-03 01:02:00', '2014-10-04 02:04:00', NULL, NULL, 1, 'pepe');
+(1, NULL, 1, 'Colocar cerrojo nuevo en puerta Kiuso', '2014-05-14 17:37:46', '19:43:00', 'Cerrajeria', 'Paco', '2014-05-14 20:00:00', '2014-05-15 20:00:00', '40.2969151', '-3.7491966', 1, ''),
+(5, NULL, 1, 'Blablabla blablablabla', '2014-05-15 17:37:46', '14:40:00', 'Cerrajeria', 'Pepe', '2014-05-07 20:00:00', '2014-05-12 20:00:00', '40.3182737', '-3.7315216', 0, ''),
+(6, NULL, 4, 'asdasd', '2014-06-04 18:02:25', '01:02:00', 'Cerrajeria', 'Paco', '2014-02-03 01:02:00', '2014-10-04 02:04:00', '40.311458', '-3.714244,17', 1, 'pepe'),
+(7, NULL, 5, 'asdasd', '2014-06-04 18:08:35', '01:02:00', 'Cerrajeria', 'Paco', '2014-02-03 01:02:00', '2014-10-04 02:04:00', '40.453054', '-3.688344,17', 1, 'pepe');
 
 -- --------------------------------------------------------
 
