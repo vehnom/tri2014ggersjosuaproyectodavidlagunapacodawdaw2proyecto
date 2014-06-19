@@ -17,7 +17,7 @@
 		<div class="sub_menu_desplegable sub_avisos">
 			<a href="avisos.php">Avisos</a>
 			<a href="nuevoAviso.php">Nuevo aviso</a>
-			<a href="SavisosMapa.php">Avisos Mapa</a>
+			<a href="../services/avisos/SavisosMapa.php">Avisos Mapa</a>
 			<a href="#">Item 3</a>
 			<a href="#">Item 4</a>
 			<a href="#">Item 5</a>
