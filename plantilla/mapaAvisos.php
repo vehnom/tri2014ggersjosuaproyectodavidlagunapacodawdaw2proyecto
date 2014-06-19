@@ -1,6 +1,5 @@
 <?php 
 	session_start();
-	include($_SESSION[".."]."/services/proveedores/SdeleteProveedor.php");
 	if(isset($_SESSION['logeado'])){
 ?>
 <!doctype html>
@@ -34,22 +33,26 @@
         var map = new google.maps.Map(document.getElementById("map_canvas"),
             mapOptions);
       	var place = new Array();
+      	var tipo = new Array();
 		//place['aviso1'] = new google.maps.LatLng(40.2969151,-3.7491966);
 		//place['aviso2'] = new google.maps.LatLng(40.3182737,-3.7315216);
 		<?php for($i = 0; $i < count($_SESSION['avisos']); $i++){?>
-	    	place['aviso<?php echo $i?>'] = new google.maps.LatLng(<?php echo $_SESSION['avisos'][$i]['Coord_Longitud'] ?>,<?php echo $_SESSION['avisos'][$i]['Coord_Latitud'] ?>);
+	    	place['aviso_<?php echo $i?>'] = new google.maps.LatLng(<?php echo $_SESSION['avisos'][$i]['Coord_Longitud'] ?>,<?php echo $_SESSION['avisos'][$i]['Coord_Latitud'] ?>);
+	    	tipo['<?php echo $i?>'] = "<?php echo $_SESSION['avisos'][$i]['Tipo_Trabajo']; ?>";
 	 	<?php }?>
 	    for(var i in place){
-	        var marker = new google.maps.Marker({
+	    	var id = i.split("_")[1];
+	    	var marker = new google.maps.Marker({
 	            position: place[i]
 	            , map: map
 	            , title: i
 	            , icon: 'http://gmaps-samples.googlecode.com/svn/trunk/markers/red/marker' + n++ + '.png'
 	        });
-	 
+	        /*var noticia = "<?php echo $_SESSION['avisos'][$i]['Tipo_Trabajo']; ?>";
+	        alert(noticia);*/
 	        google.maps.event.addListener(marker, 'click', function(){
 	            var popup = new google.maps.InfoWindow();
-	            var note = '<?php echo $_SESSION["avisos"][$i]["Tipo_Trabajo"] ?>';
+	            var note = ''+tipo[id];
 	            popup.setContent(note);
 	            popup.open(map, marker);
 	        });
@@ -58,9 +61,10 @@
     </script>
 </head>
 <body onload="initialize()">
-	<?php include "sidebar.php" ?>
+	<?php include "sidebar.php"; ?>
 	<div id="contenido"  style="width: 80%;height: 100%;">
-		<div id="map_canvas" style="width:100%; height:100%"></div>
+		<div id="map_canvas" style="width:98%; height:98%;margin:1%;"></div>
+		<input type="hidden"  id="avisos" value=""/>
 	</div>
 </body>
 </html>

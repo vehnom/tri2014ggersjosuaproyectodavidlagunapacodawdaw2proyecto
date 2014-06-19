@@ -1,11 +1,11 @@
 <?php
 	function getAvisos($mybd){
-		$query = "SELECT * FROM clientes";
-		$array_clientes = array();
+		$query = "SELECT * FROM avisos";
+		$array_avisos = array();
 		$result = $mybd -> consulta($query);
 		while($fila = mysql_fetch_assoc($result)){
-			array_push($array_clientes, $fila);
+			array_push($array_avisos, $fila);
 		}
-		return $array_clientes;
+		return $array_avisos;
 	}
 ?>
