@@ -538,10 +538,12 @@ body {
 .salir_usuario {
 	text-align: center;
 	margin: 15px auto;
+	cursor: pointer;
 }
 
 .salir_usuario a:link, .salir_usuario a:hover, .salir_usuario a:visited, .salir_usuario a:active{
 	color: red !important;
+	cursor: pointer;
 }
 
 /* FIN USUARIO LOGUEADO */
