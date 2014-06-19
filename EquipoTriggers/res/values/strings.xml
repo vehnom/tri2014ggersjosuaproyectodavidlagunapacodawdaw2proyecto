@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RP App</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- LOGIN -->
+    <string name="tv_login_email">Email:</string>
+    <string name="tv_login_contrasena">Contraseña:</string>
+    <string name="tv_login_entrar">ENTRAR</string>
+
+    <!-- INICIO DATOS SLIDE MENU -->
+    <string-array name="slide_menu_opciones">
+        <item>Atocha</item>
+        <item>Nuevos Ministerios</item>
+        <item>Getafe Centro</item>
+        <item>Fuenlabrada</item>
+        <item>Coslada</item>
+        <item>Móstoles</item>
+        <item>Las Rozas</item>
+        <item>Torrejón de Ardoz</item>
+        <item>Pinto</item>
+        <item>Parla</item>
+        <item>Laguna Joaztel</item>
+        <item>Estadio Santiago Bernabéu</item>
+    </string-array>
+
+    <!-- INICIO NOMBRE EMPRESA -->
+    <string name="nombre_empresa">Robles Portillo S.L.</string>
+    
+</resources>
