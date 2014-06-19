@@ -11,9 +11,6 @@
 			<a href="avisos.php">Avisos</a>
 			<a href="nuevoAviso.php">Nuevo aviso</a>
 			<a href="../services/avisos/SavisosMapa.php">Avisos Mapa</a>
-			<a href="#">Item 3</a>
-			<a href="#">Item 4</a>
-			<a href="#">Item 5</a>
 		</div>
 		<a href="operarios.php"><div class="btn_sidebar">OPERARIOS</div></a>
 		<a href="proveedores.php"><div class="btn_sidebar">PROVEEDORES</div></a>
