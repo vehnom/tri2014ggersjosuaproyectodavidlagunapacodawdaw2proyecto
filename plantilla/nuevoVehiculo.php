@@ -34,7 +34,7 @@
 				<h2> Crear Veh&iacute;culo </h2>
 				<div id="form_col_center">			
 					<div class="form_input">
-						<label for="idOperario">Id Operario: </label>
+						<label for="idOperario">Operario: </label>
 						<select id="listaId" name="listaId">
 						<?php
 							for($i = 0; $i < count($_SESSION['operariosVehiculo']); $i++){
