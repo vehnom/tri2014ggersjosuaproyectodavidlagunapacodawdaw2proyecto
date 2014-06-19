@@ -1,4 +1,5 @@
 <script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+<script type="text/javascript" src="../js/jquery.dataTables.js"></script>
 <script type="text/javascript">
 	function comprobarSalir(){
 		var cerrarSesionAlerta = confirm('Vas a salir de tu cuenta, ' +  String.fromCharCode(191) + 'continuar?');
@@ -17,7 +18,7 @@
 			<a href="inicio.php"><img src="../images/logo.jpg"></a>
 		</div>
 		<div class="nombre_usuario_logeado">Usuario actual: <span><?php echo $_SESSION['usuario'] ?></span></div>
-		<div class="salir_usuario"><a onclick="comprobarSalir();">Salir de mi cuenta</a></div>
+		<div class="salir_usuario"><a onclick="comprobarSalir()">Salir de mi cuenta</a></div>
 		<a href="inicio.php"><div class="btn_sidebar primer_btn_sidebar">INICIO</div></a>
 		<a href="#"><div class="btn_sidebar desp_avisos">AVISOS >></div></a>
 		<div class="sub_menu_desplegable sub_avisos">
