@@ -19,17 +19,24 @@
 	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="detalle_pedido">
+			<h2 style="text-align: center;">Detalles del pedido</h2>
 			<?php 
 				$detalle = $_SESSION['detalle'];
+				echo "<table class='tabla_detalle_pedido'>
+						<tr>
+							<th>Id Pedido</th><th>Id Producto</th><th>Unidades</th><th>Descuento</th><th>Total</th>
+						</tr>";
 				for($i = 0; $i < count($detalle); $i++){
-					echo "<div>
-							<span>Id_Pedido: ".$detalle[$i]['Id_Pedido']."</span>
-							<span>Id_Producto: ".$detalle[$i]['Id_Producto']."</span>
-							<span>Total: ".$detalle[$i]['Total']."</span>
-							<span>Unidades: ".$detalle[$i]['Unidades']."</span>
-							<span>Descuento: ".$detalle[$i]['Descuento']."</span>
-						</div>";
+					echo "
+							
+							<tr>
+								<td>".$detalle[$i]['Id_Pedido']."</td><td>".$detalle[$i]['Id_Producto']."</td><td>".$detalle[$i]['Unidades']."</td><td>".$detalle[$i]['Descuento']."</td><td>".$detalle[$i]['Total']." euros</td>
+							</tr>
+
+						";
 				}
+
+				echo "</table>";
 			?>
 		</div>
 	</div>
