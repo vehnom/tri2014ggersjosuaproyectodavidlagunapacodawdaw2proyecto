@@ -33,9 +33,14 @@
 		$result = $mybd -> insert($query);
 	}
 	
-	function deleteDatosVehiculo($mybd, $matricula){
-		$query = "DELETE FROM flota_vehiculos WHERE MATRICULA='$matricula'";
-		$result = $mybd -> delete($query);
+	function deleteDatosVehiculo($mybd, $id_vehiculo){
+		echo "<script>alert('entra al modelo');</script>";
+		$query1 = "DELETE FROM historial_itv WHERE Id_Vehiculo='$id_vehiculo'";
+		$query2 = "DELETE FROM flota_vehiculos WHERE Id_Vehiculo='$id_vehiculo'";
+		echo "<script>console.log(".$query2.");</script>";
+
+		$result1 = $mybd -> delete($query1);
+		$result1 = $mybd -> delete($query2);
 	}
 	
 	function pasarItv($mybd){

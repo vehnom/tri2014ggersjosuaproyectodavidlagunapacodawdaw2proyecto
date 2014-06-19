@@ -39,15 +39,20 @@
 						$fila_itv = getItvCoche($_GET['id_vehiculo'], $mybd);
 					} 
 				?>
-				<table>
+				<?php if($fila_itv){ ?>
+
+				<table class="tabla_itv">
 					<tr>
-						<td>Matricula</td><td>Marca</td><td>Modelo</td><td>Estado ITV</td><td>Fecha</td>
+						<th>Matricula</th><th>Marca</th><th>Modelo</th><th>Estado ITV</th><th>Fecha</th>
 					</tr>
 					<tr>
 						<td><?php echo $fila_coche['Matricula'] ?></td><td><?php echo $fila_coche['Marca'] ?></td><td><?php echo $fila_coche['Modelo'] ?></td><td><?php echo $fila_itv['Estado'] ?></td><td><?php echo $fila_itv['Fecha_Pasar_ITV'] ?></td>
 					</tr>
 				</table>
+
+				<?php } else { echo "Este coche no tiene datos de ITV";} ?>
 			</form>
+			<div class="btn_volver_itv"><button type="button" onclick="window.history.back();">Volver</button></div>
 		</div>
 	</div>
 </body>

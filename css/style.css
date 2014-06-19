@@ -748,3 +748,110 @@ a.contenedor_sub_pedido, a:link.contenedor_sub_pedido, a:active.contenedor_sub_p
 
 
 /* FIN PEDIDOS */
+
+/* COMIENZO TABLA ITV */
+
+.tabla_itv {
+	font-size: 12px;
+	margin: 0 auto;
+}
+
+
+.tabla_itv th{
+	background-color: #333;
+	color: white;
+	height: 30px;
+}
+
+
+.tabla_itv tr{
+	background-color: white;
+	text-align: center;
+}
+
+.tabla_itv td{
+	width: 100px;
+	height: 46px;
+}
+
+.btn_volver_itv{
+
+}
+
+.btn_volver_itv button{
+	width: 130px;
+	font-family: verdana;
+	padding: 5px;
+	background-color: #4873A8;
+	border: 1px solid #3A5F8B;
+	height: 35px;
+	margin-top: 15px;
+	color: #f2f2f2;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px 1px black;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-left: -3px;
+	box-shadow: 0px 1px 0px #3A5F8B;
+	margin-bottom: 10px;
+	margin-left: 415px;
+	margin-top: -8px;
+}
+
+/* FINTABLA ITV  */
+
+/* COMIENZO TABLA DETALLE PEDIDO */
+
+.tabla_detalle_pedido {
+	font-size: 12px;
+	margin: 10px auto;
+}
+
+.tabla_detalle_pedido th{
+	background-color: #333;
+	color: white;
+	height: 30px;
+}
+
+
+.tabla_detalle_pedido tr{
+	background-color: white;
+	text-align: center;
+}
+
+.tabla_detalle_pedido td{
+	width: 100px;
+	height: 46px;
+	background-color: #eee;
+}
+
+.btn_volver_itv{
+
+}
+
+.tabla_detalle_pedido button{
+	width: 130px;
+	font-family: verdana;
+	padding: 5px;
+	background-color: #4873A8;
+	border: 1px solid #3A5F8B;
+	height: 35px;
+	margin-top: 15px;
+	color: #f2f2f2;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px 1px black;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-left: -3px;
+	box-shadow: 0px 1px 0px #3A5F8B;
+	margin-bottom: 10px;
+	margin-left: 415px;
+	margin-top: -8px;
+}
+
+
+/* FIN TABLA DETALLE PEDIDO */

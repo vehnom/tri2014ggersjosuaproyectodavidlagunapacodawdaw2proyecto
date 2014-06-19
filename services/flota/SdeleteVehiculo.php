@@ -1,4 +1,5 @@
 <?php
+
 	include_once($_SESSION[".."]."/services/myBBDD.php");
 	$mybd = new myBBDD();
 	include($_SESSION[".."]."/modelo/MVehiculo.php");
@@ -9,7 +10,8 @@
 	switch($decision){
 		case "1":
 			$matricula = $_POST['listaMatricula'];
-			deleteDatosVehiculo($mybd, $matricula);
+			$elimina = deleteDatosVehiculo($mybd, $matricula);
+
 			header('Location: tablaVehiculos.php');
 		break;
 		default:
