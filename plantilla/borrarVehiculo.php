@@ -49,7 +49,7 @@
 							<br>
 							<br>
 
-							<input type="hidden" id="hideVehiculo" value="0">
+							<input type="hidden" id="hideVehiculo" value="0" name="hideVehiculo">
 						
 							<input type="button" id="borrar" name="borrar" value="Borrar Vehiculo" onclick="comprobar();"/>
 						</div>
