@@ -24,7 +24,7 @@
 						<small>Ver Pedidos</small>
 					</div>
 				</a>
-				<a href="nuevoPedido.php">
+				<a href="../services/pedidos/SempezarPedidos.php">
 					<div class="thumb">
 						<h2><i class="icon-pencil"></i></h2>
 						<small>Nuevo Pedido</small>

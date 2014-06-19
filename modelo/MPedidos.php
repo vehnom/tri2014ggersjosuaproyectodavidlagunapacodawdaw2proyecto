@@ -17,24 +17,44 @@
 		}
 			
 	}
+	function getDetallePedidosxId($mybd, $id){
+		$query = "SELECT * FROM detalle_pedido WHERE Id_Pedido = ".$id."";
+		$result = $mybd -> consulta($query);
+		$array_pedidos = array();
+		while($fila = mysql_fetch_assoc($result)){
+			array_push($array_pedidos, $fila);
+		}
+		return $array_pedidos;
+			
+	}
 	function deleteDatosPedidoxId($mybd, $id){
 		$query = "DELETE FROM pedidos WHERE Id_Pedido='$id'";
+		$query2 = "DELETE FROM detalle_pedido WHERE Id_Pedido='$id'";
 		$result = $mybd -> delete($query);	
+		$result = $mybd -> delete($query2);	
 	}
 
 	function insertDatosPedidoForm($mybd){
+					
 		$carrito = $_POST['carrito_productos'];
+		$carrito = explode(" ", $carrito);
 		$seguimiento = $_POST['seguimiento_productos'];
 		$hora = $_POST['hora_productos'];
-		$cantidad = $_POST['cantidad_productos'];
-		
-		$query = "INSERT INTO `pedidos`(`Id_Pedido`, `Fecha`, `Seguimiento`, `Hora_Llamada`, `Cantidad`) VALUES ('','18-06-2014','$seguimiento','$hora','$cantidad')";
-		
+		$cantidad = count($carrito);
+		$query = "INSERT INTO `pedidos`(`Id_Pedido`, `Fecha`, `Seguimiento`, `Hora_Llamada`, `Cantidad`) VALUES ('',CURDATE(),'$seguimiento','$hora','$cantidad')";
 		$result = $mybd -> insert($query);
+		$id = mysql_insert_id();
+
+		for($i = 0; $i < count($carrito); $i++){
+			if($carrito[$i] != ""){
+				$producto_carrito = $carrito[$i];
+				$producto_carrito = explode('-',$producto_carrito);
+				$cantidadProducto = $producto_carrito[1];
+				$idProducto = $producto_carrito[0];
+				$query = "INSERT INTO `detalle_pedido`(`Id_Pedido`, `Id_Producto`, `Total`, `Unidades`, `Descuento`) VALUES ('$id','$idProducto',0,$cantidadProducto,0);";
+				$result = $mybd -> insert($query);
+			}
+		}
 	}
 
-	function updateDatosPedido($mybd,$idPedido,$nombre,$apellido1,$apellido2,$telefono1,$telefono2,$direccion,$dni,$ss,$observaciones,$foto,$fecha){
-		$query = "UPDATE pedidos SET Nombre = '$nombre', Apellido = '$apellido1', Apellido2 = '$apellido2', Telefono = '$telefono1', Telefono2 = '$telefono2', Direccion = '$direccion', DNI = '$dni', Seg_Social = '$ss', Observacion = '$observaciones', Foto = '$foto', Fecha_Alta  = '$fecha' WHERE Id_Pedido = '$idPedido'";
-		$result = $mybd -> update($query);		
-	}
 ?>

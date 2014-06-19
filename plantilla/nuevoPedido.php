@@ -14,13 +14,6 @@
 	<script type="text/javascript" src="../js/script.js"></script>
 	<script type="text/javascript" src="../js/pedidos.js"></script>
 	<link href="../metro/min/iconFont.min.css" rel="stylesheet">
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#btn_insert_operario").on("click", function(){
-				$("#hideOperario").val("1");
-			});
-		});
-	</script>
 </head>
 <body>
 	<?php include "sidebar.php" ?>

@@ -3,28 +3,28 @@ include_once("../services/myBBDD.php");
 
 $mybd = new myBBDD();
 
-actualizaOperarios($mybd);
+actualizaPedidos($mybd);
 
-function actualizaOperarios($mybd){
-	$array_operarios = getOperarios($mybd);
-	escribeOperarios($array_operarios);
+function actualizaPedidos($mybd){
+	$array_pedidos = getPedidos($mybd);
+	escribePedidos($array_pedidos);
 }
 
 
 
-function getOperarios($mybd){
-	$query = "SELECT * FROM operarios";
-	$array_operarios = array();
+function getPedidos($mybd){
+	$query = "SELECT * FROM pedidos";
+	$array_pedidos = array();
 	$result = $mybd -> consulta($query);
 
 	while($fila = mysql_fetch_assoc($result)){
-		array_push($array_operarios, $fila);
+		array_push($array_pedidos, $fila);
 	}
 
-	return $array_operarios;
+	return $array_pedidos;
 }
-function getOperariosxId($mybd, $id){
-	$query = "SELECT * FROM operarios WHERE Id_Operario = ".$id."";
+function getPedidosxId($mybd, $id){
+	$query = "SELECT * FROM pedidos WHERE Id_Pedido = ".$id."";
 	$result = $mybd -> consulta($query);
 	if($fila = mysql_fetch_assoc($result)){
 	return $fila;
@@ -33,50 +33,34 @@ function getOperariosxId($mybd, $id){
 }
 
 
-function escribeOperarios($array_operarios){
-	$string_operarios = '';
-	$string_operarios .= '{ "data": [';
+function escribePedidos($array_pedidos){
+	$string_pedidos = '';
+	$string_pedidos .= '{ "data": [';
 	
 
 
-	for($i = 0; $i < count($array_operarios); $i++){
-		$string_operarios .= '{';
-		$string_operarios .=  '"Id_Operario":' . $array_operarios[$i]['Id_Operario'] . ',';
-		if($array_operarios[$i]['Id_Usuario'] != NULL){
-			$string_operarios .=  '"Id_Usuario":' . $array_operarios[$i]['Id_Usuario'] . ',';
-		}else{
-			$string_operarios .=  '"Id_Usuario":' . '" "' . ',';
-		}
-		$string_operarios .=  '"Nombre":' . '"' . $array_operarios[$i]['Nombre'] . '"' . ',';
-		$string_operarios .=  '"Apellido":' . '"' . $array_operarios[$i]['Apellido'] . '"' . ',';
-		$string_operarios .=  '"Apellido2":' . '"' . $array_operarios[$i]['Apellido2'] . '"' . ',';
-		$string_operarios .=  '"Telefono":' . '"' . $array_operarios[$i]['Telefono'] . '"' . ',';
-		if($array_operarios[$i]['Telefono2'] != NULL){
-			$string_operarios .=  '"Telefono2":' . '"' . $array_operarios[$i]['Telefono2'] . '"' . ',';
+	for($i = 0; $i < count($array_pedidos); $i++){
+		$string_pedidos .= '{';
+		$string_pedidos .=  '"Id_Pedido":' . $array_pedidos[$i]['Id_Pedido'] . ',';
+		$string_pedidos .=  '"Fecha":' . '"' . $array_pedidos[$i]['Fecha'] . '"' . ',';
+		$string_pedidos .=  '"Seguimiento":' . '"' . $array_pedidos[$i]['Seguimiento'] . '"' . ',';
+		$string_pedidos .=  '"Hora_Llamada":' . '"' . $array_pedidos[$i]['Hora_Llamada'] . '"' . ',';
+		$string_pedidos .=  '"Cantidad":' . '"' . $array_pedidos[$i]['Cantidad'] . '"' . '';
+		if($i == (count($array_pedidos) - 1)){
+			$string_pedidos .= "}";
 		} else {
-			$string_operarios .=  '"Telefono2":' . '" "' . ',';
-		}
-		$string_operarios .=  '"Direccion":' . '"' . $array_operarios[$i]['Direccion'] . '"' . ',';
-		$string_operarios .=  '"DNI":' . '"' . $array_operarios[$i]['DNI'] . '"' . ',';
-		$string_operarios .=  '"Seg_Social":' . '"' . $array_operarios[$i]['Seg_Social'] . '"' . ',';
-		$string_operarios .=  '"Observacion":' . '"' . $array_operarios[$i]['Observacion'] . '"' . ',';
-		$string_operarios .=  '"Foto":' . '"' . $array_operarios[$i]['Foto'] . '"' . ',';
-		$string_operarios .=  '"Fecha_Alta":' . '"' . $array_operarios[$i]['Fecha_Alta'] . '"';
-		if($i == (count($array_operarios) - 1)){
-			$string_operarios .= "}";
-		} else {
-			$string_operarios .= "},";
+			$string_pedidos .= "},";
 		}
 		
 	}
 
-	$string_operarios .= "]}";
+	$string_pedidos .= "]}";
 
-	//echo $string_operarios;
+	//echo $string_pedidos;
 	//$string_prueba = "jejeje";
 	//Escribir en un archivo una nueva línea
-	$fp = fopen("../services/operarios/operarios.txt", "w+");
-	fwrite($fp, $string_operarios);
+	$fp = fopen("../services/pedidos/pedidos.txt", "w+");
+	fwrite($fp, $string_pedidos);
 	fclose($fp);
 	
 }

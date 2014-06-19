@@ -18,8 +18,17 @@
 			
 	}
 	function deleteDatosOperarioxId($mybd, $id){
+		$query = "SELECT * FROM operarios WHERE Id_Operario = ".$id."";
+		$result = $mybd -> consulta($query);
+		if($fila = mysql_fetch_assoc($result)){
+			$idUser = $fila['Id_Usuario'];
+		}
 		$query = "DELETE FROM operarios WHERE Id_Operario='$id'";
 		$result = $mybd -> delete($query);	
+		if($idUser != null){
+			$query = "DELETE FROM usuario WHERE Id_Usuario='$idUser'";
+			$result = $mybd -> delete($query);	
+		}
 	}
 
 	function insertDatosOperarioForm($mybd){

@@ -9,7 +9,7 @@ $(document).ready(function(){
 		total_cantidad = parseInt(total_cantidad) + parseInt(cantidad);
 		$("#total_pedido input").eq(1).val(total_cantidad);
 		var carrito = $("#carrito_productos").val();
-		carrito += id+"-"+cantidad;
+		carrito += id+"-"+cantidad+" ";
 		$("#carrito_productos").val(carrito);
 	});
 });
