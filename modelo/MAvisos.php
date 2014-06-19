@@ -37,5 +37,6 @@
 	'$introducir_aviso_hidden',*/
 
 		$result = $mybd -> insert($query);
+		return $query;
 	}
 ?>

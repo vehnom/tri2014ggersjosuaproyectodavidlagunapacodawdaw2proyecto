@@ -24,6 +24,7 @@ function getAvisos($mybd){
 }
 
 function escribeAvisos($array_avisos){
+	//print_r($array_avisos);
 	$string_avisos = '';
 	$string_avisos .= '{ "data": [';
 	
@@ -35,38 +36,42 @@ function escribeAvisos($array_avisos){
 		} else {
 			$string_avisos .=  '"Id_Pedido":' . '" "' . ',';
 		}
-		$string_avisos .=  '"Id_Factura":' . $array_avisos[$i]['Id_Factura'] . ',';
+		if($array_avisos[$i]['Id_Factura'] != NULL){
+			$string_avisos .=  '"Id_Factura":' . $array_avisos[$i]['Id_Factura'] . ',';
+		}else {
+			$string_avisos .=  '"Id_Factura":' . '0' . ',';
+		}
 		if($array_avisos[$i]['Nota'] != NULL){
-			$string_avisos .=  '"Nota":' . $array_avisos[$i]['Nota'] . ',';
+			$string_avisos .=  '"Nota":"' . $array_avisos[$i]['Nota'] . '",';
 		} else {
 			$string_avisos .=  '"Nota":' . '" "' . ',';
 		}
 		$string_avisos .=  '"Quedada_dia":' . '"' . $array_avisos[$i]['Quedada_dia'] . '"' . ',';
 		$string_avisos .=  '"Hora":' . '"' . $array_avisos[$i]['Hora'] . '"' . ',';
 		if($array_avisos[$i]['Tipo_Trabajo'] != NULL){
-			$string_avisos .=  '"Tipo_Trabajo":' . $array_avisos[$i]['Tipo_Trabajo'] . ',';
+			$string_avisos .=  '"Tipo_Trabajo":"' . $array_avisos[$i]['Tipo_Trabajo'] . '",';
 		} else {
 			$string_avisos .=  '"Tipo_Trabajo":' . '" "' . ',';
 		}
 		if($array_avisos[$i]['Citado_Por'] != NULL){
-			$string_avisos .=  '"Citado_Por":' . $array_avisos[$i]['Citado_Por'] . ',';
+			$string_avisos .=  '"Citado_Por":"' . $array_avisos[$i]['Citado_Por'] . '",';
 		} else {
 			$string_avisos .=  '"Citado_Por":' . '" "' . ',';
 		}
 		$string_avisos .=  '"Fecha_Entrada":' . '"' . $array_avisos[$i]['Fecha_Entrada'] . '"' . ',';
 		$string_avisos .=  '"Fecha_Visitado":' . '"' . $array_avisos[$i]['Fecha_Visitado'] . '"' . ',';
 		if($array_avisos[$i]['Coord_Longitud'] != NULL){
-			$string_avisos .=  '"Coord_Longitud":' . $array_avisos[$i]['Coord_Longitud'] . ',';
+			$string_avisos .=  '"Coord_Longitud":"' . $array_avisos[$i]['Coord_Longitud'] . '",';
 		} else {
 			$string_avisos .=  '"Coord_Longitud":' . '" "' . ',';
 		}
 		if($array_avisos[$i]['Coord_Latitud'] != NULL){
-			$string_avisos .=  '"Coord_Latitud":' . $array_avisos[$i]['Coord_Latitud'] . ',';
+			$string_avisos .=  '"Coord_Latitud":"' . $array_avisos[$i]['Coord_Latitud'] . '",';
 		} else {
 			$string_avisos .=  '"Coord_Latitud":' . '" "' . ',';
 		}
-		$string_avisos .=  '"Id_Estado_Aviso":' . $array_avisos[$i]['Id_Estado_Aviso'] . '"' . ',';
-		$string_avisos .=  '"Ultima_Modificacion_Por":' . '"' . $array_avisos[$i]['Ultima_Modificacion_Por'];
+		$string_avisos .=  '"Id_Estado_Aviso":' . $array_avisos[$i]['Id_Estado_Aviso'] . ',';
+		$string_avisos .=  '"Ultima_Modificacion_Por":"'.$array_avisos[$i]['Ultima_Modificacion_Por'].'"';
 		if($i == (count($array_avisos) - 1)){
 			$string_avisos .= "}";
 		} else {
@@ -76,8 +81,7 @@ function escribeAvisos($array_avisos){
 	}
 
 	$string_avisos .= "]}";
-
-	$fp = fopen("avisos.txt", "w+");
+	$fp = fopen("../services/avisos/avisos.txt", "w+");
 	fwrite($fp, $string_avisos);
 	fclose($fp);
 }

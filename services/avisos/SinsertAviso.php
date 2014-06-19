@@ -5,5 +5,5 @@
 	include($_SESSION[".."]."/modelo/MAvisos.php");
 
 	$query = insertDatosAvisoForm($mybd);
-	header('Location: ../../services/avisos/savisosMapa.php'); 
+	header('Location: savisosMapa.php'); 
 ?>
