@@ -44,13 +44,43 @@
 			
 		}
 	</script>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJd5tq-tQRcaeT0TmxieASDmomsMNVLmA&sensor=SET_TO_TRUE_OR_FALSE">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+      	 var n=1;
+      	 var popup;
+        var mapOptions = {
+          center: new google.maps.LatLng(40.2970266, -3.7493709),
+          zoom:7,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+          google.maps.event.addListener(map, 'click', function(e) {
+          	var longitud = e.latLng.k;
+          	var latitud = e.latLng.A;
+          	$("#mapaLongitud").val(longitud);
+			$("#mapaLatitud").val(latitud);
+			$("#spanLongitud").text(longitud);
+			$("#spanLatitud").text(latitud);
+		  });
+      }
+    </script>
 
 </head>
-<body>
+<body onload="initialize()">
 	<?php include "sidebar.php" ?>
 	<div id="contenido">
 		<div id="contenedor_form">
-			<form name="form_nuevo_aviso" class="form" id="form_nuevo_aviso" method="post" action="../services/introduceAviso.php">
+			<form name="form_nuevo_aviso" class="form" id="form_nuevo_aviso" method="post" action="../services/avisos/SinsertAviso.php">
 				<h2>Nuevo Aviso</h2>
 				<div id="form_col_izqda">
 					<div class="form_input">
@@ -144,10 +174,15 @@
 					<div class="form_input">
 						<input type="hidden" id="introducir_aviso_hidden" name="introducir_aviso_hidden">
 					</div>
+					<div class="form_input">
+						<input onclick="validaTodo();" type="button" name="btn_introducir_aviso" id="btn_introducir_aviso" value="Añadir">
+					</div>
 				</div>
-				
-				<div class="form_input">
-					<input onclick="validaTodo();" type="button" name="btn_introducir_aviso" id="btn_introducir_aviso" value="Añadir">
+				<div class="mapa">	
+					Longitud: <span id="spanLongitud"></span> Latitud: <span id="spanLatitud"></span>				
+					<div id="map_canvas" style="width:98%; height:96%;margin:1%;"></div>
+					<input type="hidden" id="mapaLongitud"  name="mapaLongitud"/>
+					<input type="hidden" id="mapaLatitud" name="mapaLatitud"/>
 				</div>
 			</form>
 		</div>

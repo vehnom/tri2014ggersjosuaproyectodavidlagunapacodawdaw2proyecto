@@ -419,6 +419,13 @@ body {
 #valida_nota_aviso {
 	float: right;
 }
+.mapa{
+	float: left;
+	width: 100%;
+	height: 400px;
+	background-color: #ddd;
+	margin-top: 52px;
+}
 
 /* FIN FORMULARIO NUEVO AVISO */
 

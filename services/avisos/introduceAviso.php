@@ -7,9 +7,9 @@
 	$mybd = new myBBDD();
 
 	$data_aviso = array();
-	$data_factura = array();
+	$data_factura = array();mapaLongitud
 
-
+mapaLatitud
 	if(isset($_POST['n_factura_provisinal_aviso'])){
 		$nota_aviso = $_POST['nota_aviso'];
 		$hora_aviso = $_POST['hora_aviso'];
