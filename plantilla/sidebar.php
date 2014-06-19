@@ -1,4 +1,5 @@
 <script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+<script type="text/javascript" src="../js/jquery.dataTables.js"></script>
 <script type="text/javascript">
 	function comprobar(){
 		var cerrarSesionAlerta = confirm('Vas a salir de tu cuenta, ' +  String.fromCharCode(191) + 'continuar?');
