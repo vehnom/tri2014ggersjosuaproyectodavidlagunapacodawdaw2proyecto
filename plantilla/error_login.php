@@ -39,7 +39,7 @@
 		
 		<br><br><br>		
 		
-		<div class="error_login">Mientras tanto también puedes pulsar <a href="../tetris/tetris.html" target="_blank">aquí</a>.</div>
+		<div class="error_login">Mientras tanto tambi&eacute;n puedes pulsar <a href="../tetris/tetris.html" target="_blank">aqu&iacute;</a>.</div>
 	</div>
 
 </div>
